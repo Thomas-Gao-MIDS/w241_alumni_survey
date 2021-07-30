@@ -1,0 +1,277 @@
+---
+title: "Project_241_DK"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+
+
+```{r Combining the data}
+#reading the file group1
+dg1 <- fread('data/round1_0702_group1_0708_1033.csv')
+head(dg1)
+#retaining the relevant columns
+dg1 <- dg1[,c('Email','Merge status')]
+#verifying
+head(dg1)
+
+#reading the file group2
+dg2 <- fread('data/round1_0702_group2_0708_1220.csv')
+head(dg2)
+dg2 <- dg2[,c('Email','Merge status')]
+head(dg2)
+
+#reading the file group3
+dg3 <- fread('data/round1_0702_group3_0708_1122.csv')
+head(dg3)
+dg3 <- dg3[,c('Email','Merge status')]
+head(dg3)
+
+#combined data for round1
+round1 <- rbind(dg1,dg2,dg3)
+
+print(round1[,.N])
+
+#reading the data for round 2 - This is combined
+round2 <- fread('data/round2_0709_all_0716_1117.csv')
+head(round2)
+#retaining the relevant columns
+round2 <- round2[,c('Email','Merge status')]
+#verifying
+head(round2)
+
+
+print(round2[,.N])
+
+#reading the data for round 3 - This is combined
+round3 <- fread('data/round3_0716_all_0722_1046.csv')
+head(round3)
+#retaining the relevant columns
+round3 <- round3[,c('Email','Merge status')]
+#verifying
+head(round3)
+
+
+print(round3[,.N])
+
+#reading the data for round 4 - This is combined
+round4 <- fread('data/round4_0722_all_0723_1131.csv')
+head(round4)
+#retaining the relevant columns
+round4 <- round4[,c('Email','Merge status')]
+#verifying
+head(round4)
+
+
+print(round4[,.N])
+
+#reading the data for round 4 - This is combined
+round5 <- fread('data/round5_0723_all_0724_1219.csv')
+head(round5)
+#retaining the relevant columns
+round5 <- round5[,c('Email','Merge status')]
+#verifying
+head(round5)
+
+
+print(round5[,.N])
+
+
+```
+
+```{r combining all the files}
+
+d_combined <- rbind(round1,round2,round3,round4,round5)
+
+head(d_combined     )
+```
+
+```{r checking the status by email }
+library(dplyr)
+#https://stackoverflow.com/questions/25571547/select-unique-values-with-select-function-in-dplyr-library
+uniq_status <- d_combined %>% distinct(`Merge status`)
+
+uniq_status
+
+# not sure what the 0 status is
+d_combined[ ,.N]
+
+d_combined[`Merge status`== 0 , Email]
+
+d_zero_status <- d_combined[`Merge status`== 0 ,]
+#storing the data 
+write.csv(d_zero_status,"merge_status_0.csv",row.names = TRUE)
+#getting rid of the 105 rows with zero merge status
+d_combined_non_zero <- d_combined[`Merge status`!= 0 ,]
+
+
+
+```
+```{r function definition }
+
+final_mail_status <- function(d , status)
+  # This function takes the combined data frame and conslosidates the dataframe rows on email status
+{
+  
+  #first we'll decode the status we want to convert as TRUE
+  if ("Merge status" %in%  colnames(d))
+    {
+    #delete column
+    d <- subset(d , select = c("Email","Merge status"))
+    }
+  
+  
+  
+  d_merged <- setDT(d)[`Merge status`== status ,Email_status:= (as.logical(1))]
+  #everything else to 0
+  d_merged <- setDT(d)[is.na(`Email_status`) ,`Email_status`:= (as.logical(0))]
+  library(dplyr)
+  
+  #d3 <- d2 %>%  group_by(Email) %>% summarise(status = any(as.logical(`Merge Status`)))
+  d_summarized<- d_merged %>% group_by(Email) %>% summarise(status = any(as.logical(`Email_status`)))
+  
+  return (d_summarized)
+
+}
+
+```
+
+
+
+```{r}
+
+d_combined_non_zero[,.N]
+
+d_at_least_one_read <- final_mail_status(d_combined_non_zero, "EMAIL_OPENED")
+write.csv(d_at_least_one_read,"email_read.csv",row.names = TRUE)
+class(d_at_least_one_read)
+
+sum(d_at_least_one_read$status == TRUE)
+
+d_combined_non_zero
+
+
+d_at_least_one_clicked <- final_mail_status(d_combined_non_zero, "EMAIL_CLICKED")
+write.csv(d_at_least_one_clicked,"email_clicked.csv",row.names = TRUE)
+
+sum(d_at_least_one_clicked$status == TRUE)
+
+
+d_combined_non_zero
+
+d_at_least_one_bounce <- final_mail_status(d_combined_non_zero, "EMAIL_BOUNCED")
+sum(d_at_least_one_bounce$status == TRUE)
+
+colnames(d_combined_non_zero)
+
+d_combined_non_zero[`Merge status` == "EMAIL_BOUNCED",]
+```
+
+
+
+
+
+```{r test data}
+d1 <- head(d_combined_non_zero)
+
+
+
+d_test <- data.table(Email = rep("devesh1412@gmail.com",3),
+                     `Merge status` = rep("EMAIL_SENT",3))
+
+d_test2<- data.table(Email = c("devesh1412@gmail.com","dkhandelwal@nvidia.com"),
+                     `Merge status` = c(rep("EMAIL_SENT",2)))
+
+
+d_test3 <- data.table(Email = "dkhandelwal@nvidia.com",`Merge status` = "EMAIL_OPENED")
+
+d_test4 <- data.table(Email = c("dkhandelwal@nvidia.com","dkh@nv.om"),`Merge status` = c("EMAIL_OPENED","EMAIL_BOUNED"))
+d_test5 <- data.table(Email = "devesh1412@gmail.com",`Merge status` = "EMAIL_OPENED")
+d_test6 <- data.table(Email = "dkhandelwal@nvidia.com",`Merge status` = "EMAIL_CLICKED")
+d_test7 <- data.table(Email = "devesh1412@gmail.com",`Merge status` = "EMAIL_CLICKED")
+d_test8 <- data.table(Email = "dkhandelwal@yahoo.com",`Merge status` = "EMAIL_SENT")
+
+
+
+d_test_new <- rbind(d_test,d_test2,d_test3,d_test4,d_test5,d_test6,d_test7,d_test8)
+
+
+d_test_new
+
+d_temp <- d_test_new
+
+
+#d_test_new[`Merge Status`!= "EMAIL_OPENED" ,]
+
+d2 <- setDT(d_temp)[`Merge status`== "EMAIL_OPENED" ,`Emails_status`:= (as.logical(1))]
+
+d2
+
+d2
+
+d2 <- setDT(d_temp)[is.na(`Emails_status`) ,`Emails_status`:= (as.logical(0))]
+
+d2
+
+d2
+
+var_type <- d2[Email == "devesh1412@gmail.com",as.logical(`Merge status`)]
+
+
+as.logical(d2$`Merge Status`)
+
+
+class(var_type)
+
+logical_op <- function(col){
+    return ((any(col)))
+  }
+
+
+
+d3 <- d2 %>%  group_by(Email) %>% summarise(status = any(as.logical(`Emails_status`)))
+
+
+d3
+
+  
+  
+d3_func_test <- final_mail_status(d_test_new, "EMAIL_OPENED")
+
+
+d_test_new
+
+
+d3_func_test
+
+
+
+d_test_new
+
+d3_func_test_1 <- final_mail_status(d_test_new, "EMAIL_CLICKED")
+
+d3_func_test_1
+
+
+
+d_test_new
+
+test_col <- colnames(d_test_new)
+
+"Merge status" %in%  test_col 
+
+
+
+```
+
+
