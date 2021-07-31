@@ -18,7 +18,14 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r Combining the data}
 #reading the file group1
-dg1 <- fread('data/round1_0702_group1_0708_1033.csv')
+
+
+our_emails = c("mirza2020@berkeley.edu", "deveshkhandelwal@berkeley.edu",
+               "rahosbach@berkeley.edu", "tgao2020@berkeley.edu")
+
+
+
+dg1 <- fread('data/round1_0702_group1_0702_0941.csv')
 head(dg1)
 #retaining the relevant columns
 dg1 <- dg1[,c('Email','Merge status')]
@@ -26,13 +33,13 @@ dg1 <- dg1[,c('Email','Merge status')]
 head(dg1)
 
 #reading the file group2
-dg2 <- fread('data/round1_0702_group2_0708_1220.csv')
+dg2 <- fread('data/round1_0702_group2_0702_1028.csv')
 head(dg2)
 dg2 <- dg2[,c('Email','Merge status')]
 head(dg2)
 
 #reading the file group3
-dg3 <- fread('data/round1_0702_group3_0708_1122.csv')
+dg3 <- fread('data/round1_0702_group3_0702_1055.csv')
 head(dg3)
 dg3 <- dg3[,c('Email','Merge status')]
 head(dg3)
@@ -91,7 +98,7 @@ print(round5[,.N])
 
 ```{r combining all the files}
 
-d_combined <- rbind(round1,round2,round3,round4,round5)
+d_combined <- rbind(round1,round2,round3,round4,round5) %>% filter(!Email %in% our_emails)
 
 head(d_combined     )
 ```
@@ -114,7 +121,7 @@ write.csv(d_zero_status,"merge_status_0.csv",row.names = TRUE)
 #getting rid of the 105 rows with zero merge status
 d_combined_non_zero <- d_combined[`Merge status`!= 0 ,]
 
-
+d_zero_status[,.N]
 
 ```
 ```{r function definition }
@@ -175,6 +182,11 @@ sum(d_at_least_one_bounce$status == TRUE)
 colnames(d_combined_non_zero)
 
 d_combined_non_zero[`Merge status` == "EMAIL_BOUNCED",]
+
+d_email_sent <- final_mail_status(d_combined_non_zero, "EMAIL_SENT")
+
+sum(d_email_sent$status == TRUE)
+
 ```
 
 
