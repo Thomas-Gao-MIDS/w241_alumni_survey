@@ -1,6 +1,6 @@
 ---
 title: "Alumni Survey Bounce and Open Rate"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -81,10 +81,14 @@ dt_agg <-
                       r1_g2_status %>% filter(MStatus == 'EMAIL_SENT'),
                       r1_g3_status %>% filter(MStatus == 'EMAIL_SENT')) %>%
               filter(!Email %in% ex_emails) %>%
-              inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
-              inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
-              inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>% # 4 & 5 are the same?
-              inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
+              inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                         by='Email') %>%
+              inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                         by='Email') %>%
+              inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                         by='Email') %>% # 4 & 5 are the same?
+              inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                         by='Email') %>%
               add_column(non_complier = 1) %>%
               select(-MStatus),
             by = 'Email') %>%
