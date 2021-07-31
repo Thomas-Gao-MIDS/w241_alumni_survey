@@ -1,6 +1,6 @@
 Email,bounce,non_complier,complier,completion,Name,Cohort,Gender,Year_Graduation,Block,Duration,Long,Lat
-tony@ischool.berkeley.edu,0,0,1,0,Tony Abraham,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
-acconciamessa@ischool.berkeley.edu,0,0,1,0,Matt Acconciamessa,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+tony@ischool.berkeley.edu,0,1,0,0,Tony Abraham,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
+acconciamessa@ischool.berkeley.edu,0,1,0,0,Matt Acconciamessa,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 kradams@ischool.berkeley.edu,0,0,1,0,Katrina Adams,Alumni (MIDS 2016),F,2016,2,NA,NA,NA
 adereth@ischool.berkeley.edu,0,0,1,1,Matthew Adereth,Alumni (MIDS 2019),M,2019,2,53,-122.2397995,37.83760071
 danielle.adler@ischool.berkeley.edu,0,0,1,1,Danielle Adler,Alumni (MIDS 2020),F,2020,2,4331,-97.75299835,30.40319824
@@ -10,45 +10,45 @@ vishal@ischool.berkeley.edu,0,0,1,1,Vishal Agarwal,Alumni (MIDS 2019),M,2019,2,1
 vivek@ischool.berkeley.edu,0,1,0,0,Vivek Agarwal,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 chitra.agastya@ischool.berkeley.edu,0,0,1,1,Chitra Agastya,Alumni (MIDS 2021),F,2021,2,87,-73.76920319,41.16960144
 saif@ischool.berkeley.edu,0,0,1,1,Saif Ahmed,Alumni (MIDS 2017),M,2017,3,59,-77.45629883,38.82080078
-younusa23@ischool.berkeley.edu,0,0,1,0,Younus Ahmed,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+younusa23@ischool.berkeley.edu,0,1,0,0,Younus Ahmed,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 geneahn@ischool.berkeley.edu,1,0,0,0,Gene Ahn,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 swati.akella@ischool.berkeley.edu,0,0,1,1,Swati Akella,Alumni (MIDS 2020),F,2020,2,6090,-111.7081985,33.27520752
 tosin.akinpelu@ischool.berkeley.edu,0,0,1,1,Tosin Akinpelu,Alumni (MIDS 2020),M,2020,2,735,-114.2002029,51.13909912
-kakkineni@ischool.berkeley.edu,0,1,0,0,Krishna Chaitanya Akkineni,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+kakkineni@ischool.berkeley.edu,0,0,1,0,Krishna Chaitanya Akkineni,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 omar@ischool.berkeley.edu,0,0,1,1,Omar Al Taher,Alumni (MIDS 2018),M,2018,2,73,-118.2559967,34.00680542
 majid.alzein@ischool.berkeley.edu,1,0,0,0,Majid Al Zein,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 taiwo_raphael@ischool.berkeley.edu,0,0,1,0,Taiwo Raphael Alabi,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-malexander@ischool.berkeley.edu,0,0,1,0,Michael Alexander,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+malexander@ischool.berkeley.edu,0,1,0,0,Michael Alexander,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 kevin.allen@ischool.berkeley.edu,1,0,0,0,Kevin Allen,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
 timothymalt@ischool.berkeley.edu,0,1,0,0,Timothy Alt,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-daghan@berkeley.edu,0,0,1,0,Daghan Altas,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+daghan@berkeley.edu,0,1,0,0,Daghan Altas,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 daniel.alvarez@ischool.berkeley.edu,0,0,1,0,Daniel Alvarez,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 amodeo@ischool.berkeley.edu,0,0,1,0,Michael Amodeo,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 imander@ischool.berkeley.edu,0,1,0,0,Ian Anderson,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
-safyre@ischool.berkeley.edu,0,0,1,0,Safyre Anderson,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
+safyre@ischool.berkeley.edu,0,1,0,0,Safyre Anderson,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 tuckera@ischool.berkeley.edu,0,0,1,1,Tucker Anderson,Alumni (MIDS 2020),M,2020,2,45,-117.0670013,33.10969543
 sandrade@ischool.berkeley.edu,1,0,0,0,Shane Andrade,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-darren.ang@ischool.berkeley.edu,0,0,1,0,Darren Ang,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+darren.ang@ischool.berkeley.edu,0,1,0,0,Darren Ang,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 ashaanju@ischool.berkeley.edu,0,0,1,0,Asha Anju,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 ansjory@ischool.berkeley.edu,0,0,1,1,Chi Iong Ansjory,Alumni (MIDS 2019),M,2019,2,84,-121.9541016,37.24499512
 arnoldyb@ischool.berkeley.edu,0,0,1,1,Ben Arnoldy,Alumni (MIDS 2019),M,2019,2,73,-122.2411957,37.79060364
 al_arsenault@ischool.berkeley.edu,0,0,1,1,Alfred Arsenault,Alumni (MIDS 2017),M,2017,2,40,-76.79789734,39.25140381
-sahab@ischool.berkeley.edu,0,0,1,0,Sahab Aslam,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
-thomas.atkins@ischool.berkeley.edu,0,0,1,0,Thomas Atkins,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+sahab@ischool.berkeley.edu,0,1,0,0,Sahab Aslam,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
+thomas.atkins@ischool.berkeley.edu,0,1,0,0,Thomas Atkins,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 battix@ischool.berkeley.edu,0,0,1,0,Ben Attix,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 mariaauslander@ischool.berkeley.edu,0,1,0,0,Maria Auslander,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 ramsey_aweti@ischool.berkeley.edu,1,0,0,0,Ramsey Aweti,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-murat.aydogdu@ischool.berkeley.edu,0,0,1,0,Murat Aydogdu,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+murat.aydogdu@ischool.berkeley.edu,0,1,0,0,Murat Aydogdu,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 ravi_ayyappan@ischool.berkeley.edu,0,0,1,0,Ravi Ayyappan,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
-dorandoran@gmail.com,0,1,0,0,Doran Bae,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
-rock1017@ischool.berkeley.edu,0,0,1,0,Kyung Rock Baek,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-abagnard@ischool.berkeley.edu,0,0,1,0,Alexa Bagnard,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
-bakerjas@ischool.berkeley.edu,0,0,1,0,Jason Baker,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+dorandoran@gmail.com,0,0,1,0,Doran Bae,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
+rock1017@ischool.berkeley.edu,0,1,0,0,Kyung Rock Baek,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+abagnard@ischool.berkeley.edu,0,1,0,0,Alexa Bagnard,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
+bakerjas@ischool.berkeley.edu,0,1,0,0,Jason Baker,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 victoria.baker@ischool.berkeley.edu,0,0,1,0,Victoria Baker,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 ramya.girish@ischool.berkeley.edu,0,1,0,0,Ramya Balasubramaniam,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
 ram_bala@ischool.berkeley.edu,0,0,1,0,Ram Balasubramanian,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 daniel.balck@ischool.berkeley.edu,1,0,0,0,Daniel Balck,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-mballschmiede@ischool.berkeley.edu,0,0,1,0,Michael Ballschmiede,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+mballschmiede@ischool.berkeley.edu,0,1,0,0,Michael Ballschmiede,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 rutikasb@ischool.berkeley.edu,1,0,0,0,Rutika Banakar,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 rbansal@ischool.berkeley.edu,0,0,1,0,Rahul Bansal,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 tingwenbao@ischool.berkeley.edu,1,0,0,0,Tingwen Bao,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
@@ -56,7 +56,7 @@ lisabarcelo@ischool.berkeley.edu,0,0,1,1,Lisa Barcelo,Alumni (MIDS 2017),F,2017,
 cbarger@ischool.berkeley.edu,0,0,1,1,Christine Barger,Alumni (MIDS 2020),F,2020,2,48,-76.78820038,40.34039307
 markb@ischool.berkeley.edu,0,0,1,1,Mark Barnett,Alumni (MIDS 2018),M,2018,1,49,8.723098755,47.34440613
 pbarranger@ischool.berkeley.edu,1,0,0,0,Patrick Barranger,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
-gsb@ischool.berkeley.edu,0,0,1,0,George Barsukov,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+gsb@ischool.berkeley.edu,0,1,0,0,George Barsukov,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 jim.bauserman@ischool.berkeley.edu,1,0,0,0,James Bauserman,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 sartaj@ischool.berkeley.edu,0,1,0,0,Sartaj Singh Baveja,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 hbazakas@ischool.berkeley.edu,0,0,1,1,Henry Bazakas,Alumni (MIDS 2020),M,2020,2,48,-121.9189987,37.72009277
@@ -68,8 +68,8 @@ crisbenge@ischool.berkeley.edu,0,0,1,1,Cristopher Benge,Alumni (MIDS 2021),M,202
 chris.bennett@ischool.berkeley.edu,0,0,1,1,Chris Bennett,Alumni (MIDS 2017),M,2017,2,52,-75.58750153,39.94439697
 robert.bergan@ischool.berkeley.edu,1,0,0,0,Robert Bergan,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 mberger@ischool.berkeley.edu,0,0,1,0,Michael Berger,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-ianbettinger@ischool.berkeley.edu,0,0,1,0,Ian Bettinger,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
-dhaval@ischool.berkeley.edu,0,0,1,0,Dhaval Bhatt,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+ianbettinger@ischool.berkeley.edu,0,1,0,0,Ian Bettinger,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+dhaval@ischool.berkeley.edu,0,1,0,0,Dhaval Bhatt,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 nilesh.bhoyar@ischool.berkeley.edu,0,0,1,0,Nilesh Bhoyar,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 rohithabhushan@ischool.berkeley.edu,0,1,0,0,Rohitha Bhushan,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
 csbikkanur@ischool.berkeley.edu,0,0,1,0,Chandra Shekar Bikkanur,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
@@ -77,14 +77,14 @@ kevinbirnbaum@ischool.berkeley.edu,1,0,0,0,Kevin Birnbaum,Alumni (MIDS 2018),M,2
 brentbiseda@ischool.berkeley.edu,0,0,1,0,Brent Biseda,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 black@ischool.berkeley.edu,0,0,1,0,James Black,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 nathaniel.black@ischool.berkeley.edu,1,0,0,0,Nathaniel Black,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
-john.blakkan@ischool.berkeley.edu,0,0,1,0,John Blakkan,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+john.blakkan@ischool.berkeley.edu,0,1,0,0,John Blakkan,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 jason.blauvelt@ischool.berkeley.edu,0,1,0,0,Jason Blauvelt,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 mblinder@ischool.berkeley.edu,0,0,1,1,Marcelo Blinder,Alumni (MIDS 2020),M,2020,2,101,-93.38420105,44.95339966
-kbloom@ischool.berkeley.edu,0,0,1,0,Kenneth Bloom,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+kbloom@ischool.berkeley.edu,0,1,0,0,Kenneth Bloom,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 mboardman@ischool.berkeley.edu,0,0,1,1,Mary C. Boardman,Alumni (MIDS 2019),F,2019,2,56,-118.5297012,34.05020142
 ross.boberg@ischool.berkeley.edu,0,0,1,1,Ross Boberg,Alumni (MIDS 2015),M,2015,3,63,-122.2664948,37.4967041
 jbocharov@ischool.berkeley.edu,0,0,1,1,John Bocharov,Alumni (MIDS 2016),M,2016,2,61,-122.4413986,37.72009277
-erin@ischool.berkeley.edu,0,0,1,0,Erin Boehmer,Alumni (MIDS 2015),F,2015,2,NA,NA,NA
+erin@ischool.berkeley.edu,0,1,0,0,Erin Boehmer,Alumni (MIDS 2015),F,2015,2,NA,NA,NA
 cbolin@ischool.berkeley.edu,0,0,1,0,Chuck Bolin,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 brennan.borlaug@ischool.berkeley.edu,1,0,0,0,Brennan Borlaug,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 kborojerdi@ischool.berkeley.edu,0,0,1,1,Katayoun Borojerdi,Alumni (MIDS 2020),F,2020,2,78,-117.5919952,33.66079712
@@ -95,25 +95,25 @@ ryan.brady@ischool.berkeley.edu,0,0,1,0,Ryan Brady,Alumni (MIDS 2019),M,2019,2,N
 jbraun@ischool.berkeley.edu,0,0,1,1,Jeff Braun,Alumni (MIDS 2019),M,2019,2,104,-87.63829803,41.90319824
 amy.breden@ischool.berkeley.edu,0,0,1,1,Amy Breden,Alumni (MIDS 2020),F,2020,2,62,-97.8219986,37.75100708
 mbrimmer@ischool.berkeley.edu,0,0,1,0,Matt Brimmer,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-kbrodd@ischool.berkeley.edu,0,0,1,0,Karin Brodd,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+kbrodd@ischool.berkeley.edu,0,1,0,0,Karin Brodd,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 smarx@ischool.berkeley.edu,0,0,1,0,Samantha Brownstein,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 juliab@ischool.berkeley.edu,0,1,0,0,Julia Buffinton,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 rbuhr@ischool.berkeley.edu,0,0,1,1,Raymond Buhr,Alumni (MIDS 2016),M,2016,2,69,-87.9434967,41.89570618
 thongnbui@ischool.berkeley.edu,1,0,0,0,Thong Bui,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-hbulcha@ischool.berkeley.edu,0,0,1,0,Hawina Bulcha,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
+hbulcha@ischool.berkeley.edu,0,1,0,0,Hawina Bulcha,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 mbulkow@ischool.berkeley.edu,0,1,0,0,Madeleine Bulkow,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 walt.burge@ischool.berkeley.edu,0,0,1,1,Walt Burge,Alumni (MIDS 2019),M,2019,2,65,-122.5872955,38.09959412
-matthew.burke@ischool.berkeley.edu,0,0,1,0,Matthew Burke,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+matthew.burke@ischool.berkeley.edu,0,1,0,0,Matthew Burke,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 morris.burkhardt@ischool.berkeley.edu,0,0,1,0,Morris Michael Burkhardt,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 rkburns@ischool.berkeley.edu,0,0,1,0,Rachael Burns,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 aburrage@ischool.berkeley.edu,1,0,0,0,Andrew Burrage,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-dmburt@ischool.berkeley.edu,0,0,1,0,Dustin Burt,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+dmburt@ischool.berkeley.edu,0,1,0,0,Dustin Burt,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 joe.butcher@ischool.berkeley.edu,1,0,0,0,Joe Butcher,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 mariaccabezas@ischool.berkeley.edu,1,0,0,0,Marina Corina Cabezas Mujica,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 rcadavid@ischool.berkeley.edu,0,0,1,0,Ramiro Cadavid,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 chris.c@ischool.berkeley.edu,0,0,1,1,Chris Caldwell,Alumni (MIDS 2017),M,2017,1,69,-78.53759766,35.98249817
 jlc@ischool.berkeley.edu,0,1,0,0,Jesse Calvillo,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
-rcalzaretta@ischool.berkeley.edu,0,1,0,0,Robert Calzaretta,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+rcalzaretta@ischool.berkeley.edu,0,0,1,0,Robert Calzaretta,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 fcampos@ischool.berkeley.edu,0,0,1,0,Felipe Campos,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 catherine.cao@ischool.berkeley.edu,0,0,1,1,Catherine Cao,Alumni (MIDS 2020),F,2020,2,84,-87.96600342,42.16140747
 hcao@ischool.berkeley.edu,0,1,0,0,Haihui Cao,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
@@ -122,34 +122,34 @@ carberyc@ischool.berkeley.edu,1,0,0,0,Charles Carbery,Alumni (MIDS 2016),M,2016,
 juanjose.carin@ischool.berkeley.edu,0,0,1,0,Juan Jose Carin,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 acarl005@ischool.berkeley.edu,0,1,0,0,Andrew Carlson,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 colby.carter@ischool.berkeley.edu,0,0,1,0,Colby Carter,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
-jenncasper@ischool.berkeley.edu,0,0,1,0,Jennifer Casper,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+jenncasper@ischool.berkeley.edu,0,1,0,0,Jennifer Casper,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 bcastaing@ischool.berkeley.edu,0,1,0,0,Brandon Castaing,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 pcastles@ischool.berkeley.edu,0,1,0,0,Patrick Castles,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
-carlosscastro@ischool.berkeley.edu,0,0,1,0,Carlos Castro,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+carlosscastro@ischool.berkeley.edu,0,1,0,0,Carlos Castro,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 cscaudill@ischool.berkeley.edu,1,0,0,0,Christopher Caudill,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
-ceccarelli@ischool.berkeley.edu,0,0,1,0,Gregory Ceccarelli,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+ceccarelli@ischool.berkeley.edu,0,1,0,0,Gregory Ceccarelli,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 sarah.cha@ischool.berkeley.edu,0,0,1,0,Sarah Cha,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
-elizchabot@ischool.berkeley.edu,0,0,1,0,Elizabeth Chabot,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
-gurdit@ischool.berkeley.edu,0,0,1,0,Gurdit Chahal,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+elizchabot@ischool.berkeley.edu,0,1,0,0,Elizabeth Chabot,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+gurdit@ischool.berkeley.edu,0,1,0,0,Gurdit Chahal,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 archakra@ischool.berkeley.edu,0,1,0,0,Arjun Chakraborty,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 schakraverty@ischool.berkeley.edu,0,0,1,1,Shiraz Chakraverty,Alumni (MIDS 2019),M,2019,2,58,-122.2803955,38.15820313
 usha.challa@ischool.berkeley.edu,0,1,0,0,Usha Challa,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 chamberlain@ischool.berkeley.edu,0,1,0,0,Ryan Chamberlain,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 derekschan@ischool.berkeley.edu,0,0,1,1,Derek S. Chan,Alumni (MIDS 2017),M,2017,2,190,-121.9125977,37.32090759
 konniamchan@ischool.berkeley.edu,0,0,1,0,Konniam Chan,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
-shuangchan@ischool.berkeley.edu,0,0,1,0,Shuang Chan,Alumni (MIDS 2017),U,2017,2,NA,NA,NA
+shuangchan@ischool.berkeley.edu,0,1,0,0,Shuang Chan,Alumni (MIDS 2017),U,2017,2,NA,NA,NA
 yingchan@ischool.berkeley.edu,0,1,0,0,Ying Chan,Alumni (MIDS 2017),U,2017,2,NA,NA,NA
 hetalchandaria@ischool.berkeley.edu,0,1,0,0,Hetal Chandaria,Alumni (MIDS 2016),F,2016,2,NA,NA,NA
-nalini.chandhi@ischool.berkeley.edu,0,0,1,0,Nalini Chandhi,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
+nalini.chandhi@ischool.berkeley.edu,0,1,0,0,Nalini Chandhi,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 avinash@ischool.berkeley.edu,0,0,1,0,Avinash Chandrasekaran,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-sychang@ischool.berkeley.edu,0,0,1,0,Shih Yu Chang,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+sychang@ischool.berkeley.edu,0,1,0,0,Shih Yu Chang,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 ploy@ischool.berkeley.edu,0,0,1,0,Matanaporn Cheewadhanaraks,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
-axc5711@ischool.berkeley.edu,0,1,0,0,Anqi Chen,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
+axc5711@ischool.berkeley.edu,0,0,1,0,Anqi Chen,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 cchen@ischool.berkeley.edu,0,0,1,0,Congying (Charlene) Chen,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 jen2@ischool.berkeley.edu,1,0,0,0,Jen Jen Chen,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 jim.chen@ischool.berkeley.edu,0,0,1,0,Jim Chen,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 kchen@ischool.berkeley.edu,0,0,1,0,Kenneth Chen,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
-liang.chen@ischool.berkeley.edu,0,0,1,0,Liang Chen,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+liang.chen@ischool.berkeley.edu,0,1,0,0,Liang Chen,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 marchen@ischool.berkeley.edu,0,1,0,0,Marcus Chen,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 nwchen24@ischool.berkeley.edu,1,0,0,0,Nicholas Chen,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 chenrui@ischool.berkeley.edu,0,1,0,0,Rui Chen,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
@@ -157,8 +157,8 @@ jessiecyz@ischool.berkeley.edu,0,0,1,0,Yanzhu Chen,Alumni (MIDS 2021),F,2021,2,N
 yuze.chen@ischool.berkeley.edu,0,0,1,0,Yuze Chen,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 xiaobei.cheng@ischool.berkeley.edu,1,0,0,0,Cheng Cheng,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 yc2701@ischool.berkeley.edu,0,1,0,0,Yuchen Cheng,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
-kchepudira@berkeley.edu,0,0,1,0,Karthik Chepudira,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
-ashton@ischool.berkeley.edu,0,0,1,0,Ashton Chevallier,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+kchepudira@berkeley.edu,0,1,0,0,Karthik Chepudira,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+ashton@ischool.berkeley.edu,0,1,0,0,Ashton Chevallier,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 jchiang@ischool.berkeley.edu,0,0,1,0,John Chiang,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 vchio@ischool.berkeley.edu,1,0,0,0,Vincent Chio,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 staciachoe@ischool.berkeley.edu,0,0,1,0,Stacia Choe,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
@@ -170,21 +170,21 @@ asheshchoudhury@ischool.berkeley.edu,0,0,1,0,Ashesh Choudhury,Alumni (MIDS 2020)
 li.chu@ischool.berkeley.edu,1,0,0,0,Li Chu,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 vslchu@ischool.berkeley.edu,0,0,1,0,Vincent Chu,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 kchuangk@ischool.berkeley.edu,0,0,1,1,Kyle Chuang,Alumni (MIDS 2020),M,2020,1,74,-77.0318985,38.90570068
-alexanderchung@ischool.berkeley.edu,0,0,1,0,Alexander Chung,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+alexanderchung@ischool.berkeley.edu,0,1,0,0,Alexander Chung,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 koohong@ischool.berkeley.edu,0,0,1,1,Bill Chung,Alumni (MIDS 2021),M,2021,2,80,-122.0756989,37.95770264
 lchutny@ischool.berkeley.edu,0,0,1,0,Laura Chutny,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 vncirella@ischool.berkeley.edu,0,0,1,0,Nick Cirella,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 pierce.coggins@ischool.berkeley.edu,0,1,0,0,Pierce Coggins,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
-ncollins@ischool.berkeley.edu,0,0,1,0,Nicholas Collins,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-nconidas@ischool.berkeley.edu,0,0,1,0,Nicholas Conidas,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+ncollins@ischool.berkeley.edu,0,1,0,0,Nicholas Collins,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+nconidas@ischool.berkeley.edu,0,1,0,0,Nicholas Conidas,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 shane.conner@ischool.berkeley.edu,0,1,0,0,Shane Conner,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 ron.cordell@ischool.berkeley.edu,0,1,0,0,Ronald Cordell,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 jcordes@ischool.berkeley.edu,1,0,0,0,Jay Cordes,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 ocoronel@ischool.berkeley.edu,0,0,1,1,Osmar Coronel,Alumni (MIDS 2020),M,2020,2,52,-57.61569977,-25.29269409
 melanie.costello@ischool.berkeley.edu,1,0,0,0,Melanie Costello,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
-andycui97@ischool.berkeley.edu,0,0,1,0,Andrew Cui,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+andycui97@ischool.berkeley.edu,0,1,0,0,Andrew Cui,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 sophia@ischool.berkeley.edu,0,1,0,0,Sophia Cui,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
-maura.cullen28@gmail.com,0,1,0,0,Maura Cullen,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+maura.cullen28@gmail.com,0,0,1,0,Maura Cullen,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 brandoncummings@ischool.berkeley.edu,0,0,1,0,Brandon Cummings,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 collincun@ischool.berkeley.edu,0,0,1,1,Collin Cunningham,Alumni (MIDS 2020),M,2020,2,4883,-73.95020294,40.78089905
 ldacunto@ischool.berkeley.edu,0,0,1,0,Loris Dacunto,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
@@ -193,12 +193,12 @@ lucasdan3@ischool.berkeley.edu,1,0,0,0,Lucas Dan,Alumni (MIDS 2016),M,2016,2,NA,
 minhchau.dang@ischool.berkeley.edu,0,1,0,0,Minhchau Dang,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 c.danicic@ischool.berkeley.edu,0,1,0,0,Christopher Danicic,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 hdanish@ischool.berkeley.edu,1,0,0,0,Hussein Danish,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
-danzisar@ischool.berkeley.edu,0,0,1,0,Sarah Danzi,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
+danzisar@ischool.berkeley.edu,0,1,0,0,Sarah Danzi,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 jdarmody@ischool.berkeley.edu,0,0,1,0,James Darmody,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 kdarnell@ischool.berkeley.edu,0,1,0,0,Kim Darnell,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 jend@ischool.berkeley.edu,0,0,1,1,Jennifer Darrouzet,Alumni (MIDS 2019),F,2019,3,89,-97.75299835,30.40319824
 aditi.das@ischool.berkeley.edu,0,1,0,0,Aditi Das,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
-amitavadas@ischool.berkeley.edu,0,0,1,0,Amitava Das,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+amitavadas@ischool.berkeley.edu,0,1,0,0,Amitava Das,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 dasxx179@ischool.berkeley.edu,0,0,1,0,Sayan Das,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 sudiptodasgupta@ischool.berkeley.edu,0,0,1,1,Sudipto Shankar Dasgupta,Alumni (MIDS 2020),M,2020,1,55,-122.0350952,37.34790039
 sdatta@ischool.berkeley.edu,1,0,0,0,Samir Datta,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
@@ -212,12 +212,12 @@ zday@ischool.berkeley.edu,0,1,0,0,Zachary Day,Alumni (MIDS 2019),M,2019,2,NA,NA,
 james_delatorre@ischool.berkeley.edu,0,0,1,0,James De La Torre,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 gderoo@ischool.berkeley.edu,1,0,0,0,Guillaume De Roo,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 vinicio.desola@ischool.berkeley.edu,0,0,1,1,Vinicio De Sola,Alumni (MIDS 2020),M,2020,3,28,-73.98010254,40.89430237
-pdegner@ischool.berkeley.edu,0,0,1,0,Patricia Degner,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
+pdegner@ischool.berkeley.edu,0,1,0,0,Patricia Degner,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 ernesto@ischool.berkeley.edu,0,0,1,0,Ernesto Del Valle,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 rmdelgad2013@ischool.berkeley.edu,1,0,0,0,Ryan Delgado,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 ddelmoli@ischool.berkeley.edu,1,0,0,0,Dominic Delmolino,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 mdemaster@ischool.berkeley.edu,0,1,0,0,Marcus DeMaster,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
-michael.demertzi@ischool.berkeley.edu,0,0,1,0,Michael Demertzi,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+michael.demertzi@ischool.berkeley.edu,0,1,0,0,Michael Demertzi,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 qian.deng@ischool.berkeley.edu,0,0,1,0,Qian Deng,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
 robert.deng@ischool.berkeley.edu,0,0,1,1,Robert Deng,Alumni (MIDS 2018),M,2018,2,51,-97.39199829,31.06820679
 shirleydeng@ischool.berkeley.edu,0,0,1,0,Shirley Deng,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
@@ -228,7 +228,7 @@ adityadhara@ischool.berkeley.edu,0,1,0,0,Aditya Dhara,Alumni (MIDS 2020),M,2020,
 sdille@ischool.berkeley.edu,0,0,1,1,Steve Dille,Alumni (MIDS 2021),M,2021,2,102,-122.1716995,37.88279724
 adively@ischool.berkeley.edu,0,0,1,0,Andrew Dively,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 vaibhavdiwan@ischool.berkeley.edu,0,0,1,1,Vaibhav Diwan,Alumni (MIDS 2018),M,2018,2,51,75.83369446,22.71699524
-phatdoan@ischool.berkeley.edu,0,0,1,0,Phat Doan,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+phatdoan@ischool.berkeley.edu,0,1,0,0,Phat Doan,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 sjdong@ischool.berkeley.edu,0,1,0,0,Shujing Dong,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
 austin.doolittle@ischool.berkeley.edu,0,0,1,0,Austin Doolittle,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 dorairajsanjay@ischool.berkeley.edu,0,1,0,0,Sanjay Dorairaj,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
@@ -251,7 +251,7 @@ dan.elkin@ischool.berkeley.edu,0,0,1,1,Daniel Elkin,Alumni (MIDS 2019),M,2019,2,
 elrufaie@ischool.berkeley.edu,0,1,0,0,Harith Elrufaie,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 sombiri@ischool.berkeley.edu,0,1,0,0,Sombiri Enwemeka,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 werquinigo@ischool.berkeley.edu,1,0,0,0,Walter Erquinigo Pezo,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-kyleeschen@ischool.berkeley.edu,0,0,1,0,Kyle Eschen,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
+kyleeschen@ischool.berkeley.edu,0,1,0,0,Kyle Eschen,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 eduardaespindola@ischool.berkeley.edu,0,0,1,0,Eduarda Espindola,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 arturo.esquerra@ischool.berkeley.edu,0,0,1,1,Arturo Esquerra,Alumni (MIDS 2019),M,2019,2,38,-99.1427002,19.43539429
 ammara.essa@ischool.berkeley.edu,0,1,0,0,Ammara Essa,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
@@ -282,16 +282,16 @@ carson@ischool.berkeley.edu,0,0,1,0,Carson Forter,Alumni (MIDS 2016),M,2016,2,NA
 vfoss@ischool.berkeley.edu,0,1,0,0,Vicki Foss,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 fosterrj@ischool.berkeley.edu,0,0,1,1,Robert Foster,Alumni (MIDS 2018),M,2018,2,35,-104.9651031,39.7592926
 aris@ischool.berkeley.edu,0,0,1,1,Aristotelis Fotkatzikis,Alumni (MIDS 2020),M,2020,1,59,23.73530579,37.98420715
-apouchepanadin@ischool.berkeley.edu,0,0,1,0,Andrew Joseph Francois Pouchepanadin,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+apouchepanadin@ischool.berkeley.edu,0,1,0,0,Andrew Joseph Francois Pouchepanadin,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 mfrazzini@ischool.berkeley.edu,0,1,0,0,Michael Frazzini,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
-ericfreeman@ischool.berkeley.edu,0,0,1,0,Eric Freeman,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+ericfreeman@ischool.berkeley.edu,0,1,0,0,Eric Freeman,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 craig.fujii@ischool.berkeley.edu,0,0,1,1,Craig Fujii,Alumni (MIDS 2020),M,2020,2,130,-122.0350952,37.34790039
 david.gamez@ischool.berkeley.edu,0,1,0,0,David Gámez,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 sgandavarapu@ischool.berkeley.edu,0,0,1,0,Sasanka Gandavarapu,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 arvindh@ischool.berkeley.edu,0,1,0,0,Arvindh Ganesan,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 bala.ganeshan@ischool.berkeley.edu,0,0,1,0,Bala Ganeshan,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 vineet.gangwar@ischool.berkeley.edu,0,1,0,0,Vineet Gangwar,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
-johngao1@ischool.berkeley.edu,0,0,1,0,John Gao,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+johngao1@ischool.berkeley.edu,0,1,0,0,John Gao,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 garber.boris@ischool.berkeley.edu,0,0,1,1,Boris Garber,Alumni (MIDS 2019),M,2019,3,105,-73.97049713,40.62139893
 luca.garre@ischool.berkeley.edu,0,1,0,0,Luca Garrè,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 spyrosg@ischool.berkeley.edu,0,0,1,0,Spyridon Garyfallos,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
@@ -302,7 +302,7 @@ scott.george@ischool.berkeley.edu,1,0,0,0,Scott George,Alumni (MIDS 2019),M,2019
 girijaghali@ischool.berkeley.edu,0,0,1,1,Girija Ghali,Alumni (MIDS 2021),F,2021,1,100,-121.8359985,37.2507019
 amod.ghangurde@ischool.berkeley.edu,0,0,1,1,Amod Ghangurde,Alumni (MIDS 2018),M,2018,2,11089,-121.9526978,37.75579834
 sirak@ischool.berkeley.edu,0,0,1,1,Sirak Ghebremusse,Alumni (MIDS 2021),M,2021,2,64,-123.1291046,49.28250122
-ravneetghuman@ischool.berkeley.edu,0,0,1,0,Ravneet Ghuman,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+ravneetghuman@ischool.berkeley.edu,0,1,0,0,Ravneet Ghuman,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 krissy@ischool.berkeley.edu,0,1,0,0,Krissy Gianforte,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 ksgifford@ischool.berkeley.edu,0,1,0,0,Kevin Gifford,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 mgin@ischool.berkeley.edu,0,0,1,0,Mark Gin,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
@@ -311,7 +311,7 @@ monag@ischool.berkeley.edu,0,0,1,1,Mona Gogia,Alumni (MIDS 2018),F,2018,3,58,-77
 taeil.goh@ischool.berkeley.edu,0,0,1,1,Taeil Goh,Alumni (MIDS 2021),M,2021,2,139,-122.3992996,37.76420593
 pg426@ischool.berkeley.edu,0,0,1,0,Pavel Golukhin,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 samuel.goodgame@ischool.berkeley.edu,0,1,0,0,Sam Goodgame,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-jason.goodman@ischool.berkeley.edu,0,0,1,0,Jason Goodman,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
+jason.goodman@ischool.berkeley.edu,0,1,0,0,Jason Goodman,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
 chandangope@ischool.berkeley.edu,0,0,1,0,Chandan Gope,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 divyagorantla@ischool.berkeley.edu,0,0,1,0,Divya Gorantla,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 tomgoter@ischool.berkeley.edu,0,0,1,0,Thomas Goter,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
@@ -321,13 +321,13 @@ shantigreene@ischool.berkeley.edu,0,0,1,1,Shanti Greene,Alumni (MIDS 2016),M,201
 saul.grimaldo@ischool.berkeley.edu,0,0,1,1,Saul Grimaldo,Alumni (MIDS 2018),M,2018,3,56,-122.4059982,37.77709961
 mike.gruzynski@ischool.berkeley.edu,0,1,0,0,Mike Gruzynski,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 gule0321@gmail.com,0,0,1,0,Le Gu,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
-guevarra@ischool.berkeley.edu,0,0,1,0,Dan Guevarra,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+guevarra@ischool.berkeley.edu,0,1,0,0,Dan Guevarra,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 agunapal@ischool.berkeley.edu,0,0,1,1,Ankith Gunapal,Alumni (MIDS 2017),M,2017,2,56,-122.3300018,37.55169678
 prabhakar@berkeley.edu,0,0,1,0,Prabhakar Gundugola,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 agunn@ischool.berkeley.edu,0,0,1,1,Angela Gunn,Alumni (MIDS 2016),F,2016,1,60,-121.8450012,37.26919556
 angela.guo@ischool.berkeley.edu,0,1,0,0,Angela Guo,Alumni (MIDS 2016),F,2016,3,NA,NA,NA
-adhaar@ischool.berkeley.edu,0,0,1,0,Adhaar Gupta,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-pgupta@ischool.berkeley.edu,0,0,1,0,Priya Gupta,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
+adhaar@ischool.berkeley.edu,0,1,0,0,Adhaar Gupta,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+pgupta@ischool.berkeley.edu,0,1,0,0,Priya Gupta,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
 suhas.gupta@ischool.berkeley.edu,0,0,1,0,Suhas Gupta,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 surabhi@ischool.berkeley.edu,0,0,1,0,Surabhi Gupta,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
 lgurevich@ischool.berkeley.edu,0,0,1,1,Lina Gurevich,Alumni (MIDS 2020),F,2020,3,101,-123.0951004,49.21299744
@@ -359,24 +359,24 @@ ahathaway@ischool.berkeley.edu,0,0,1,1,Alexander Hathaway,Alumni (MIDS 2020),M,2
 whawkins@ischool.berkeley.edu,0,1,0,0,Will Hawkins,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 mhayes@ischool.berkeley.edu,0,0,1,0,Matthew Hayes,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 jessica.h.fisher@ischool.berkeley.edu,0,1,0,0,Jessica Hays,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
-chqngh@ischool.berkeley.edu,0,0,1,0,Chuqing He,Alumni (MIDS 2018),U,2018,2,NA,NA,NA
+chqngh@ischool.berkeley.edu,0,1,0,0,Chuqing He,Alumni (MIDS 2018),U,2018,2,NA,NA,NA
 david.s.he@ischool.berkeley.edu,0,1,0,0,David He,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 heshan@ischool.berkeley.edu,0,0,1,0,Shan He,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 conor@ischool.berkeley.edu,0,0,1,1,Conor Healy,Alumni (MIDS 2020),M,2020,3,53,-121.8956985,37.68730164
 jheckman@ischool.berkeley.edu,0,1,0,0,Judd Heckman,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
 aditihegde@ischool.berkeley.edu,0,0,1,1,Aditi Hegde,Alumni (MIDS 2020),F,2020,3,68,-121.8359985,37.2507019
 vikhegde@ischool.berkeley.edu,0,0,1,0,Vikram Hegde,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-khenderson@ischool.berkeley.edu,0,0,1,0,Kiersten Henderson,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
+khenderson@ischool.berkeley.edu,0,1,0,0,Kiersten Henderson,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
 bas@ischool.berkeley.edu,0,1,0,0,Pradipta Ariyo Bhaskoro Hendri,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 alexanderherring@ischool.berkeley.edu,0,0,1,0,Alexander Herring,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 gal@ischool.berkeley.edu,0,0,1,0,Gal Heyne,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
-jonathan.hilton@ischool.berkeley.edu,0,1,0,0,Jonathan Hilton,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+jonathan.hilton@ischool.berkeley.edu,0,0,1,0,Jonathan Hilton,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 hipplec@ischool.berkeley.edu,1,0,0,0,Christopher Hipple,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 tako@ischool.berkeley.edu,0,0,1,1,Takahiro Hisada,Alumni (MIDS 2019),M,2019,1,102,-118.3016052,34.06719971
 richard.hitchens@ischool.berkeley.edu,0,0,1,0,Richard Hitchens,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 rachel.ho@ischool.berkeley.edu,0,0,1,0,Rachel SK Ho,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 errett@ischool.berkeley.edu,0,0,1,1,Errett Hobbs,Alumni (MIDS 2019),M,2019,3,51,-122.3746948,47.69009399
-simon.hodgkinson@ischool.berkeley.edu,0,0,1,0,Simon Hodgkinson,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+simon.hodgkinson@ischool.berkeley.edu,0,1,0,0,Simon Hodgkinson,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 matthew.r.holmes@ischool.berkeley.edu,0,0,1,0,Matthew Holmes,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 srholtz@ischool.berkeley.edu,1,0,0,0,Stephen Holtz,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 sallyhong@ischool.berkeley.edu,0,0,1,1,Seo-Im Hong,Alumni (MIDS 2017),U,2017,1,34,-94.71890259,39.04519653
@@ -387,24 +387,24 @@ davidhou@ischool.berkeley.edu,0,0,1,1,David Hou,Alumni (MIDS 2020),M,2020,2,56,-
 erikhou@ischool.berkeley.edu,0,0,1,0,Erik Hou,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 justin.hsia@ischool.berkeley.edu,0,1,0,0,Justin Hsia,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 jeffrey.hsu@ischool.berkeley.edu,0,0,1,0,Jeffrey Hsu,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
-shsu@ischool.berkeley.edu,0,0,1,0,Shelly Hsu,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+shsu@ischool.berkeley.edu,0,1,0,0,Shelly Hsu,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 cynthiahu@ischool.berkeley.edu,0,1,0,0,Cynthia Hu,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 xhu33@ischool.berkeley.edu,0,0,1,0,Xiaoyun Hu,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 yhu@ischool.berkeley.edu,0,0,1,0,Yue Hu,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
-yinghua@ischool.berkeley.edu,0,1,0,0,Ying Hua,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+yinghua@ischool.berkeley.edu,0,0,1,0,Ying Hua,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 joanna.huang@ischool.berkeley.edu,0,0,1,0,Joanna Huang,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
 kuangwei@ischool.berkeley.edu,0,1,0,0,Kuangwei Huang,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 lye.huang@ischool.berkeley.edu,0,0,1,1,Lu Yin Huang,Alumni (MIDS 2020),F,2020,1,60,-97.98419952,30.33610535
 sophiahuang@ischool.berkeley.edu,1,0,0,0,Sophia Huang,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 tracyhuang@ischool.berkeley.edu,0,0,1,0,Tracy Huang,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
-dhuber@ischool.berkeley.edu,0,0,1,0,David Huber,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-hudsonga@ischool.berkeley.edu,0,0,1,0,Gabriel Hudson,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+dhuber@ischool.berkeley.edu,0,1,0,0,David Huber,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
+hudsonga@ischool.berkeley.edu,0,1,0,0,Gabriel Hudson,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 ehulburd@ischool.berkeley.edu,1,0,0,0,Eric Hulburd,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 scott.hungerford@ischool.berkeley.edu,0,0,1,0,Scott Hungerford,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 jnhunsberger@ischool.berkeley.edu,0,1,0,0,Jason Hunsberger,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 thurt@ischool.berkeley.edu,0,0,1,1,Timothy Hurt,Alumni (MIDS 2018),M,2018,2,49,-122.217804,37.77940369
 dianai@ischool.berkeley.edu,0,0,1,1,Diana Iftimie,Alumni (MIDS 2021),F,2021,3,86,-122.1632996,47.5579071
-zingbretsen@ischool.berkeley.edu,0,0,1,0,Zachary Ingbretsen,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+zingbretsen@ischool.berkeley.edu,0,1,0,0,Zachary Ingbretsen,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 csinguva@ischool.berkeley.edu,0,0,1,0,Chandra Inguva,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 alexandraiov@ischool.berkeley.edu,1,0,0,0,Alexandra Iov,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 iqbaldanishm@ischool.berkeley.edu,1,0,0,0,Danish Iqbal,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
@@ -420,34 +420,34 @@ miguel@ischool.berkeley.edu,0,1,0,0,Miguel Jaime,Alumni (MIDS 2020),M,2020,1,NA,
 saurabh.jaju2@ischool.berkeley.edu,0,0,1,1,Saurabh Jaju,Alumni (MIDS 2019),M,2019,3,70,103.8375854,1.283493042
 jakkamreddy@ischool.berkeley.edu,0,0,1,0,Siddhartha Jakkamreddy,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 ajamar@ischool.berkeley.edu,1,0,0,0,Alexandre Jamar,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
-younghak.jang@ischool.berkeley.edu,0,0,1,0,Younghak Jang,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
+younghak.jang@ischool.berkeley.edu,0,1,0,0,Younghak Jang,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
 meganjasek@ischool.berkeley.edu,0,0,1,1,Megan Jasek,Alumni (MIDS 2016),F,2016,3,358744,-122.3930054,47.54150391
 james.jasper@ischool.berkeley.edu,0,0,1,1,James Jasper,Alumni (MIDS 2016),M,2016,2,92560,-122.1856995,47.67840576
 tiffanyjaya@ischool.berkeley.edu,0,0,1,0,Tiffany Jaya,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 c.jentzsch@ischool.berkeley.edu,0,0,1,0,Christoph Jentzsch,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 cmjepeway@ischool.berkeley.edu,0,1,0,0,Chris Jepeway,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-anup.jha@ischool.berkeley.edu,0,0,1,0,Anup Jha,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+anup.jha@ischool.berkeley.edu,0,1,0,0,Anup Jha,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 siduojiang@ischool.berkeley.edu,0,0,1,1,Siduo Jiang,Alumni (MIDS 2021),M,2021,2,54,-98.64980316,29.45509338
 yjin@ischool.berkeley.edu,0,0,1,0,Yi Jin,Alumni (MIDS 2017),U,2017,1,NA,NA,NA
 zhongqiao.jin@ischool.berkeley.edu,0,0,1,0,Zhongqiao Jin,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 yang.jing@ischool.berkeley.edu,0,1,0,0,Yang Jing,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 adamjohns@ischool.berkeley.edu,0,1,0,0,Adam Johns,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 keanejohnson@ischool.berkeley.edu,0,1,0,0,Keane Johnson,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
-richard.johnson@ischool.berkeley.edu,0,0,1,0,Richard Johnson,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+richard.johnson@ischool.berkeley.edu,0,1,0,0,Richard Johnson,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 jasen@ischool.berkeley.edu,0,1,0,0,Jasen Jones,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 takunda@ischool.berkeley.edu,1,0,0,0,Takunda Jora,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
-martin.jung@ischool.berkeley.edu,0,0,1,0,Martin Jung,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+martin.jung@ischool.berkeley.edu,0,1,0,0,Martin Jung,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 jungy06@ischool.berkeley.edu,1,0,0,0,Yeonjoo Jung,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 amkabatznick@ischool.berkeley.edu,0,0,1,0,Andrew Kabatznick,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 samkabue@ischool.berkeley.edu,0,0,1,0,Samuel Kabue,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-samuel.kahn@ischool.berkeley.edu,0,0,1,0,Samuel Kahn,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+samuel.kahn@ischool.berkeley.edu,0,1,0,0,Samuel Kahn,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 james.kajdasz@gmail.com,0,0,1,0,James Kajdasz,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
-mkane@ischool.berkeley.edu,0,1,0,0,Matthew Kane,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+mkane@ischool.berkeley.edu,0,0,1,0,Matthew Kane,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 dougkang@ischool.berkeley.edu,1,0,0,0,Doug Kang,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 jasonkang@ischool.berkeley.edu,0,1,0,0,Jason Kang,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 kalvin.kao@ischool.berkeley.edu,1,0,0,0,Kalvin Kao,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 amitkarmakar@ischool.berkeley.edu,0,0,1,0,Amitabha Karmakar,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-gautam@ischool.berkeley.edu,0,1,0,0,Gautam Karnataki,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+gautam@ischool.berkeley.edu,0,0,1,0,Gautam Karnataki,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 rohinik@ischool.berkeley.edu,0,0,1,1,Rohini Kashibatla,Alumni (MIDS 2020),F,2020,1,49,-122.0438004,37.31770325
 brosskatz@ischool.berkeley.edu,0,1,0,0,Ross Katz,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 kavoussi@ischool.berkeley.edu,0,0,1,0,Cullen Kavoussi,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
@@ -461,32 +461,32 @@ kelleydac@ischool.berkeley.edu,0,1,0,0,Douglas Kelley,Alumni (MIDS 2015),M,2015,
 skelley@ischool.berkeley.edu,1,0,0,0,Sarah Kelley,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 gkelly@ischool.berkeley.edu,0,0,1,1,Gerard Kelly,Alumni (MIDS 2018),M,2018,3,53,151.7860107,-32.92810059
 camkennedy@ischool.berkeley.edu,0,1,0,0,Cameron Kennedy,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
-mkennedy@ischool.berkeley.edu,0,1,0,0,Michael Kennedy,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
+mkennedy@ischool.berkeley.edu,0,0,1,0,Michael Kennedy,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 jrkenneyjr@ischool.berkeley.edu,0,0,1,0,John Kenney,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 dkenny@ischool.berkeley.edu,0,0,1,1,Dylan Kenny,Alumni (MIDS 2018),M,2018,3,66,-75.0943985,39.86560059
 dkent@ischool.berkeley.edu,0,0,1,1,Daniel Kent,Alumni (MIDS 2019),M,2019,3,501,-121.975296,37.34170532
 ekepner@ischool.berkeley.edu,0,1,0,0,Evan Kepner,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
 skessler@ischool.berkeley.edu,1,0,0,0,Shawn Kessler,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 mumin@ischool.berkeley.edu,0,0,1,0,Mumin Khan,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-khannag@ischool.berkeley.edu,0,1,0,0,Gaurav Khanna,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+khannag@ischool.berkeley.edu,0,0,1,0,Gaurav Khanna,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 aditi.khullar@ischool.berkeley.edu,1,0,0,0,Aditi Khullar,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
-aprilkim@ischool.berkeley.edu,0,1,0,0,April Kim,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
-hyunchul78@ischool.berkeley.edu,0,1,0,0,Hyunchul Kim,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
+aprilkim@ischool.berkeley.edu,0,0,1,0,April Kim,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
+hyunchul78@ischool.berkeley.edu,0,0,1,0,Hyunchul Kim,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 michelle.m.kim@ischool.berkeley.edu,0,0,1,1,Michelle Kim,Alumni (MIDS 2018),F,2018,1,68,-76.99330139,39.06799316
 ryan.kim@ischool.berkeley.edu,0,0,1,0,Ryan K Kim,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 soodongandrew@ischool.berkeley.edu,0,0,1,0,Soodong Kim,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
 corykind@ischool.berkeley.edu,0,0,1,0,Cory Kind,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 cking@ischool.berkeley.edu,0,0,1,0,Casey King,Alumni (MIDS 2021),U,2021,1,NA,NA,NA
 king@ischool.berkeley.edu,0,1,0,0,James King,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-mike.king@ischool.berkeley.edu,0,0,1,0,William King,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+mike.king@ischool.berkeley.edu,0,1,0,0,William King,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 lkirch@ischool.berkeley.edu,0,0,1,1,Lisa Kirch,Alumni (MIDS 2015),F,2015,2,53,-81.36270142,30.12229919
-gunnarklee@ischool.berkeley.edu,0,1,0,0,Gunnar Kleemann,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
+gunnarklee@ischool.berkeley.edu,0,0,1,0,Gunnar Kleemann,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 boris@ischool.berkeley.edu,0,0,1,0,Boris Kletser,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 akodaka@ischool.berkeley.edu,0,0,1,0,Andres Kodaka,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 nitin.kohli@ischool.berkeley.edu,0,0,1,0,Nitin Kohli,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 armand.kok@ischool.berkeley.edu,0,0,1,0,Armand Kok,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 heather.koo@ischool.berkeley.edu,0,1,0,0,Heather Koo,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
-kevin.kory@ischool.berkeley.edu,0,1,0,0,Kevin Kory,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
+kevin.kory@ischool.berkeley.edu,0,0,1,0,Kevin Kory,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 nikhitakoul@ischool.berkeley.edu,0,0,1,0,Nikhita Koul,Alumni (MIDS 2015),F,2015,2,NA,NA,NA
 brock.kowalchuk@ischool.berkeley.edu,1,0,0,0,Brock Kowalchuk,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 beaukramer@ischool.berkeley.edu,1,0,0,0,Beau Kramer,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
@@ -496,7 +496,7 @@ nk@ischool.berkeley.edu,0,0,1,1,Natarajan Krishnaswami,Alumni (MIDS 2016),M,2016
 fkrunic@ischool.berkeley.edu,0,0,1,1,Filip Krunic,Alumni (MIDS 2016),M,2016,2,50,-117.8302002,33.68159485
 divyaraaga@ischool.berkeley.edu,0,0,1,0,Divya Raaga Kukati Sudhakara Babu,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 nkuklisova@ischool.berkeley.edu,0,0,1,1,Nina Kuklisova,Alumni (MIDS 2016),F,2016,2,27,-73.95880127,40.76519775
-rahul.kulkarni@ischool.berkeley.edu,0,0,1,0,Rahul Kulkarni,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+rahul.kulkarni@ischool.berkeley.edu,0,1,0,0,Rahul Kulkarni,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 kumar.abhishek@ischool.berkeley.edu,0,0,1,1,Abhishek Kumar,Alumni (MIDS 2016),M,2016,3,47,77.58551025,12.96339417
 neha.kumar@ischool.berkeley.edu,0,0,1,0,Neha Kumar,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 tom.kunicki@ischool.berkeley.edu,0,0,1,0,Tom Kunicki,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
@@ -505,25 +505,25 @@ jmkupe@ischool.berkeley.edu,0,1,0,0,Jordan Kupersmith,Alumni (MIDS 2018),M,2018,
 pkurapati@ischool.berkeley.edu,0,0,1,0,Pavan Kurapati,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 nikhil@ischool.berkeley.edu,0,0,1,1,Nikhil Kurup,Alumni (MIDS 2015),M,2015,3,89,-82.6147995,28.04750061
 amy.xm.lai@ischool.berkeley.edu,1,0,0,0,Amy Lai,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
-ajlam@ischool.berkeley.edu,0,1,0,0,Adrian Lam,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-alice.lam@ischool.berkeley.edu,0,0,1,0,Alice Lam,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
-andrewlam@ischool.berkeley.edu,0,0,1,0,Andrew Lam,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
+ajlam@ischool.berkeley.edu,0,0,1,0,Adrian Lam,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+alice.lam@ischool.berkeley.edu,0,1,0,0,Alice Lam,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
+andrewlam@ischool.berkeley.edu,0,1,0,0,Andrew Lam,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 lucaschadwicklam@ischool.berkeley.edu,0,0,1,1,Lucas Lam,Alumni (MIDS 2021),M,2021,3,46,-87.70429993,41.92089844
 james.lamb@ischool.berkeley.edu,0,0,1,0,James Lamb,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-jlandesman@ischool.berkeley.edu,0,1,0,0,Jonathan Landesman,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
+jlandesman@ischool.berkeley.edu,0,0,1,0,Jonathan Landesman,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 aelane@ischool.berkeley.edu,0,0,1,0,Annie Lane,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 jelane@ischool.berkeley.edu,0,1,0,0,Jackson Lane,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 dlarance@ischool.berkeley.edu,1,0,0,0,David Larance,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 andrewlarimer@ischool.berkeley.edu,0,0,1,1,Andrew Larimer,Alumni (MIDS 2019),M,2019,1,64,-97.75299835,30.40319824
 robin.lashof@ischool.berkeley.edu,0,0,1,0,Robin Lashof-Regas,Alumni (MIDS 2021),M,2021,3,NA,NA,NA
-alexlau@ischool.berkeley.edu,0,0,1,0,Alexander Lau,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+alexlau@ischool.berkeley.edu,0,1,0,0,Alexander Lau,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 emmylau@ischool.berkeley.edu,0,0,1,0,Emmy Lau,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 hoichunlaw@ischool.berkeley.edu,0,0,1,1,Hoi Chun Law,Alumni (MIDS 2020),U,2020,2,95,114.2174988,22.28199768
 erikaananda@ischool.berkeley.edu,0,0,1,1,Erika Lawrence,Alumni (MIDS 2018),F,2018,2,78,2.304397583,48.74980164
 thanh@ischool.berkeley.edu,0,1,0,0,Thanh Le,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 cgleach@ischool.berkeley.edu,1,0,0,0,Clay Leach,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 annie.lee@ischool.berkeley.edu,0,0,1,0,Annie Lee,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
-dlee@ischool.berkeley.edu,0,1,0,0,Daniel Lee,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+dlee@ischool.berkeley.edu,0,0,1,0,Daniel Lee,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 daniel.lee@ischool.berkeley.edu,0,0,1,0,Daniel Lee,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 jeylee@ischool.berkeley.edu,0,0,1,1,Jae Il Lee,Alumni (MIDS 2019),M,2019,2,52,-121.8641052,37.2124939
 joseph.lee@ischool.berkeley.edu,1,0,0,0,Joseph Lee,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
@@ -534,11 +534,11 @@ raymondlee@ischool.berkeley.edu,0,0,1,0,Raymond Lee,Alumni (MIDS 2019),M,2019,2,
 rosalind@ischool.berkeley.edu,0,0,1,1,Rosalind Lee,Alumni (MIDS 2015),F,2015,3,45,-122.0438004,37.31770325
 yannie@ischool.berkeley.edu,1,0,0,0,Yannie Lee,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 alenart@ischool.berkeley.edu,0,0,1,1,Adam Lenart,Alumni (MIDS 2018),M,2018,2,70,12.58920288,55.6802063
-adam.letcher@ischool.berkeley.edu,0,1,0,0,Adam Letcher,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+adam.letcher@ischool.berkeley.edu,0,0,1,0,Adam Letcher,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 francis.leung@ischool.berkeley.edu,0,0,1,0,Chun Chiu Francis Anthony Leung,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 rogerleung@ischool.berkeley.edu,0,1,0,0,Roger Leung,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
-ashley.dsci@ischool.berkeley.edu,0,1,0,0,Ashley Levato,Alumni (MIDS 2016),F,2016,1,NA,NA,NA
-nwlevy@ischool.berkeley.edu,0,0,1,0,Noah Levy,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
+ashley.dsci@ischool.berkeley.edu,0,0,1,0,Ashley Levato,Alumni (MIDS 2016),F,2016,1,NA,NA,NA
+nwlevy@ischool.berkeley.edu,0,1,0,0,Noah Levy,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 m5@ischool.berkeley.edu,0,1,0,0,Mary Lewis,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
 louisli@ischool.berkeley.edu,0,0,1,0,Ning Li,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
 karen.liang@ischool.berkeley.edu,0,0,1,0,Karen Liang,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
@@ -547,22 +547,22 @@ zenla@ischool.berkeley.edu,0,0,1,1,Zenobia Liendo,Alumni (MIDS 2018),F,2018,3,89
 kaiqi@ischool.berkeley.edu,0,0,1,1,Kai Qi Lim,Alumni (MIDS 2020),F,2020,2,259,103.8862915,1.369094849
 rolandlim@ischool.berkeley.edu,0,0,1,0,Roland Lim,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 arthur.lima@ischool.berkeley.edu,0,0,1,1,Arthur Lima,Alumni (MIDS 2019),M,2019,1,64,-46.64089966,-23.6282959
-cendylin@ischool.berkeley.edu,0,0,1,0,Cendy Lin,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
-cclin@ischool.berkeley.edu,0,0,1,0,Curtis Lin,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+cendylin@ischool.berkeley.edu,0,1,0,0,Cendy Lin,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
+cclin@ischool.berkeley.edu,0,1,0,0,Curtis Lin,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 dlin@ischool.berkeley.edu,1,0,0,0,Darren Lin,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
-haifenglin@ischool.berkeley.edu,0,1,0,0,Haifeng Lin,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-kuanlin@ischool.berkeley.edu,0,0,1,0,Kuan Lin,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
-sharonxlin@ischool.berkeley.edu,0,1,0,0,Sharon Lin,Alumni (MIDS 2015),F,2015,1,NA,NA,NA
+haifenglin@ischool.berkeley.edu,0,0,1,0,Haifeng Lin,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+kuanlin@ischool.berkeley.edu,0,1,0,0,Kuan Lin,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+sharonxlin@ischool.berkeley.edu,0,0,1,0,Sharon Lin,Alumni (MIDS 2015),F,2015,1,NA,NA,NA
 steven@ischool.berkeley.edu,0,0,1,0,Steven Lin,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 winlin@ischool.berkeley.edu,0,0,1,0,Winston Lin,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 ylin@ischool.berkeley.edu,0,0,1,0,Yuqing Lin,Alumni (MIDS 2019),U,2019,3,NA,NA,NA
-fjlind8@ischool.berkeley.edu,0,1,0,0,Eric Lind,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
+fjlind8@ischool.berkeley.edu,0,0,1,0,Eric Lind,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 david.lindsey@ischool.berkeley.edu,0,0,1,0,David Lindsey,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 geoffrey.link@ischool.berkeley.edu,0,0,1,0,Geoffrey Link,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 cliu@ischool.berkeley.edu,0,0,1,1,Chenglin Liu,Alumni (MIDS 2018),M,2018,2,115,-73.94609833,40.70089722
-dongzl@ischool.berkeley.edu,0,1,0,0,Dongzi Liu,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
+dongzl@ischool.berkeley.edu,0,0,1,0,Dongzi Liu,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
 elyliu@ischool.berkeley.edu,0,0,1,1,Ely Liu,Alumni (MIDS 2019),M,2019,3,73,-118.5957031,34.15539551
-jasonliu@ischool.berkeley.edu,0,1,0,0,Jason Liu,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+jasonliu@ischool.berkeley.edu,0,0,1,0,Jason Liu,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 michelleliu@ischool.berkeley.edu,0,0,1,0,Michelle Liu,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
 sam.liu@ischool.berkeley.edu,0,0,1,0,Samuel Liu,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 wenqiliu@ischool.berkeley.edu,0,1,0,0,Wenqi Liu,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
@@ -572,10 +572,10 @@ jtomaslobo@ischool.berkeley.edu,0,0,1,0,Tomas Lobo,Alumni (MIDS 2020),M,2020,2,N
 klomurray@ischool.berkeley.edu,0,0,1,0,Keith LoMurray,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 jason.j.lott@ischool.berkeley.edu,0,1,0,0,Jason Lott,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 jia.lu@ischool.berkeley.edu,0,0,1,0,Jia Lu,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
-joshlu@ischool.berkeley.edu,0,0,1,0,Joshua Lu,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
+joshlu@ischool.berkeley.edu,0,1,0,0,Joshua Lu,Alumni (MIDS 2015),M,2015,2,NA,NA,NA
 vivian.c.lu@ischool.berkeley.edu,0,0,1,0,Vivian Lu,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 cludwinski@ischool.berkeley.edu,0,0,1,1,Celia Ludwinski,Alumni (MIDS 2018),F,2018,1,48,-117.9477005,33.92999268
-janson@ischool.berkeley.edu,0,0,1,0,Janson Lui,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+janson@ischool.berkeley.edu,0,1,0,0,Janson Lui,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 rluna@ischool.berkeley.edu,1,0,0,0,Rodrigo Luna,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 luodanqi123@ischool.berkeley.edu,0,0,1,0,Danqi Luo,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 jun.luo@ischool.berkeley.edu,0,1,0,0,Jun Luo,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
@@ -584,7 +584,7 @@ jjm011@ischool.berkeley.edu,0,0,1,0,Junjie Ma,Alumni (MIDS 2021),M,2021,1,NA,NA,
 tma@ischool.berkeley.edu,0,1,0,0,Zhengyu (Taylor) Ma,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 cmaalouf@ischool.berkeley.edu,1,0,0,0,Charles Maalouf,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 samacart@ischool.berkeley.edu,0,1,0,0,Simon Macarthur,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-kyle.macilvain@ischool.berkeley.edu,0,0,1,0,Kyle MacIlvain,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+kyle.macilvain@ischool.berkeley.edu,0,1,0,0,Kyle MacIlvain,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 ross.maclean@ischool.berkeley.edu,0,0,1,0,Ross MacLean,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 ramseyamagana@ischool.berkeley.edu,1,0,0,0,Ramsey Magana,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 jmahle@ischool.berkeley.edu,0,1,0,0,Jennifer Mahle,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
@@ -594,7 +594,7 @@ kingsuk.maitra@ischool.berkeley.edu,1,0,0,0,Kingsuk Maitra,Alumni (MIDS 2019),M,
 rmajumder@ischool.berkeley.edu,0,0,1,0,Rishikesh Majumder,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 atm@ischool.berkeley.edu,0,1,0,0,Arthur Mak,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
 mursil@ischool.berkeley.edu,0,1,0,0,Mursil Makhani,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-jacquesmakutonin@ischool.berkeley.edu,0,1,0,0,Jacques Makutonin,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+jacquesmakutonin@ischool.berkeley.edu,0,0,1,0,Jacques Makutonin,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 mamrotha@ischool.berkeley.edu,1,0,0,0,Andrew Mamroth,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 imran.manji@ischool.berkeley.edu,0,0,1,1,Imran Manji,Alumni (MIDS 2021),M,2021,3,94,-122.4059982,37.77709961
 kanitha@ischool.berkeley.edu,0,1,0,0,Kanitha Mann,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
@@ -602,8 +602,8 @@ rmanzano@ischool.berkeley.edu,0,0,1,0,Romulo Manzano,Alumni (MIDS 2019),M,2019,2
 tao.mao@ischool.berkeley.edu,0,0,1,0,Tao Mao,Alumni (MIDS 2015),U,2015,3,NA,NA,NA
 krista.mar@ischool.berkeley.edu,0,0,1,1,Krista Mar,Alumni (MIDS 2018),F,2018,3,123,-75.16570282,39.95429993
 faria@ischool.berkeley.edu,0,0,1,0,Faria Mardhani,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
-marks@ischool.berkeley.edu,0,0,1,0,Michael Marks,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
-scott.marler@ischool.berkeley.edu,0,0,1,0,Scott Marler,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
+marks@ischool.berkeley.edu,0,1,0,0,Michael Marks,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+scott.marler@ischool.berkeley.edu,0,1,0,0,Scott Marler,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 jfmyq9@ischool.berkeley.edu,0,0,1,0,Jared Maslin,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
 stephanie.mather@ischool.berkeley.edu,0,1,0,0,Stephanie Mather,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 janak@ischool.berkeley.edu,0,0,1,0,Janak Mayer,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
@@ -625,29 +625,29 @@ tmetz@ischool.berkeley.edu,0,0,1,1,Travis Metz,Alumni (MIDS 2020),M,2020,3,32,-7
 jenniferm@ischool.berkeley.edu,0,0,1,1,Jennifer Middleton,Alumni (MIDS 2020),F,2020,2,107,-72.04489899,41.36250305
 lance.miles@ischool.berkeley.edu,0,0,1,1,Lance Miles,Alumni (MIDS 2019),M,2019,1,55,-118.2440033,34.05439758
 miller@ischool.berkeley.edu,0,0,1,0,Christopher Miller,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
-clay@ischool.berkeley.edu,0,0,1,0,Clayton Miller,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
+clay@ischool.berkeley.edu,0,1,0,0,Clayton Miller,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 jake.miller@ischool.berkeley.edu,0,0,1,1,Jake Miller,Alumni (MIDS 2019),M,2019,3,56,-77.02529907,38.95219421
-mmillervedam@ischool.berkeley.edu,0,0,1,0,Maya Miller-Vedam,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
-cmillsop@ischool.berkeley.edu,0,0,1,0,Christian Millsop,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+mmillervedam@ischool.berkeley.edu,0,1,0,0,Maya Miller-Vedam,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
+cmillsop@ischool.berkeley.edu,0,1,0,0,Christian Millsop,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 lisajune@ischool.berkeley.edu,0,0,1,1,Lisa Minas,Alumni (MIDS 2017),F,2017,3,234,-84.48670197,39.12460327
 mmiranda@ischool.berkeley.edu,0,0,1,1,Menandro Miranda,Alumni (MIDS 2017),M,2017,2,53,-122.0289001,37.53370667
 anirudh_mittal@ischool.berkeley.edu,0,0,1,0,Anirudh Mittal,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 malini.mittal@ischool.berkeley.edu,0,0,1,0,Malini Mittal,Alumni (MIDS 2016),F,2016,1,NA,NA,NA
-kmo@ischool.berkeley.edu,0,0,1,0,Katie Mo,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+kmo@ischool.berkeley.edu,0,1,0,0,Katie Mo,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 vcz@ischool.berkeley.edu,0,0,1,0,Vincenzo Moccia,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-nach.mohan@ischool.berkeley.edu,0,0,1,0,Nach Mohan,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
+nach.mohan@ischool.berkeley.edu,0,1,0,0,Nach Mohan,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 guillermo.monge@ischool.berkeley.edu,0,0,1,1,Guillermo Monge,Alumni (MIDS 2016),M,2016,3,91,-122.3992996,37.76420593
-dongukmoon@ischool.berkeley.edu,0,1,0,0,Donguk Moon,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-hyera.moon@ischool.berkeley.edu,0,0,1,0,Hyera Moon,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
+dongukmoon@ischool.berkeley.edu,0,0,1,0,Donguk Moon,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+hyera.moon@ischool.berkeley.edu,0,1,0,0,Hyera Moon,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
 bryanmoore@ischool.berkeley.edu,0,0,1,1,Bryan Moore,Alumni (MIDS 2018),M,2018,1,56,-118.3029022,34.07620239
 jason.k.moore@ischool.berkeley.edu,0,0,1,0,Jason Moore,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 lee.moore@ischool.berkeley.edu,0,0,1,0,Lee Moore,Alumni (MIDS 2020),F,2020,2,NA,NA,NA
 jmorales4@yahoo.com,0,0,1,0,Joseph Morales,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
-arnobiomorelix@ischool.berkeley.edu,0,0,1,0,Arnobio Morelix,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
+arnobiomorelix@ischool.berkeley.edu,0,1,0,0,Arnobio Morelix,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 brynamo@ischool.berkeley.edu,0,0,1,1,Bryan Morgan,Alumni (MIMS 2016),M,2016,3,80,-122.3451004,47.63479614
 hmorgan@ischool.berkeley.edu,0,0,1,0,Hannah Morgan,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 andrew.morris@ischool.berkeley.edu,0,0,1,0,Andrew Morris,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-neilmk@ischool.berkeley.edu,0,1,0,0,Neil Mukerje,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+neilmk@ischool.berkeley.edu,0,0,1,0,Neil Mukerje,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 dmukhop@ischool.berkeley.edu,0,0,1,1,Debasish Mukhopadhyay,Alumni (MIDS 2019),M,2019,1,163,-122.0404053,47.62600708
 rob.mulla@ischool.berkeley.edu,0,0,1,0,Robert Mulla,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 alexmue@ischool.berkeley.edu,0,0,1,0,Alexander Müller,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
@@ -668,10 +668,10 @@ rohit.nair@ischool.berkeley.edu,0,0,1,0,Rohit Nair,Alumni (MIDS 2018),M,2018,1,N
 adityanakai@ischool.berkeley.edu,0,0,1,1,Aditya Nakai,Alumni (MIDS 2018),M,2018,3,74,-73.63680267,40.74360657
 nathan.nam@ischool.berkeley.edu,0,1,0,0,Nathan (Dae Hyun) Nam,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 sangki.nam@ischool.berkeley.edu,0,1,0,0,Sang Ki Nam,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
-ahana.namburi@ischool.berkeley.edu,0,1,0,0,Ahana Namburi,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
+ahana.namburi@ischool.berkeley.edu,0,0,1,0,Ahana Namburi,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 vid.nath@ischool.berkeley.edu,0,0,1,0,Vidhu Nath,Alumni (MIDS 2021),M,2021,3,NA,NA,NA
 aniruddh.n@ischool.berkeley.edu,0,1,0,0,Aniruddh Nautiyal,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
-marcial.nava@ischool.berkeley.edu,0,0,1,0,Marcial Nava,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+marcial.nava@ischool.berkeley.edu,0,1,0,0,Marcial Nava,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 sarah@ischool.berkeley.edu,0,1,0,0,Sarah Neff,Alumni (MIDS 2016),F,2016,3,NA,NA,NA
 matthewnelson@ischool.berkeley.edu,0,0,1,0,Matthew Nelson,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 anemani@ischool.berkeley.edu,1,0,0,0,Aditya Nemani,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
@@ -680,7 +680,7 @@ martin.r.neuhard@ischool.berkeley.edu,0,0,1,1,Martin Neuhard,Alumni (MIDS 2017),
 kasey.ng@ischool.berkeley.edu,1,0,0,0,Kasey Ng,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 patng@ischool.berkeley.edu,0,0,1,1,Patrick Ng,Alumni (MIDS 2017),M,2017,2,60,114.1500854,22.290802
 nguyen.hien@ischool.berkeley.edu,0,0,1,0,Hien Nguyen,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-james.n@ischool.berkeley.edu,0,0,1,0,James Nguyen,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+james.n@ischool.berkeley.edu,0,1,0,0,James Nguyen,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 julie.nguyen@ischool.berkeley.edu,0,0,1,0,Julie Nguyen,Alumni (MIDS 2021),F,2021,3,NA,NA,NA
 xuanthu@ischool.berkeley.edu,0,0,1,0,Xuan Thu Nguyen,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 knham@ischool.berkeley.edu,0,0,1,1,Kai Nham,Alumni (MIDS 2021),M,2021,1,53,-121.441803,38.56390381
@@ -690,24 +690,24 @@ iniu@ischool.berkeley.edu,0,1,0,0,I-Wae Niu,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 nocella@ischool.berkeley.edu,0,0,1,1,Alex Nocella,Alumni (MIDS 2018),M,2018,2,46,-71.12840271,42.373703
 priyankara.nonis@ischool.berkeley.edu,0,0,1,0,Pri Nonis,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 bradley.nott@ischool.berkeley.edu,1,0,0,0,Bradley Nott,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
-veronika@ischool.berkeley.edu,0,0,1,0,Veronika Nuretdinova,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
+veronika@ischool.berkeley.edu,0,1,0,0,Veronika Nuretdinova,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
 doneil@ischool.berkeley.edu,0,0,1,1,Danielle O'Neil,Alumni (MIDS 2019),F,2019,1,37,-90.51670074,38.57589722
 gochs@ischool.berkeley.edu,0,1,0,0,Giles Ochs,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 sho.ohata@ischool.berkeley.edu,0,0,1,1,Sho Ohata,Alumni (MIDS 2017),M,2017,1,71,-95.17469788,30.00430298
 wioldfather@ischool.berkeley.edu,0,0,1,0,Will Oldfather,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
-dolmstead@ischool.berkeley.edu,0,0,1,0,Daniel Olmstead,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
-ajolson@ischool.berkeley.edu,0,0,1,0,Aaron Olson,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+dolmstead@ischool.berkeley.edu,0,1,0,0,Daniel Olmstead,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+ajolson@ischool.berkeley.edu,0,1,0,0,Aaron Olson,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 marguerite.oneto@ischool.berkeley.edu,0,1,0,0,Marguerite Oneto,Alumni (MIDS 2016),F,2016,3,NA,NA,NA
 stanley.opara@ischool.berkeley.edu,0,1,0,0,Stanley Opara,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 ernesto.oropeza@ischool.berkeley.edu,0,1,0,0,Ernesto Oropeza,Alumni (MIDS 2021),M,2021,3,NA,NA,NA
-dave.owen@ischool.berkeley.edu,0,0,1,0,Dave Owen,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
+dave.owen@ischool.berkeley.edu,0,1,0,0,Dave Owen,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 kent.owen@ischool.berkeley.edu,1,0,0,0,Kent Owen,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 saad.padela@ischool.berkeley.edu,1,0,0,0,Saad Padela,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 sandippalit@ischool.berkeley.edu,0,1,0,0,Sandip Palit,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 mpaluta@ischool.berkeley.edu,0,0,1,1,Mark Paluta,Alumni (MIDS 2019),M,2019,3,126,-122.3414001,47.60339355
 rpamidimarri@ischool.berkeley.edu,0,1,0,0,RaghuRam Pamidimarri,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 prajakta.p@ischool.berkeley.edu,0,1,0,0,Prajakta Pandharkar,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
-yp2182@ischool.berkeley.edu,0,0,1,0,Ye Pang,Alumni (MIDS 2019),U,2019,2,NA,NA,NA
+yp2182@ischool.berkeley.edu,0,1,0,0,Ye Pang,Alumni (MIDS 2019),U,2019,2,NA,NA,NA
 panza@ischool.berkeley.edu,0,0,1,0,Anthony Panza,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 c.papadimitriou@ischool.berkeley.edu,0,0,1,0,Christina Papadimitriou,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
 kpapandrew@ischool.berkeley.edu,0,1,0,0,Kathryn Papandrew,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
@@ -717,9 +717,9 @@ taeil.park@ischool.berkeley.edu,0,0,1,0,Taeil Park,Alumni (MIDS 2021),M,2021,3,N
 beth@milkandhoney.ai,0,1,0,0,Beth Partridge,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
 akhil.patel@ischool.berkeley.edu,0,0,1,1,Akhil Patel,Alumni (MIDS 2019),M,2019,1,149,-89.03250122,42.32940674
 ankit@ischool.berkeley.edu,0,0,1,0,Ankitkumar Patel,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
-NiharPatel@berkeley.edu,0,0,1,0,Nihar Patel,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
+NiharPatel@berkeley.edu,0,1,0,0,Nihar Patel,Alumni (MIDS 2016),M,2016,2,NA,NA,NA
 priteshnpatel@ischool.berkeley.edu,0,1,0,0,Pritesh Patel,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
-stp8954@ischool.berkeley.edu,0,0,1,0,Sanket Patel,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
+stp8954@ischool.berkeley.edu,0,1,0,0,Sanket Patel,Alumni (MIDS 2018),M,2018,2,NA,NA,NA
 npatwa@ischool.berkeley.edu,0,1,0,0,Nital Patwa,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 paulang@ischool.berkeley.edu,0,1,0,0,Angshuman Paul,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 jjpeh@ischool.berkeley.edu,0,0,1,0,Jun Jun Peh,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
@@ -727,7 +727,7 @@ guangyu.pei@ischool.berkeley.edu,0,0,1,1,Guangyu Pei,Alumni (MIDS 2019),M,2019,2
 spelkey@ischool.berkeley.edu,0,1,0,0,Steve Pelkey,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 james.peng@ischool.berkeley.edu,0,0,1,1,James Peng,Alumni (MIDS 2017),M,2017,1,67,114.1500854,22.290802
 mpera@ischool.berkeley.edu,0,1,0,0,Megan Pera,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
-eperkins@ischool.berkeley.edu,0,0,1,0,Eric Perkins,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
+eperkins@ischool.berkeley.edu,0,1,0,0,Eric Perkins,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 elizabeth.peters@ischool.berkeley.edu,0,0,1,1,Elizabeth Peters,Alumni (MIDS 2015),F,2015,3,79,-76.6411972,39.30459595
 paulrpetit@ischool.berkeley.edu,0,1,0,0,Paul Petit,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 ebpetrov@ischool.berkeley.edu,0,0,1,0,Elena Petrov,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
@@ -736,23 +736,23 @@ npflaum@ischool.berkeley.edu,0,1,0,0,Noah Pflaum,Alumni (MIDS 2020),M,2020,1,NA,
 chrispham@ischool.berkeley.edu,0,0,1,0,Chris Pham,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 tedapham@ischool.berkeley.edu,0,0,1,0,Ted Pham,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 hoanghphan@ischool.berkeley.edu,0,0,1,0,Hoang Phan,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
-anish.philip@ischool.berkeley.edu,0,0,1,0,Anish Philip,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+anish.philip@ischool.berkeley.edu,0,1,0,0,Anish Philip,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 jennifer.p@ischool.berkeley.edu,0,0,1,0,Jennifer Philippou,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
 julian.phillips@ischool.berkeley.edu,0,1,0,0,Julian Phillips,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 laura.pintos@ischool.berkeley.edu,0,1,0,0,Laura Pintos,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 drewplant@ischool.berkeley.edu,0,0,1,1,Drew Plant,Alumni (MIDS 2017),M,2017,3,91,-122.0747986,37.40429688
 kplath@ischool.berkeley.edu,1,0,0,0,Kathryn Plath,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
-lorrel.plimier@ischool.berkeley.edu,0,0,1,0,Lorrel Plimier,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+lorrel.plimier@ischool.berkeley.edu,0,1,0,0,Lorrel Plimier,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 justinplumley@ischool.berkeley.edu,1,0,0,0,Justin Plumley,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 j.podracky@ischool.berkeley.edu,0,0,1,1,Jennifer Podracky,Alumni (MIDS 2019),F,2019,1,61,-71.09870148,42.36489868
 melwinj7@ischool.berkeley.edu,0,0,1,0,Melwin Poovakottu,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 andreapope@ischool.berkeley.edu,0,1,0,0,Andrea Pope,Alumni (MIDS 2017),F,2017,3,NA,NA,NA
 mjp058347@ischool.berkeley.edu,0,1,0,0,Matt Post,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 mepotts@ischool.berkeley.edu,0,1,0,0,Matthew Potts,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
-miketp333@ischool.berkeley.edu,0,0,1,0,Michael Powers,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
+miketp333@ischool.berkeley.edu,0,1,0,0,Michael Powers,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 divpat18@ischool.berkeley.edu,1,0,0,0,Divyang Prateek,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 apraturu@ischool.berkeley.edu,0,1,0,0,Anusha Praturu,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
-danprice@ischool.berkeley.edu,0,0,1,0,Danon Price,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
+danprice@ischool.berkeley.edu,0,1,0,0,Danon Price,Alumni (MIDS 2020),M,2020,2,NA,NA,NA
 mproetsch@ischool.berkeley.edu,0,1,0,0,Matthew Proetsch,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 elleproust@ischool.berkeley.edu,0,0,1,1,Eleanor Proust,Alumni (MIDS 2020),F,2020,3,45,144.9544067,-37.81089783
 mprout@ischool.berkeley.edu,0,0,1,0,Matthew Prout,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
@@ -760,7 +760,7 @@ djamal@ischool.berkeley.edu,1,0,0,0,Djamal Pullom,Alumni (MIDS 2017),M,2017,1,NA
 bwputman@ischool.berkeley.edu,0,1,0,0,Bradley Putman,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 ahsen@ischool.berkeley.edu,0,0,1,0,Mirza Qamar,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 tqi@ischool.berkeley.edu,0,0,1,0,Jasmine Tianjiao Qi,Alumni (MIDS 2016),F,2016,3,NA,NA,NA
-yangyang.qian@ischool.berkeley.edu,0,0,1,0,Yang Yang Qian,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
+yangyang.qian@ischool.berkeley.edu,0,1,0,0,Yang Yang Qian,Alumni (MIDS 2019),M,2019,2,NA,NA,NA
 joan.qiu@ischool.berkeley.edu,0,1,0,0,Yue Qiu,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 marcelo.queiroz@ischool.berkeley.edu,0,0,1,1,Marcelo Queiroz,Alumni (MIDS 2019),M,2019,3,98,-89.67590332,35.06440735
 timothy_quek@ischool.berkeley.edu,0,0,1,1,Timothy Quek,Alumni (MIDS 2020),M,2020,1,70,103.8367004,1.365203857
@@ -835,18 +835,18 @@ briansch@ischool.berkeley.edu,0,1,0,0,Brian Schoenleber,Alumni (MIDS 2021),M,202
 natschub@ischool.berkeley.edu,0,0,1,0,Nathaniel Schub,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 tom@ischool.berkeley.edu,0,1,0,0,Tom Seddon,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 marek.sedlacek@ischool.berkeley.edu,0,0,1,1,Marek Sedlacek,Alumni (MIDS 2016),M,2016,2,46,-122.4121017,37.75059509
-ksjeyabarani@ischool.berkeley.edu,0,0,1,0,Jeya Seenivasagam,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
+ksjeyabarani@ischool.berkeley.edu,0,1,0,0,Jeya Seenivasagam,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
 thaddeussegura@ischool.berkeley.edu,0,0,1,1,Thaddeus Segura,Alumni (MIDS 2021),M,2021,3,63,-94.21970367,36.35189819
 miki.seltzer@ischool.berkeley.edu,0,1,0,0,Miki Seltzer,Alumni (MIDS 2016),F,2016,2,NA,NA,NA
 shwetasen@ischool.berkeley.edu,0,1,0,0,Shweta Sen,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 cmseney@ischool.berkeley.edu,0,0,1,0,Cassandra Seney,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
-jooyeon@ischool.berkeley.edu,0,1,0,0,Joo Yeon Seo,Alumni (MIDS 2019),U,2019,1,NA,NA,NA
+jooyeon@ischool.berkeley.edu,0,0,1,0,Joo Yeon Seo,Alumni (MIDS 2019),U,2019,1,NA,NA,NA
 asered@ischool.berkeley.edu,1,0,0,0,Asher Sered,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 sonaliserro@ischool.berkeley.edu,0,1,0,0,Sonali Serro,Alumni (MIDS 2021),F,2021,2,NA,NA,NA
 sewards@ischool.berkeley.edu,0,0,1,0,Stephanie Seward,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 cjsexton@ischool.berkeley.edu,0,0,1,0,Chris Sexton,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
-mattshaffer@ischool.berkeley.edu,0,0,1,0,Matt Shaffer,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-kunalshah@ischool.berkeley.edu,0,0,1,0,Kunal Shah,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
+mattshaffer@ischool.berkeley.edu,0,1,0,0,Matt Shaffer,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
+kunalshah@ischool.berkeley.edu,0,1,0,0,Kunal Shah,Alumni (MIDS 2015),M,2015,3,NA,NA,NA
 amshah@ischool.berkeley.edu,0,0,1,1,Manish Shah,Alumni (MIDS 2018),M,2018,1,61,-122.063797,37.25390625
 shankar@ischool.berkeley.edu,0,0,1,1,Natarajan Shankar,Alumni (MIDS 2017),M,2017,1,78,-121.9132996,37.76179504
 thiyagu.shanmuga@ischool.berkeley.edu,0,1,0,0,Thiyagarajan Shanmuga,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
@@ -857,7 +857,7 @@ dsheinin@ischool.berkeley.edu,0,1,0,0,Daniel Sheinin,Alumni (MIDS 2016),M,2016,1
 kmshelley@ischool.berkeley.edu,0,1,0,0,Katherine Shelley,Alumni (MIDS 2016),F,2016,1,NA,NA,NA
 maxshen@ischool.berkeley.edu,1,0,0,0,Sungtais Shen,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 yiran@ischool.berkeley.edu,1,0,0,0,Yiran Sheng,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-sheraz@ischool.berkeley.edu,0,0,1,0,Sheraz Shere,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
+sheraz@ischool.berkeley.edu,0,1,0,0,Sheraz Shere,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 mark.wei.shi@ischool.berkeley.edu,1,0,0,0,Wei Shi,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 shishir@ischool.berkeley.edu,0,1,0,0,Razib Shishir,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 shulok@ischool.berkeley.edu,0,0,1,0,Elizabeth Shulok,Alumni (MIDS 2018),F,2018,2,NA,NA,NA
@@ -871,7 +871,7 @@ mandeepak@ischool.berkeley.edu,0,0,1,0,Mandeepak Singh,Alumni (MIDS 2016),M,2016
 tejsingh@ischool.berkeley.edu,0,1,0,0,Tejinderpal Singh,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 umber@ischool.berkeley.edu,0,0,1,0,Umber Singh,Alumni (MIDS 2017),M,2017,2,NA,NA,NA
 vsingh@ischool.berkeley.edu,0,0,1,0,Vijay Singh,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-sid@ischool.berkeley.edu,0,0,1,0,Siddharth Singhal,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
+sid@ischool.berkeley.edu,0,1,0,0,Siddharth Singhal,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 anamika@ischool.berkeley.edu,0,0,1,0,Anamika Sinha,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 skarbrevik@ischool.berkeley.edu,1,0,0,0,David Skarbrevik,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 tslade@ischool.berkeley.edu,0,0,1,1,Timothy Steven Slade,Alumni (MIDS 2020),M,2020,3,51,-116.9772949,32.65390015
@@ -889,7 +889,7 @@ ask@ischool.berkeley.edu,0,0,1,0,Anthony Spalvieri-Kruse,Alumni (MIDS 2017),M,20
 natallia@ischool.berkeley.edu,0,1,0,0,Natallia Spell,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
 timspittle@ischool.berkeley.edu,1,0,0,0,Timothy Spittle,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 spooner@ischool.berkeley.edu,1,0,0,0,Benjamin Spooner,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
-psridhar@ischool.berkeley.edu,0,0,1,0,Padmavati Sridhar,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
+psridhar@ischool.berkeley.edu,0,1,0,0,Padmavati Sridhar,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
 jayanthsrinivasa@ischool.berkeley.edu,0,0,1,1,Jayanth Srinivasa,Alumni (MIDS 2019),M,2019,2,86,-79.4815979,43.79870605
 varadarajan@ischool.berkeley.edu,0,1,0,0,Varadarajan Srinivasan,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 divyasriram@ischool.berkeley.edu,0,0,1,0,Divya Sriram,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
@@ -904,12 +904,12 @@ matt.s@ischool.berkeley.edu,0,1,0,0,Matt Stevenson,Alumni (MIDS 2019),M,2019,3,N
 gstirling@ischool.berkeley.edu,0,0,1,1,Geoff Stirling,Alumni (MIDS 2017),M,2017,3,59,-122.0438004,37.31770325
 kevinstone@ischool.berkeley.edu,0,0,1,1,Kevin Stone,Alumni (MIDS 2020),M,2020,1,168,-122.8292999,45.54960632
 sstorey@ischool.berkeley.edu,0,0,1,1,Simon Storey,Alumni (MIDS 2018),M,2018,3,70,-64.7845993,32.29519653
-mastreips@ischool.berkeley.edu,0,1,0,0,Marcus Streips,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+mastreips@ischool.berkeley.edu,0,0,1,0,Marcus Streips,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 d.l.strockis@ischool.berkeley.edu,1,0,0,0,Daniel Strockis,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 fsuares@ischool.berkeley.edu,1,0,0,0,Frederic Suares,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 sudha@ischool.berkeley.edu,1,0,0,0,Sudha Subramanian,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 johnsullivan@ischool.berkeley.edu,0,0,1,1,John Sullivan,Alumni (MIDS 2018),M,2018,1,41,-118.3361053,46.05940247
-sunh0003@ischool.berkeley.edu,0,1,0,0,Michelle Sun,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+sunh0003@ischool.berkeley.edu,0,0,1,0,Michelle Sun,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 weixing@ischool.berkeley.edu,1,0,0,0,Weixing Sun,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 ysun@ischool.berkeley.edu,1,0,0,0,Yifan Sun,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
 ganeshs@ischool.berkeley.edu,0,0,1,1,Ganesh Sundararajan,Alumni (MIDS 2017),M,2017,1,60,-159.3692932,21.98370361
@@ -927,7 +927,7 @@ john.tabbone@ischool.berkeley.edu,0,1,0,0,John Tabbone,Alumni (MIDS 2018),M,2018
 taher@ischool.berkeley.edu,0,0,1,0,Mahdieh Taher,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 alantan@ischool.berkeley.edu,0,1,0,0,Alan Tan,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 alvin.tan@ischool.berkeley.edu,0,0,1,1,Alvin Tan,Alumni (MIDS 2020),M,2020,3,53,-122.3746948,47.69009399
-ttan@ischool.berkeley.edu,0,0,1,0,Tracey Tan,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+ttan@ischool.berkeley.edu,0,1,0,0,Tracey Tan,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 ztan9@ischool.berkeley.edu,0,0,1,1,Zhiwei (David) Tan,Alumni (MIDS 2018),M,2018,3,66,-74.05740356,40.7467041
 tangbyron@ischool.berkeley.edu,1,0,0,0,Byron Tang,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 eugenet@ischool.berkeley.edu,0,0,1,0,Eugene Tang,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
@@ -937,11 +937,11 @@ satishkt@ischool.berkeley.edu,0,1,0,0,Satish Kumar Terala,Alumni (MIDS 2016),M,2
 sonalthakkar@ischool.berkeley.edu,0,0,1,1,Sonal Thakkar,Alumni (MIDS 2020),F,2020,1,45,-121.8845978,37.35119629
 rohan.thakur@ischool.berkeley.edu,0,0,1,0,Rohan Thakur,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 rajesh.thallam@ischool.berkeley.edu,0,0,1,1,Rajesh Thallam,Alumni (MIDS 2016),M,2016,3,72,-121.9526978,37.75579834
-rthamman@ischool.berkeley.edu,0,0,1,0,Rama Thamman,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
+rthamman@ischool.berkeley.edu,0,1,0,0,Rama Thamman,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 ankittharwani@ischool.berkeley.edu,0,0,1,0,Ankit Tharwani,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 abhijit.thatte@ischool.berkeley.edu,0,1,0,0,Abhijit Thatte,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 matt.thielen@ischool.berkeley.edu,0,1,0,0,Matthew Thielen,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
-utthaman@ischool.berkeley.edu,0,0,1,0,Utthaman Thirunavukkarasu,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
+utthaman@ischool.berkeley.edu,0,1,0,0,Utthaman Thirunavukkarasu,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 sthiruvallur@ischool.berkeley.edu,0,0,1,0,Satya Narayan Thiruvallur Selvakumar,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 tgthomas@ischool.berkeley.edu,0,0,1,1,Tigi Thomas,Alumni (MIDS 2016),M,2016,3,129,-122.3661041,47.31210327
 bthompson@ischool.berkeley.edu,0,1,0,0,Ben Thompson,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
@@ -949,7 +949,7 @@ krysten.thompson@ischool.berkeley.edu,0,1,0,0,Krysten Thompson,Alumni (MIDS 2019
 amzthorp@ischool.berkeley.edu,0,0,1,0,Alex Thorp,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 bovard@ischool.berkeley.edu,0,0,1,1,Bovard Tiberi,Alumni (MIDS 2016),M,2016,1,54,-155.092804,19.70599365
 anup@ischool.berkeley.edu,0,0,1,1,Anup Tirumala,Alumni (MIDS 2019),M,2019,3,92,-121.9389954,37.40730286
-kctobin@ischool.berkeley.edu,0,0,1,0,Keith Tobin,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
+kctobin@ischool.berkeley.edu,0,1,0,0,Keith Tobin,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 btodescan@ischool.berkeley.edu,0,1,0,0,Bruno Todescan,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 stosaria@ischool.berkeley.edu,0,1,0,0,Samarth Tosaria,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 jaketosh@ischool.berkeley.edu,0,1,0,0,Jacob Tosh,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
@@ -961,7 +961,7 @@ prabhat.tripathi@ischool.berkeley.edu,0,0,1,0,Prabhat Tripathi,Alumni (MIDS 2020
 stephane.truong@ischool.berkeley.edu,1,0,0,0,Stephane Truong,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 tktruong@ischool.berkeley.edu,0,0,1,1,Tiffany (TK) Truong,Alumni (MIDS 2020),F,2020,1,136,-121.8526993,37.34790039
 erictsai@ischool.berkeley.edu,0,0,1,0,Eric Tsai,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
-felixt1986@ischool.berkeley.edu,0,1,0,0,Felix Tsui,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
+felixt1986@ischool.berkeley.edu,0,0,1,0,Felix Tsui,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 jrtuenge@ischool.berkeley.edu,0,0,1,0,Jason Tuenge,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 gtumuluri@ischool.berkeley.edu,0,1,0,0,Gopala Tumuluri,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
 jtuthill@ischool.berkeley.edu,1,0,0,0,John Tuthill,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
@@ -970,7 +970,7 @@ seanu@ischool.berkeley.edu,1,0,0,0,Sean Underwood,Alumni (MIDS 2016),M,2016,3,NA
 rich.ung@ischool.berkeley.edu,0,0,1,1,Rich Ung,Alumni (MIDS 2019),M,2019,3,87,-118.4297943,34.00300598
 kasane@ischool.berkeley.edu,0,1,0,0,Kasane Utsumi,Alumni (MIDS 2016),U,2016,3,NA,NA,NA
 subhav@ischool.berkeley.edu,0,1,0,0,Subha Vadakkumkoor,Alumni (MIDS 2019),F,2019,2,NA,NA,NA
-aruna.vallur@ischool.berkeley.edu,0,0,1,0,Aruna Vallurupalli,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
+aruna.vallur@ischool.berkeley.edu,0,1,0,0,Aruna Vallurupalli,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
 sdvh@ischool.berkeley.edu,0,0,1,0,Shruti van Hemmen,Alumni (MIDS 2017),F,2017,2,NA,NA,NA
 danvan@ischool.berkeley.edu,0,0,1,1,Daniel Van Lunen,Alumni (MIDS 2019),M,2019,1,65,-71.18139648,42.37249756
 jvantomme@ischool.berkeley.edu,0,0,1,1,Jason Vantomme,Alumni (MIDS 2018),M,2018,3,60,-123.3655014,48.41520691
@@ -1000,7 +1000,7 @@ daniel.wald@ischool.berkeley.edu,0,0,1,0,Daniel Wald,Alumni (MIDS 2018),M,2018,3
 walekova@ischool.berkeley.edu,0,1,0,0,Miroslava Walekova,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 alisonwalker@ischool.berkeley.edu,0,1,0,0,Alison Walker,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 chris.walker@ischool.berkeley.edu,0,0,1,0,Christopher Walker,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
-james.wall@ischool.berkeley.edu,0,0,1,0,James Wall,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
+james.wall@ischool.berkeley.edu,0,1,0,0,James Wall,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 andrewfwalters@ischool.berkeley.edu,0,0,1,0,Andrew Walters,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 dean.wang@ischool.berkeley.edu,0,1,0,0,Dean Wang,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 dwang@ischool.berkeley.edu,0,0,1,0,Dili Wang,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
@@ -1012,19 +1012,19 @@ teresawang@ischool.berkeley.edu,0,0,1,0,Teresa Wang,Alumni (MIDS 2019),F,2019,3,
 wiw5087@ischool.berkeley.edu,0,1,0,0,Wei Wang,Alumni (MIDS 2019),U,2019,3,NA,NA,NA
 yekun.wang@ischool.berkeley.edu,0,0,1,1,Yekun Wang,Alumni (MIDS 2021),F,2021,1,56,-122.0289001,37.53370667
 pwang@ischool.berkeley.edu,0,0,1,0,Yi Wang,Alumni (MIDS 2020),U,2020,1,NA,NA,NA
-alanwang@ischool.berkeley.edu,0,1,0,0,Yihjih Wang,Alumni (MIDS 2017),U,2017,3,NA,NA,NA
+alanwang@ischool.berkeley.edu,0,0,1,0,Yihjih Wang,Alumni (MIDS 2017),U,2017,3,NA,NA,NA
 dan.watson@ischool.berkeley.edu,0,0,1,0,Daniel Watson,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 chula@ischool.berkeley.edu,1,0,0,0,Chula Watugala,Alumni (MIDS 2015),M,2015,1,NA,NA,NA
 webban@ischool.berkeley.edu,0,0,1,1,Andrew Webb,Alumni (MIDS 2020),M,2020,1,49,-111.816597,40.6750946
-timothy@ischool.berkeley.edu,0,0,1,0,Reo Weeks,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
-chrishcwen@ischool.berkeley.edu,0,0,1,0,Christopher Wen,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
+timothy@ischool.berkeley.edu,0,1,0,0,Reo Weeks,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
+chrishcwen@ischool.berkeley.edu,0,1,0,0,Christopher Wen,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 howard_wen@ischool.berkeley.edu,1,0,0,0,Howard Wen,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
-keith.wertsching@ischool.berkeley.edu,0,1,0,0,Keith Wertsching,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
+keith.wertsching@ischool.berkeley.edu,0,0,1,0,Keith Wertsching,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 alexwest@ischool.berkeley.edu,0,0,1,1,Alexandra West,Alumni (MIDS 2020),F,2020,3,37,-87.64350128,41.87969971
 keri.wheatley@ischool.berkeley.edu,0,1,0,0,Keri Wheatley,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 dlwheeler@ischool.berkeley.edu,0,0,1,0,David Wheeler,Alumni (MIDS 2021),M,2021,3,NA,NA,NA
 wgwhittington@ischool.berkeley.edu,0,0,1,1,Grant Whittington,Alumni (MIDS 2019),M,2019,2,40,-96.96669769,32.84890747
-ericwhyne@ischool.berkeley.edu,0,1,0,0,Eric Whyne,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
+ericwhyne@ischool.berkeley.edu,0,0,1,0,Eric Whyne,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 laura.williams@ischool.berkeley.edu,0,0,1,0,Laura Williams,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
 blake.williamson@ischool.berkeley.edu,0,1,0,0,Blake Williamson,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 wilsonjs@ischool.berkeley.edu,0,0,1,0,Josh Wilson,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
@@ -1044,13 +1044,13 @@ rayxiao@ischool.berkeley.edu,0,0,1,0,Ray Xiao,Alumni (MIDS 2020),M,2020,2,NA,NA,
 guangzhi.xie@ischool.berkeley.edu,0,0,1,0,Frank Guangzhi Xie,Alumni (MIDS 2017),M,2017,1,NA,NA,NA
 jxieeducation@ischool.berkeley.edu,0,0,1,0,Jason (Jiatong) Xie,Alumni (MIDS 2017),M,2017,3,NA,NA,NA
 lucy.xie@ischool.berkeley.edu,0,1,0,0,Lucy Xie,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
-harryxu@ischool.berkeley.edu,0,0,1,0,Harry Xu,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
-jing.xu@ischool.berkeley.edu,0,0,1,0,Jing Xu,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
+harryxu@ischool.berkeley.edu,0,1,0,0,Harry Xu,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
+jing.xu@ischool.berkeley.edu,0,1,0,0,Jing Xu,Alumni (MIDS 2016),M,2016,1,NA,NA,NA
 scott.xu@ischool.berkeley.edu,0,1,0,0,Scott Xu,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
 tianhaoxu@ischool.berkeley.edu,1,0,0,0,Tianhao Xu,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 zeliangx@ischool.berkeley.edu,0,0,1,0,Zeliang Xu,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-daisy.ya@ischool.berkeley.edu,0,0,1,0,Xiao Chen Ya,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
-anuyadav@ischool.berkeley.edu,0,0,1,0,Anu Yadav,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
+daisy.ya@ischool.berkeley.edu,0,1,0,0,Xiao Chen Ya,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+anuyadav@ischool.berkeley.edu,0,1,0,0,Anu Yadav,Alumni (MIDS 2021),F,2021,1,NA,NA,NA
 nobu.yamaguchi@ischool.berkeley.edu,0,0,1,0,Nobuhiro Yamaguchi,Alumni (MIDS 2021),M,2021,1,NA,NA,NA
 hyamtich@ischool.berkeley.edu,1,0,0,0,Hilary Yamtich,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 yanji84@ischool.berkeley.edu,0,1,0,0,Ji Yan,Alumni (MIDS 2016),M,2016,3,NA,NA,NA
@@ -1059,9 +1059,9 @@ adamcy99@ischool.berkeley.edu,0,0,1,1,Adam Yang,Alumni (MIDS 2019),M,2019,1,77,-
 alexyyang@ischool.berkeley.edu,1,0,0,0,Alex Yang,Alumni (MIDS 2018),M,2018,1,NA,NA,NA
 baokui@ischool.berkeley.edu,0,0,1,0,BK (Baokui) Yang,Alumni (MIDS 2021),M,2021,2,NA,NA,NA
 eric.yang@ischool.berkeley.edu,0,0,1,1,Eric Yang,Alumni (MIDS 2018),M,2018,1,69,-118.3607025,34.10600281
-yangh@ischool.berkeley.edu,0,1,0,0,Hong Yang,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
+yangh@ischool.berkeley.edu,0,0,1,0,Hong Yang,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
 yang@ischool.berkeley.edu,0,0,1,0,Lei Yang,Alumni (MIDS 2016),F,2016,3,NA,NA,NA
-yanglinfang@ischool.berkeley.edu,0,0,1,0,Linfang Yang,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
+yanglinfang@ischool.berkeley.edu,0,1,0,0,Linfang Yang,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
 pj.yang_lester@ischool.berkeley.edu,0,0,1,0,Peng-Jian Yang,Alumni (MIDS 2021),M,2021,3,NA,NA,NA
 steve.yang@ischool.berkeley.edu,0,0,1,0,Steve Yang,Alumni (MIDS 2018),M,2018,3,NA,NA,NA
 xiaoshi.yang@ischool.berkeley.edu,0,1,0,0,Xiaoshi Yang,Alumni (MIDS 2020),F,2020,1,NA,NA,NA
@@ -1082,18 +1082,18 @@ joannayu@ischool.berkeley.edu,0,1,0,0,Joanna Yu,Alumni (MIDS 2021),F,2021,3,NA,N
 qianyu@ischool.berkeley.edu,0,0,1,1,Qian Yu,Alumni (MIDS 2018),M,2018,1,84,-122.0438004,37.31770325
 syu@ischool.berkeley.edu,0,0,1,0,Sijie Yu,Alumni (MIDS 2019),F,2019,1,NA,NA,NA
 tennisonyu@ischool.berkeley.edu,0,0,1,0,Tennison Yu,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
-zhaoning.yu@ischool.berkeley.edu,0,0,1,0,Zhaoning Yu,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
+zhaoning.yu@ischool.berkeley.edu,0,1,0,0,Zhaoning Yu,Alumni (MIDS 2019),M,2019,1,NA,NA,NA
 cw2yuen@ischool.berkeley.edu,1,0,0,0,Aaron Yuen,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 zszaiss@ischool.berkeley.edu,0,0,1,1,Zachary Sam Zaiss,Alumni (MIDS 2015),M,2015,3,66,-122.3554993,47.49729919
 azamora@ischool.berkeley.edu,0,0,1,0,Andres Zamora,Alumni (MIDS 2020),M,2020,3,NA,NA,NA
 zamriy@ischool.berkeley.edu,0,1,0,0,Yulia Zamriy,Alumni (MIDS 2019),F,2019,3,NA,NA,NA
 jwzhang@ischool.berkeley.edu,0,1,0,0,Jacky Zhang,Alumni (MIDS 2017),F,2017,1,NA,NA,NA
-jill.zhang@ischool.berkeley.edu,0,1,0,0,Jill Zhang,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
+jill.zhang@ischool.berkeley.edu,0,0,1,0,Jill Zhang,Alumni (MIDS 2018),F,2018,3,NA,NA,NA
 qingzhang@ischool.berkeley.edu,0,0,1,1,Qing Zhang,Alumni (MIDS 2019),M,2019,1,18,-121.7252045,38.54420471
 yaran.zhang@ischool.berkeley.edu,0,1,0,0,Yaran Zhang,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 yuboz@ischool.berkeley.edu,1,0,0,0,Yubo Zhang,Alumni (MIDS 2018),F,2018,1,NA,NA,NA
 yuchen@ischool.berkeley.edu,0,1,0,0,Yuchen Zhang,Alumni (MIDS 2020),M,2020,1,NA,NA,NA
-czhao@ischool.berkeley.edu,0,1,0,0,Changjing Zhao,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
+czhao@ischool.berkeley.edu,0,0,1,0,Changjing Zhao,Alumni (MIDS 2020),F,2020,3,NA,NA,NA
 yhzhao@ischool.berkeley.edu,0,1,0,0,Yuhang Zhao,Alumni (MIDS 2018),U,2018,1,NA,NA,NA
 jizheng@ischool.berkeley.edu,0,1,0,0,Ji Zheng,Alumni (MIDS 2019),M,2019,3,NA,NA,NA
 jonathan.zhou@ischool.berkeley.edu,0,1,0,0,Jonathan Zhou,Alumni (MIDS 2020),M,2020,1,NA,NA,NA

@@ -77,21 +77,27 @@ dt_agg <-
   replace(is.na(.), 0) %>%
   
   # non-compliance: email_sent status for all 5 rounds
-  left_join(bind_rows(r1_g1_status %>% filter(MStatus == 'EMAIL_SENT'),
-                      r1_g2_status %>% filter(MStatus == 'EMAIL_SENT'),
-                      r1_g3_status %>% filter(MStatus == 'EMAIL_SENT')) %>%
-              filter(!Email %in% ex_emails) %>%
-              inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
-                         by='Email') %>%
-              inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
-                         by='Email') %>%
-              inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
-                         by='Email') %>% # 4 & 5 are the same?
-              inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
-                         by='Email') %>%
-              add_column(non_complier = 1) %>%
-              select(-MStatus),
-            by = 'Email') %>%
+  left_join(
+    # EMAIL_SENT not balanced.
+    #bind_rows(r1_g1_status %>% filter(MStatus == 'EMAIL_SENT'),
+    #          r1_g2_status %>% filter(MStatus == 'EMAIL_SENT'),
+    #          r1_g3_status %>% filter(MStatus == 'EMAIL_SENT')) %>%
+    #  filter(!Email %in% ex_emails) %>%
+    #inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+    #           by='Email') %>%
+    
+    # EMAIL_SENT is balanced in r3, r4 and r5
+    dt_roster %>% select(Email) %>% add_column(MStatus='EMAIL_SENT') %>%
+      
+      inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>%
+      inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>% # 4 & 5 are the same?
+      inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>%
+      add_column(non_complier = 1) %>%
+      select(-MStatus),
+    by = 'Email') %>%
   replace(is.na(.), 0) %>%
   
   # compliers: people who opened at least 1 round
@@ -125,7 +131,8 @@ dt_agg %>%
   group_by(Block, measure) %>%
   summarise(value = sum(value)) %>%
   spread(measure, value) %>%
-  select(Block, bounce, non_complier, complier, completion)
+  select(Block, bounce, non_complier, complier, completion) %>%
+  mutate(all = bounce + non_complier + complier, .before=2)
 ```
 
 
