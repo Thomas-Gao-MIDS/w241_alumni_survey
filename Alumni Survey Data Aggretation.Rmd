@@ -1,0 +1,127 @@
+---
+title: "Alumni Survey Bounce and Open Rate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load_lib}
+library(data.table)
+library(tidyverse)
+```
+
+## Load Data
+```{r load_data}
+# list of people
+dt_roster <- read_csv('data/alumni_scrape.csv', col_types=cols()) %>%
+  select(Email = email, Name = name, Cohort = cohort, Gender = gender, 
+         Year_Graduation = year_graduation, 
+         Block = blocking_genderyear_assignments)
+
+# attrition, bounced, round 1 post-send merged status
+r1_g1_bounce <- read_csv('data/round1_0702_group1_0702_0941.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+r1_g2_bounce <- read_csv('data/round1_0702_group2_0702_1028.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+r1_g3_bounce <- read_csv('data/round1_0702_group3_0702_1055.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+
+# final status, sent, opened
+r1_g1_status <- read_csv('data/round1_0702_group1_0708_1033.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r1_g2_status <- read_csv('data/round1_0702_group2_0708_1220.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r1_g3_status <- read_csv('data/round1_0702_group3_0708_1122.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r2_status <- read_csv('data/round2_0709_all_0716_1117.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r3_status <- read_csv('data/round3_0716_all_0722_1046.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r4_status <- read_csv('data/round4_0722_all_0723_1131.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r5_status <- read_csv('data/round5_0723_all_0724_1219.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+
+# outcome, Qualtrics completion
+dt_qualtrics <- read_csv('data/Qualtrics_downloaded_20210726.csv', col_types=cols()) %>%
+  select(Email = RecipientEmail, Duration = `Duration (in seconds)`,
+         Long = LocationLongitude, Lat = LocationLatitude) %>%
+  slice(3:n()) %>%
+  mutate(Duration = as.numeric(Duration),
+         Long = as.numeric(Long),
+         Lat = as.numeric(Lat))
+
+# emails to exclude
+ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
+               'tgao2020@berkeley.edu', 'mirza2020@berkeley.edu')
+```
+
+## Combine Data
+```{r combine_data}
+
+dt_agg <- 
+  # roster does not contain us
+  dt_roster %>%
+  select(Email) %>%
+  
+  # bounce
+  left_join(bind_rows(r1_g1_bounce, r1_g2_bounce, r1_g3_bounce) %>%
+              add_column(bounce = 1) %>%
+              select(-MStatus),
+            by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # non-compliance: email_sent status for all 5 rounds
+  left_join(bind_rows(r1_g1_status %>% filter(MStatus == 'EMAIL_SENT'),
+                      r1_g2_status %>% filter(MStatus == 'EMAIL_SENT'),
+                      r1_g3_status %>% filter(MStatus == 'EMAIL_SENT')) %>%
+              filter(!Email %in% ex_emails) %>%
+              inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
+              inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
+              inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>% # 4 & 5 are the same?
+              inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), by='Email') %>%
+              add_column(non_complier = 1) %>%
+              select(-MStatus),
+            by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # compliers: people who opened at least 1 round
+  mutate(complier = 1 - (bounce + non_complier)) %>%
+  
+  # completion: qualtrics records
+  left_join(dt_qualtrics %>% select(Email) %>% add_column(completion=1), by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # override some incorrect YAMM data
+  mutate(non_complier = if_else(completion == 1, 0, non_complier),
+         complier = if_else(completion == 1, 1, complier)) %>%
+  
+  # meta data
+  left_join(dt_roster, by = 'Email') %>%
+  left_join(dt_qualtrics, by = 'Email') 
+
+```
+
+## Output Data
+```{r output}
+# output
+write_csv(dt_agg, 'data/agg_table.csv')
+```
+
+## Quick Look
+```{r quick_look}
+dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion) %>%
+  gather(measure, value, -Block) %>%
+  group_by(Block, measure) %>%
+  summarise(value = sum(value)) %>%
+  spread(measure, value) %>%
+  select(Block, bounce, non_complier, complier, completion)
+```
+
+
