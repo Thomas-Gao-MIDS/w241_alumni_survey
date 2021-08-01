@@ -1,0 +1,417 @@
+---
+title: "Project_241_DK"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Analysis
+
+In the code chunk below we combine our datasets i.e all the emails that we have sent in 5 pushes in a single data.
+
+```{r Combining the data}
+#reading the file group1
+
+
+our_emails = c("mirza2020@berkeley.edu", "deveshkhandelwal@berkeley.edu",
+               "rahosbach@berkeley.edu", "tgao2020@berkeley.edu")
+
+#reading in the data for 02nd July
+
+dg1 <- fread('data/round1_0702_group1_0702_0941.csv')
+head(dg1)
+#retaining the relevant columns
+dg1 <- dg1[,c('Email','Merge status')]
+#verifying
+head(dg1)
+
+#reading the file group2 for 2nd July
+dg2 <- fread('data/round1_0702_group2_0702_1028.csv')
+head(dg2)
+dg2 <- dg2[,c('Email','Merge status')]
+head(dg2)
+
+#reading the file group3  for 2nd July
+dg3 <- fread('data/round1_0702_group3_0702_1055.csv')
+head(dg3)
+dg3 <- dg3[,c('Email','Merge status')]
+head(dg3)
+
+#combined data for round1
+round1 <- rbind(dg1,dg2,dg3)
+
+print(round1[,.N])
+
+#reading the data for round 2 - Round 2 onwards we used a single spreadsheet for the ease of tracking.
+round2 <- fread('data/round2_0709_all_0716_1117.csv')
+head(round2)
+#retaining the relevant columns
+round2 <- round2[,c('Email','Merge status')]
+#verifying
+head(round2)
+
+
+print(round2[,.N])
+
+#reading the data for round 3 - This is combined
+round3 <- fread('data/round3_0716_all_0722_1046.csv')
+head(round3)
+#retaining the relevant columns
+round3 <- round3[,c('Email','Merge status')]
+#verifying
+head(round3)
+
+
+print(round3[,.N])
+
+#reading the data for round 4 - This is combined
+round4 <- fread('data/round4_0722_all_0723_1131.csv')
+head(round4)
+#retaining the relevant columns
+round4 <- round4[,c('Email','Merge status')]
+#verifying
+head(round4)
+
+
+print(round4[,.N])
+
+#reading the data for round 4 - This is combined
+round5 <- fread('data/round5_0723_all_0724_1219.csv')
+head(round5)
+#retaining the relevant columns
+round5 <- round5[,c('Email','Merge status')]
+#verifying
+head(round5)
+
+
+print(round5[,.N])
+
+
+```
+We have created multiple datatables, the cde chunk below will concatenate the data horizontally.
+We also remove our group's email , which was added to ensure delivery with a mail merge techbology.
+```{r combining all the files}
+
+d_combined <- rbind(round1,round2,round3,round4,round5) %>% filter(!Email %in% our_emails)
+
+head(d_combined     )
+
+
+#sum(d_combined[, Email == "deveshkhandelwal@berkeley.edu"])
+```
+We now analyze the aggregated data.
+The idea is to check the status of the emails by looking at the column `Merge Status`
+
+```{r checking the status by email }
+library(dplyr)
+#https://stackoverflow.com/questions/25571547/select-unique-values-with-select-function-in-dplyr-library
+uniq_status <- d_combined %>% distinct(`Merge status`)
+
+uniq_status
+
+# not sure what the 0 status is
+d_combined[ ,.N]
+
+d_combined[`Merge status`== 0 , Email]
+
+d_zero_status <- d_combined[`Merge status`== 0 ,]
+
+
+```
+We notice that there are certain emails with status as `0`. some of these emails overlap with the bounced emails but nonoe of the people with the emails in this category responded to our survey. We therefore remove these `r  d_zero_status[,.N] `emails from further analysis.
+```{r removing merge status zero}
+#storing the data 
+write.csv(d_zero_status,"merge_status_0.csv",row.names = TRUE)
+#getting rid of the 105 rows with zero merge status
+d_combined_non_zero <- d_combined[`Merge status`!= 0 ,]
+
+d_zero_status[,.N]
+```
+
+## Finding Compliers
+Compliers are the people in our dataset who have at-least opened an email once.We have sent the emails out in 5 pushes and a person with a valid email id would have received more than a single email.
+In the code chunk that follows we calculate the number of compliers.
+Our strategy is to group the data by emails and summarize the groups by emails when there is at least one read email.
+
+
+The function below combines the emails and adds a new column in the dataframe with status TRUE if the person has read the email at least once.
+```{r function definition }
+
+final_mail_status <- function(d , status)
+  # This function takes the combined data frame and conslosidates the dataframe rows on email status
+{
+  
+  #first we'll decode the status we want to convert as TRUE
+  if ("Merge status" %in%  colnames(d))
+    {
+    #delete column
+    d <- subset(d , select = c("Email","Merge status"))
+    }
+  
+  
+  
+  d_merged <- setDT(d)[`Merge status`== status ,Email_status:= (as.logical(1))]
+  #everything else to 0
+  #d_merged <- setDT(d)[is.na(`Email_status`) ,`Email_status`:= (as.logical(0))]
+  library(dplyr)
+  
+  #d3 <- d2 %>%  group_by(Email) %>% summarise(status = any(as.logical(`Merge Status`)))
+  d_summarized<- d_merged %>% group_by(Email) %>% summarise(status = any(as.logical(`Email_status`)))
+  
+  return (d_summarized)
+
+}
+
+```
+
+
+## Data Consolidation
+
+We now focus our attention to the combined dataset, the idea is to assign a status to each of the unique email id in our alumni corpus and determine whether that person is a complier , attritor or Never-taker.
+
+```{r finding open emails}
+
+#calling function to get the list of those who have opened email at least once
+d_at_least_one_read <- final_mail_status(d_combined_non_zero, "EMAIL_OPENED")
+
+
+
+#This has NAs too that could correspond to other status, Lets remove the NAs.
+d_at_least_once_open <- d_at_least_one_read [!is.na(d_at_least_one_read$status),]
+
+#saving the data to a file
+write.csv(d_at_least_one_read,"email_opened.csv",row.names = TRUE)
+
+#getting the details for those who have clicked the emails.
+
+d_at_least_one_clicked <- final_mail_status(d_combined_non_zero, "EMAIL_CLICKED")
+d_clicked <- d_at_least_one_read [!is.na(d_at_least_one_clicked$status),]
+
+write.csv(d_at_least_one_clicked,"email_clicked.csv",row.names = TRUE)
+
+
+d_at_least_one_bounce <- final_mail_status(d_combined_non_zero, "EMAIL_BOUNCED")
+sum(d_at_least_one_bounce$status == TRUE)
+
+
+
+```
+
+# Data Aggregation - Joins
+We now combine our data from our alumni scrape and assign a `final status` to each email.
+
+
+
+```{r JOINS}
+#reading the alumni file
+alum_data <- fread('data/alumni_scrape.csv')
+
+#reading in the open emails
+open_data <- fread('data/email_opened.csv')
+#chaaging the names for join to work
+setnames(alum_data, "email", "Email")
+
+print(colnames(alum_data))
+print(colnames(open_data))
+
+#performing left join - We want all the cols from alum data
+d_complier <- left_join(alum_data , open_data)
+
+d_complier[.N]
+d_complier[!is.na(status),.N]
+print(colnames(d_complier))
+
+#Reading in bounced emails
+
+d_bounce <- fread('data/bounced_emails.csv')
+colnames(d_bounce)
+
+head(d_bounce)
+setnames(d_bounce, "V2", "Email")
+
+d_bounce[,status := "BOUNCE"]
+
+head(d_bounce)
+
+head(d_complier)
+
+#joining the compliers and the bounced email data
+final_data <-left_join(d_complier , d_bounce , by = "Email")
+
+final_data[,.N]
+
+head(final_data)
+
+
+
+```
+
+```{r Sanith Check} 
+
+
+dubios_data_read_bounce <- final_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
+#storing
+write.csv(dubios_data_read_bounce,"read_bounced.csv",row.names = TRUE)
+
+```
+
+
+There seems to be something wrng with the `dubious data` as the status can not be `read` and `Bounced` at the same time.
+We'll remove these `r dubios_data_read_bounce[,.N]` values from complier count and label them as `Bounced`
+
+```{r updating the status to bounce for these dubious recs }
+
+#https://stackoverflow.com/questions/28650957/update-a-value-in-one-column-based-on-criteria-in-other-columns
+
+class (dubios_data_read_bounce)
+
+colnames(dubios_data_read_bounce)
+#we'll update status .x to False
+
+setDT(final_data)[(status.y == "BOUNCE") & (status.x == TRUE), status.x := FALSE]
+#verifying the update
+final_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
+
+#updating the "Bounce status to TRUE for logical operation"
+setDT(final_data)[(status.y == "BOUNCE") , status.y := TRUE]
+
+colnames(final_data)
+#updating the names for easier verification
+setnames(final_data, "status.y", "Bounce_status")
+setnames(final_data, "status.x", "read_status")
+colnames(final_data)
+
+
+
+```
+Based on our final dataset , our next step is to create a final column in our data frame that reflects the status of the emails that are sent.
+  - There could be 3 possible status on an email - 'Read, Bounced,Sent'
+  - We've already marked as Bounced those emails for which both `Bounced` and `Open` was True
+  
+
+
+
+
+```{r}
+ final_data<- final_data %>% mutate(final_status = case_when(
+    Bounce_status== TRUE ~ "B",
+    read_status== TRUE ~ "O"
+    
+  ))
+  
+
+```
+
+
+
+```{r}
+table(final_data[,final_status])
+write.csv(final_data,"final_data_dk.csv",row.names = TRUE)
+
+
+```
+
+```{r}
+table(final_data[, final_status])
+
+
+```
+
+
+
+
+### Test data
+```{r test data}
+d1 <- head(d_combined_non_zero)
+
+
+
+d_test <- data.table(Email = rep("devesh1412@gmail.com",3),
+                     `Merge status` = rep("EMAIL_SENT",3))
+
+d_test2<- data.table(Email = c("devesh1412@gmail.com","dkhandelwal@nvidia.com"),
+                     `Merge status` = c(rep("EMAIL_SENT",2)))
+
+
+d_test3 <- data.table(Email = "dkhandelwal@nvidia.com",`Merge status` = "EMAIL_OPENED")
+
+d_test4 <- data.table(Email = c("dkhandelwal@nvidia.com","dkh@nv.om"),`Merge status` = c("EMAIL_OPENED","EMAIL_BOUNED"))
+d_test5 <- data.table(Email = "devesh1412@gmail.com",`Merge status` = "EMAIL_OPENED")
+d_test6 <- data.table(Email = "dkhandelwal@nvidia.com",`Merge status` = "EMAIL_CLICKED")
+d_test7 <- data.table(Email = "devesh1412@gmail.com",`Merge status` = "EMAIL_CLICKED")
+d_test8 <- data.table(Email = "dkhandelwal@yahoo.com",`Merge status` = "EMAIL_SENT")
+
+
+
+d_test_new <- rbind(d_test,d_test2,d_test3,d_test4,d_test5,d_test6,d_test7,d_test8)
+
+
+d_test_new
+
+d_temp <- d_test_new
+
+
+#d_test_new[`Merge Status`!= "EMAIL_OPENED" ,]
+
+d2 <- setDT(d_temp)[`Merge status`== "EMAIL_OPENED" ,`Emails_status`:= (as.logical(1))]
+
+d2
+
+d2
+
+d2 <- setDT(d_temp)[is.na(`Emails_status`) ,`Emails_status`:= (as.logical(0))]
+
+d2
+
+d2
+
+var_type <- d2[Email == "devesh1412@gmail.com",as.logical(`Merge status`)]
+
+
+as.logical(d2$`Merge Status`)
+
+
+class(var_type)
+
+logical_op <- function(col){
+    return ((any(col)))
+  }
+
+
+
+d3 <- d2 %>%  group_by(Email) %>% summarise(status = any(as.logical(`Emails_status`)))
+
+
+d3
+
+  
+  
+d3_func_test <- final_mail_status(d_test_new, "EMAIL_OPENED")
+
+
+d_test_new
+
+
+d3_func_test
+
+
+
+d_test_new
+
+d3_func_test_1 <- final_mail_status(d_test_new, "EMAIL_CLICKED")
+
+d3_func_test_1
+
+
+
+d_test_new
+
+test_col <- colnames(d_test_new)
+
+"Merge status" %in%  test_col 
+
+
+
+```
