@@ -238,11 +238,11 @@ head(d_bounce)
 head(d_complier)
 
 #joining the compliers and the bounced email data
-final_data <-left_join(d_complier , d_bounce , by = "Email")
+final_yamm_data <-left_join(d_complier , d_bounce , by = "Email")
 
-final_data[,.N]
+final_yamm_data[,.N]
 
-head(final_data)
+
 
 
 
@@ -251,7 +251,7 @@ head(final_data)
 ```{r Sanith Check} 
 
 
-dubios_data_read_bounce <- final_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
+dubios_data_read_bounce <- final_yamm_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
 #storing
 write.csv(dubios_data_read_bounce,"read_bounced.csv",row.names = TRUE)
 
@@ -270,18 +270,18 @@ class (dubios_data_read_bounce)
 colnames(dubios_data_read_bounce)
 #we'll update status .x to False
 
-setDT(final_data)[(status.y == "BOUNCE") & (status.x == TRUE), status.x := FALSE]
+setDT(final_yamm_data)[(status.y == "BOUNCE") & (status.x == TRUE), status.x := FALSE]
 #verifying the update
-final_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
+final_yamm_data[(status.y == "BOUNCE") & (status.x == TRUE), ]
 
 #updating the "Bounce status to TRUE for logical operation"
-setDT(final_data)[(status.y == "BOUNCE") , status.y := TRUE]
+setDT(final_yamm_data)[(status.y == "BOUNCE") , status.y := TRUE]
 
-colnames(final_data)
+colnames(final_yamm_data)
 #updating the names for easier verification
-setnames(final_data, "status.y", "Bounce_status")
-setnames(final_data, "status.x", "read_status")
-colnames(final_data)
+setnames(final_yamm_data, "status.y", "Bounce_status")
+setnames(final_yamm_data, "status.x", "read_status")
+colnames(final_yamm_data)
 
 
 
@@ -295,7 +295,7 @@ Based on our final dataset , our next step is to create a final column in our da
 
 
 ```{r}
- final_data<- final_data %>% mutate(final_status = case_when(
+ final_yamm_data<- final_yamm_data %>% mutate(final_status = case_when(
     Bounce_status== TRUE ~ "B",
     read_status== TRUE ~ "O"
     
@@ -307,18 +307,48 @@ Based on our final dataset , our next step is to create a final column in our da
 
 
 ```{r}
-table(final_data[,final_status])
-write.csv(final_data,"final_data_dk.csv",row.names = TRUE)
+write.csv(final_yamm_data,"final_yamm_data_dk.csv",row.names = TRUE)
 
 
 ```
 
 ```{r}
-table(final_data[, final_status])
+
+final_yamm_data[final_status == "O",.N]
+
+```
+## Data Viz
+
+
+```{r}
+print(colnames(final_yamm_data))
+library(ggplot2)
+
+
+#breakdown of the final status
+ggplot(data = final_yamm_data , aes(final_status )) + geom_bar(aes(fill = cohort))
+
+
 
 
 ```
+```{r covariate balance check}
 
+ggplot(data = final_yamm_data , aes(blocking_genderyear_assignments )) + geom_bar(aes(fill = cohort))
+```
+
+```{r covariate balance check}
+
+ggplot(data = final_yamm_data , aes(blocking_genderyear_assignments )) + geom_bar(aes(fill = gender))
+```
+
+```{r}
+ggplot(data = final_yamm_data , aes(blocking_genderyear_assignments )) + geom_bar(aes(fill = final_status))
+```
+```{r}
+ggplot(data = final_yamm_data , aes(final_status )) + geom_bar(aes(fill = blocking_genderyear_assignments))
+
+```
 
 
 
@@ -415,3 +445,5 @@ test_col <- colnames(d_test_new)
 
 
 ```
+
+
