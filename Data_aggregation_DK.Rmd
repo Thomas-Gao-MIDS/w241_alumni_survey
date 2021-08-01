@@ -16,7 +16,7 @@ In the code chunk below we combine our datasets i.e all the emails that we have 
 
 
 our_emails = c("mirza2020@berkeley.edu", "deveshkhandelwal@berkeley.edu",
-               "rahosbach@berkeley.edu", "tgao2020@berkeley.edu")
+               "rahosbach@berkeley.edu", "tgao2020@berkeley.edu","tgao2020@berkely.edu")
 
 #reading in the data for 02nd July
 
@@ -347,6 +347,54 @@ ggplot(data = final_yamm_data , aes(blocking_genderyear_assignments )) + geom_ba
 ```
 ```{r}
 ggplot(data = final_yamm_data , aes(final_status )) + geom_bar(aes(fill = blocking_genderyear_assignments))
+
+```
+Now, let's bring in Qualtrics data to understand who has responded to our survey.
+
+```{r Reading Qualtrics Data}
+d_qualtrics_temp <- fread('data/Qualtrics_downloaded_20210726.csv',header = TRUE)
+
+#checking the imported data
+head(d_qualtrics_temp)
+
+# Lets retain only the columns that we are interested in and add a column for Qualtrics status
+
+d_qualtrics <- data.table(d_qualtrics[, RecipientEmail])
+d_qualtrics[ , survey_status := rep(1L,.N)]
+
+head(d_qualtrics)
+# WE notice that the first 2 rows are references from Qualtrics and are not helpful for analysis.
+
+d_qualtrics <- d_qualtrics[-c(1,2),]
+
+#verifying
+head(d_qualtrics)
+
+#now let's rename that column V1
+colnames(d_qualtrics)
+setnames(d_qualtrics, "V1", "Email")
+colnames(d_qualtrics)
+
+head(d_qualtrics)
+
+```
+```{r Joining with the Yamm_data}
+#let's retian only the needed column
+head(final_yamm_data)
+
+#final_yamm_data <-left_join(d_complier , d_bounce , by = "Email")
+
+final_data_set <- left_join(final_yamm_data , d_qualtrics , by = "Email")
+
+final_data_set[, .N]
+colnames(final_data_set)
+#Let's rename a few cols for ease of reference
+setnames(final_data_set, "final_status", "Email_status")
+
+head(final_data_set)
+
+write.csv(final_data_set,"final_yamm_qual_dataset_dk.csv",row.names = TRUE)
+
 
 ```
 
