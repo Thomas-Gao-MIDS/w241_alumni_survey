@@ -7,7 +7,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r load_lib}
+```{r load_lib, warning=FALSE}
 library(data.table)
 library(tidyverse)
 ```
@@ -16,9 +16,11 @@ library(tidyverse)
 ```{r load_data}
 # list of people
 dt_roster <- read_csv('data/alumni_scrape.csv', col_types=cols()) %>%
-  select(Email = email, Name = name, Cohort = cohort, Gender = gender, 
-         Year_Graduation = year_graduation, 
-         Block = blocking_genderyear_assignments)
+  select(Email = email, Gender = gender, Year_Graduation = year_graduation, 
+         Block = blocking_genderyear_assignments) %>% 
+  mutate(Block = ifelse(
+    Block == 1, "Direct", ifelse(
+      Block == 2, "Philanthropic", "Control")))
 
 # attrition, bounced, round 1 post-send merged status
 r1_g1_bounce <- read_csv('data/round1_0702_group1_0702_0941.csv', col_types=cols()) %>%
@@ -58,7 +60,8 @@ dt_qualtrics <- read_csv('data/Qualtrics_downloaded_20210726.csv', col_types=col
 
 # emails to exclude
 ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
-               'tgao2020@berkeley.edu', 'mirza2020@berkeley.edu')
+               'tgao2020@berkeley.edu', 'tgao2020@berkely.edu',
+               'mirza2020@berkeley.edu')
 ```
 
 ## Combine Data
@@ -108,8 +111,10 @@ dt_agg <-
   replace(is.na(.), 0) %>%
   
   # override some incorrect YAMM data
+  # (these two lines correct rows for 4 people, all in the philanthropic group)
+  # vishal, ansjory, taeil.goh, and davidhou
   mutate(non_complier = if_else(completion == 1, 0, non_complier),
-         complier = if_else(completion == 1, 1, complier)) %>%
+         complier = if_else(completion == 1, 1, complier)) %>% 
   
   # meta data
   left_join(dt_roster, by = 'Email') %>%
