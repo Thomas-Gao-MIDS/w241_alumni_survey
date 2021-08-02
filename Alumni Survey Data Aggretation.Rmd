@@ -10,6 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r load_lib, warning=FALSE}
 library(data.table)
 library(tidyverse)
+library(stargazer)
+library(sandwich)
+library(lmtest)
 ```
 
 ## Load Data
@@ -140,4 +143,27 @@ dt_agg %>%
   mutate(all = bounce + non_complier + complier, .before=2)
 ```
 
+## ITT Models
+```{r itt}
+# Convert dt_agg to a data.table
+d <- data.table(dt_agg)
+
+# Generate models
+m1 <- d[bounce == 0 , lm(completion ~ Block)]
+m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + Year_Graduation)]
+
+# Calculate robust SEs for both models
+rse1 <- sqrt(diag(vcovHC(m1)))
+rse2 <- sqrt(diag(vcovHC(m2)))
+
+# Generate stargazer table
+stargazer(m1, m2, summary = FALSE, header = FALSE, 
+          title = "ITT Estimate with Attriters Removed",
+          digits = 3,
+          type="text",
+          se = list(rse1, rse2),
+          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male",
+                               "Gender: Unknown", "Graduation Year", "Constant"),
+          dep.var.labels = "Survey Completion")
+```
 
