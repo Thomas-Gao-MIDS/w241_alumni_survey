@@ -13,6 +13,7 @@ library(tidyverse)
 library(stargazer)
 library(sandwich)
 library(lmtest)
+library(AER) # for IV regression
 ```
 
 ## Load Data
@@ -167,3 +168,34 @@ stargazer(m1, m2, summary = FALSE, header = FALSE,
           dep.var.labels = "Survey Completion")
 ```
 
+## CACE Models
+```{r cace}
+# Calculate the CACE for each treatment group manually
+ittd_direct <- (d[bounce == 0 & Block == "Direct" & complier == 1, .N] /
+                  d[bounce == 0 & Block == "Direct" , .N])
+ittd_philanthropic <- (d[bounce == 0 & Block == "Philanthropic" & complier == 1, .N] /
+                         d[bounce == 0 & Block == "Philanthropic" , .N])
+cace_direct <- m2$coefficients[2] / ittd_direct
+cace_philanthropic <- m2$coefficients[3] / ittd_philanthropic
+
+
+# Generate IV regression models
+d[ , treated := complier * (Block != "Control")]
+ivmod_direct <- d[bounce == 0 & Block != "Philanthropic",
+                  ivreg(completion ~ treated | Block)]
+ivmod_philanthropic <- d[bounce == 0 & Block != "Direct",
+                         ivreg(completion ~ treated | Block)]
+
+# Calculate robust SEs for the IV regression models
+rseiv_direct <- sqrt(diag(vcovHC(ivmod_direct)))
+rseiv_philanthropic <- sqrt(diag(vcovHC(ivmod_philanthropic)))
+
+# Generate stargazer table
+stargazer(ivmod_direct, ivmod_philanthropic, summary = FALSE, header = FALSE, 
+          title = "CACE Estimate with Attriters Removed",
+          digits = 3,
+          type="text",
+          se = list(rseiv_direct, rseiv_philanthropic),
+          dep.var.labels = "Survey Completion",
+          column.labels = c("Direct", "Philanthropic"))
+```
