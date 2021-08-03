@@ -172,7 +172,7 @@ cb3 <- dt_cb[, lm(complier~Block)]
 
 stargazer(cb1, cb2, cb3, 
           type="text",
-
+          
           omit.stat = c('ser'),
           
           title = "Covariate Balance Check",
@@ -261,19 +261,26 @@ stargazer(m3,m4,summary = FALSE, header = FALSE,
 ## CACE Models
 ```{r cace}
 # Calculate the CACE for each treatment group manually
-ittd_direct <- (d[bounce == 0 & Block == "Direct" & complier == 1, .N] /
-                  d[bounce == 0 & Block == "Direct" , .N])
-ittd_philanthropic <- (d[bounce == 0 & Block == "Philanthropic" & complier == 1, .N] /
-                         d[bounce == 0 & Block == "Philanthropic" , .N])
-cace_direct <- m2$coefficients[2] / ittd_direct
-cace_philanthropic <- m2$coefficients[3] / ittd_philanthropic
+ittd_direct <- 
+  d[bounce == 0 & Block == "Direct" & complier == 1, .N] /
+  d[bounce == 0 & Block == "Direct" , .N]
+ittd_philanthropic <- 
+  d[bounce == 0 & Block == "Philanthropic" & complier == 1, .N] /
+  d[bounce == 0 & Block == "Philanthropic" , .N]
 
-ittd_regress <- d[ , lm(completion ~ Block)]
-coeftest(ittd_regress,vcovHC(ittd_regress))
+cace_direct <- m2$coefficients['BlockDirect'] / ittd_direct
+cace_philanthropic <- m2$coefficients['BlockPhilanthropic'] / ittd_philanthropic
 
+cace_table <- 
+  data.table(Treatment = c('Direct', 'Philanthropic'),
+             ITT = m2$coefficients[c('BlockDirect', 'BlockPhilanthropic')],
+             ITTd = c(ittd_direct, ittd_philanthropic),
+             CACE = c(cace_direct, cace_philanthropic))
 
+stargazer(cace_table, type = 'text', 
+          summary = F, rownames = F,
+          title = 'CACE = ITT / ITTd')
 
-#summary(ittd_regress)
 
 # Generate IV regression models
 d[ , treated := complier * (Block != "Control")]
@@ -287,11 +294,15 @@ rseiv_direct <- sqrt(diag(vcovHC(ivmod_direct)))
 rseiv_philanthropic <- sqrt(diag(vcovHC(ivmod_philanthropic)))
 
 # Generate stargazer table
-stargazer(ivmod_direct, ivmod_philanthropic, summary = FALSE, header = FALSE, 
-          title = "CACE Estimate with Attriters Removed",
-          digits = 3,
+stargazer(ivmod_direct, ivmod_philanthropic, 
           type="text",
           se = list(rseiv_direct, rseiv_philanthropic),
+          
+          omit.stat = c('rsq', 'adj.rsq', 'ser'),
+          
+          title = "CACE (IVreg) Estimate with Attriters Removed",
           dep.var.labels = "Survey Completion",
+          covariate.labels = 'Treated',
           column.labels = c("Direct", "Philanthropic"))
+
 ```
