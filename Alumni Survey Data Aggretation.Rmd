@@ -169,26 +169,52 @@ stargazer(m1, m2, summary = FALSE, header = FALSE,
           se = list(rse1, rse2),
           covariate.labels = c("Group: Direct", "Group: Philanthropic",
                                "Gender: Male", "Gender: Unknown",
-                               "Graduation: 2016", "Graduation: 2017",
-                               "Graduation: 2018", "Graduation: 2019",
-                               "Graduation: 2020", "Graduation: 2021",
+                               "Cohort: 2016", "Cohort: 2017",
+                               "Cohort: 2018", "Cohort: 2019",
+                               "Cohort: 2020", "Cohort: 2021",
                                "Constant"),
           dep.var.labels = "Survey Completion")
 
 
-m3 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation) + Gender*factor(Year_Graduation))]
-rse3 <- sqrt(diag(vcovHC(m3 ,type = "HC1")))
-summary(m3)
+```
 
-stargazer(m3, summary = FALSE, header = FALSE, 
-          title = "HTE and Estimate with Attriters Removed",
-          digits = 3,
-          type="text",
-          se = list(rse3),
-          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male","Gender: Unknown", "Graduation Year:16","Graduation Year:17","Graduation Year:18","Graduation Year:19","Graduation Year:20","Graduation Year:21" ,"Male:Graduation Year:16","Unk:Graduation Year:16","Male:Graduation Year:17","Unk:Graduation Year:17","Male:Graduation Year:18","Unk:Graduation Year:18","Male:Graduation Year:19","Unk:Graduation Year:19","Male:Graduation Year:20","Unk:Graduation Year:20","Male:Graduation Year:21","Unk:Graduation Year:21"),
-          dep.var.labels = "Survey Completion")
+```{r Heterogenous Treatment effect}
+
+# HTE between grad year and treatment
+m3 <- d[bounce == 0 , lm(completion ~ Block +  factor(Year_Graduation) + Block*factor(Year_Graduation))]
+rse3 <- sqrt(diag(vcovHC(m3 ,type = "HC1")))
+
+
+
+
+m4 <- d[bounce == 0 , lm(completion ~ Block +  Gender + Block*Gender)]
+rse4 <- sqrt(diag(vcovHC(m4 ,type = "HC1")))
+
+
+
+
+collist_m3 = c("Group: Direct", "Group: Philanthropic", "Cohort:2016","Cohort:2017","Cohort:2018","Cohort:2019","Cohort:2020","Cohort:2021" ,"Direct:Cohort:2016","Phil:Cohort:2016","Direct:Cohort:2016","Phil:Cohort:2016","Direct:Cohort:2017","Phil:Cohort:2017","Direct:Cohort:2018","Phil:Cohort:2018","Direct:Cohort:2019","Phil:Cohort:2019","Direct:Cohort:2020","Phil:Cohort:2020","Direct:Cohort:2021","Phil:Cohort:2021")
+
+collist_m4 = c("Group: Direct", "Group: Philanthropic","Gender:Male","Gender:Unk","Direct:Male", "Phil:Male","Direct:Unk","Phil:Unk")
+
+
+
+
+stargazer(m3,m4,summary = FALSE, header = FALSE,
+          title = "HTE between Gender , Graduation Year and Tretment",
+          se = list(rse3, rse4),
+          type = "text",
+          covariate.labels = c(collist_m3,collist_m4 ),
+           dep.var.labels = "Survey Completion")
+          
+
+
+
+          
 
 ```
+
+
 
 ## CACE Models
 ```{r cace}
