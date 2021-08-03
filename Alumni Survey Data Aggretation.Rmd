@@ -148,24 +148,48 @@ dt_agg %>%
 ```{r itt}
 # Convert dt_agg to a data.table
 d <- data.table(dt_agg)
+head(d)
+
+
+
+
 
 # Generate models
 m1 <- d[bounce == 0 , lm(completion ~ Block)]
-m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + Year_Graduation)]
+m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation))]
+
+summary(m2)
+
 
 # Calculate robust SEs for both models
 rse1 <- sqrt(diag(vcovHC(m1)))
 rse2 <- sqrt(diag(vcovHC(m2)))
 
 # Generate stargazer table
+
+
+
 stargazer(m1, m2, summary = FALSE, header = FALSE, 
           title = "ITT Estimate with Attriters Removed",
           digits = 3,
           type="text",
           se = list(rse1, rse2),
-          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male",
-                               "Gender: Unknown", "Graduation Year", "Constant"),
+          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male","Gender: Unknown", "Graduation Year:16","Graduation Year:17","Graduation Year:18","Graduation Year:19","Graduation Year:20","Graduation Year:21" ,"Constant"),
           dep.var.labels = "Survey Completion")
+
+
+m3 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation) + Gender*factor(Year_Graduation))]
+rse3 <- sqrt(diag(vcovHC(m3 ,type = "HC1")))
+summary(m3)
+
+stargazer(m3, summary = FALSE, header = FALSE, 
+          title = "HTE and Estimate with Attriters Removed",
+          digits = 3,
+          type="text",
+          se = list(rse3),
+          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male","Gender: Unknown", "Graduation Year:16","Graduation Year:17","Graduation Year:18","Graduation Year:19","Graduation Year:20","Graduation Year:21" ,"Male:Graduation Year:16","Unk:Graduation Year:16","Male:Graduation Year:17","Unk:Graduation Year:17","Male:Graduation Year:18","Unk:Graduation Year:18","Male:Graduation Year:19","Unk:Graduation Year:19","Male:Graduation Year:20","Unk:Graduation Year:20","Male:Graduation Year:21","Unk:Graduation Year:21"),
+          dep.var.labels = "Survey Completion")
+
 ```
 
 ## CACE Models
@@ -178,6 +202,12 @@ ittd_philanthropic <- (d[bounce == 0 & Block == "Philanthropic" & complier == 1,
 cace_direct <- m2$coefficients[2] / ittd_direct
 cace_philanthropic <- m2$coefficients[3] / ittd_philanthropic
 
+ittd_regress <- d[ , lm(completion ~ Block)]
+coeftest(ittd_regress,vcovHC(ittd_regress))
+
+
+
+#summary(ittd_regress)
 
 # Generate IV regression models
 d[ , treated := complier * (Block != "Control")]
