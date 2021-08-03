@@ -150,10 +150,6 @@ dt_agg %>%
 d <- data.table(dt_agg)
 head(d)
 
-
-
-
-
 # Generate models
 m1 <- d[bounce == 0 , lm(completion ~ Block)]
 m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation))]
@@ -166,15 +162,17 @@ rse1 <- sqrt(diag(vcovHC(m1)))
 rse2 <- sqrt(diag(vcovHC(m2)))
 
 # Generate stargazer table
-
-
-
 stargazer(m1, m2, summary = FALSE, header = FALSE, 
           title = "ITT Estimate with Attriters Removed",
           digits = 3,
           type="text",
           se = list(rse1, rse2),
-          covariate.labels = c("Group: Direct", "Group: Philanthropic", "Gender: Male","Gender: Unknown", "Graduation Year:16","Graduation Year:17","Graduation Year:18","Graduation Year:19","Graduation Year:20","Graduation Year:21" ,"Constant"),
+          covariate.labels = c("Group: Direct", "Group: Philanthropic",
+                               "Gender: Male", "Gender: Unknown",
+                               "Graduation: 2016", "Graduation: 2017",
+                               "Graduation: 2018", "Graduation: 2019",
+                               "Graduation: 2020", "Graduation: 2021",
+                               "Constant"),
           dep.var.labels = "Survey Completion")
 
 
