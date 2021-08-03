@@ -170,10 +170,12 @@ cb1 <- dt_cb[, lm(bounce~Block)]
 cb2 <- dt_cb[, lm(non_complier~Block)]
 cb3 <- dt_cb[, lm(complier~Block)]
 
-stargazer(cb1, cb2, cb3, summary = FALSE, header = FALSE, 
-          title = "Covariate Balance Check",
-          digits = 3,
+stargazer(cb1, cb2, cb3, 
           type="text",
+
+          omit.stat = c('ser'),
+          
+          title = "Covariate Balance Check",
           covariate.labels = c("Group: Direct", 
                                "Group: Philanthropic",
                                "Constant"),
@@ -186,30 +188,32 @@ stargazer(cb1, cb2, cb3, summary = FALSE, header = FALSE,
 ```{r itt}
 # Convert dt_agg to a data.table
 d <- data.table(dt_agg)
-head(d)
 
 # Generate models
 m1 <- d[bounce == 0 , lm(completion ~ Block)]
 m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation))]
-
-summary(m2)
-
 
 # Calculate robust SEs for both models
 rse1 <- sqrt(diag(vcovHC(m1)))
 rse2 <- sqrt(diag(vcovHC(m2)))
 
 # Generate stargazer table
-stargazer(m1, m2, summary = FALSE, header = FALSE, 
-          title = "ITT Estimate with Attriters Removed",
-          digits = 3,
+stargazer(m1, m2, 
           type="text",
           se = list(rse1, rse2),
+          
+          #no.space = T, 
+          omit.stat = c('ser', 'f'),
+          omit = c('Gender', 'Year_Graduation'),
+          add.lines = list(c('Gender Fixed Effects?', 'No', 'Yes'),
+                           c('Cohort Fixed Effects?', 'No', 'Yes')),
+          
+          title = "ITT Estimate with Attriters Removed",
           covariate.labels = c("Group: Direct", "Group: Philanthropic",
-                               "Gender: Male", "Gender: Unknown",
-                               "Cohort: 2016", "Cohort: 2017",
-                               "Cohort: 2018", "Cohort: 2019",
-                               "Cohort: 2020", "Cohort: 2021",
+                               #"Gender: Male", "Gender: Unknown",
+                               #"Cohort: 2016", "Cohort: 2017",
+                               #"Cohort: 2018", "Cohort: 2019",
+                               #"Cohort: 2020", "Cohort: 2021",
                                "Constant"),
           dep.var.labels = "Survey Completion")
 
