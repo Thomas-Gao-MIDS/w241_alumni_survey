@@ -132,8 +132,8 @@ dt_agg <-
 write_csv(dt_agg, 'data/agg_table.csv')
 ```
 
-## Quick Look
-```{r quick_look}
+## Covariance Balance Check
+```{r cov_balance}
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
   gather(measure, value, -Block) %>%
@@ -142,6 +142,44 @@ dt_agg %>%
   spread(measure, value) %>%
   select(Block, bounce, non_complier, complier, completion) %>%
   mutate(all = bounce + non_complier + complier, .before=2)
+
+dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion) %>%
+  gather(measure, value, -Block) %>%
+  group_by(Block, measure) %>%
+  summarise(value = sum(value)) %>%
+  ungroup() %>%
+  filter(measure != 'completion') %>%
+  mutate(measure = recode_factor(measure, 
+                                 bounce = "Email Bounced (Attrition)", 
+                                 non_complier = 'Did Not Open (Non-Complier)',
+                                 complier = "Opened Email (Complier)")) %>%
+  # plotting
+  ggplot(aes(x=Block, y=value, fill=measure)) +
+  geom_col() +
+  labs(x='Treatment Group', y='Count', title='Covariate Balance Check',
+       fill='Status') +
+  scale_fill_brewer(palette = 'Accent') +
+  theme_bw()
+
+dt_cb <- dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion)  %>%
+  data.table()
+
+cb1 <- dt_cb[, lm(bounce~Block)]
+cb2 <- dt_cb[, lm(non_complier~Block)]
+cb3 <- dt_cb[, lm(complier~Block)]
+
+stargazer(cb1, cb2, cb3, summary = FALSE, header = FALSE, 
+          title = "Covariate Balance Check",
+          digits = 3,
+          type="text",
+          covariate.labels = c("Group: Direct", 
+                               "Group: Philanthropic",
+                               "Constant"),
+          dep.var.labels = c("Attrition", 'Non-Compliance', 'Compliance'))
+
+
 ```
 
 ## ITT Models
@@ -205,12 +243,12 @@ stargazer(m3,m4,summary = FALSE, header = FALSE,
           se = list(rse3, rse4),
           type = "text",
           covariate.labels = c(collist_m3,collist_m4 ),
-           dep.var.labels = "Survey Completion")
-          
+          dep.var.labels = "Survey Completion")
 
 
 
-          
+
+
 
 ```
 
