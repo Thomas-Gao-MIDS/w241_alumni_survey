@@ -272,12 +272,12 @@ stargazer(ivmod_direct, ivmod_philanthropic,
 ```{r hte}
 
 # HTE for different gender
-m3 <- d[bounce == 0 & Gender != 'U', lm(completion ~ Gender * Block)]
-rse3 <- sqrt(diag(vcovHC(m3 ,type = "HC1")))
+m3 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block)]
+rse3 <- sqrt(diag(vcovHC(m3)))
 
 # HTE for different gender, controlling for cohort effect
-m4 <- d[bounce == 0 & Gender != 'U', lm(completion ~ Gender * Block + factor(Year_Graduation))]
-rse4<- sqrt(diag(vcovHC(m4 ,type = "HC1")))
+m4 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block + factor(Year_Graduation))]
+rse4<- sqrt(diag(vcovHC(m4)))
 
 
 stargazer(m3, m4,
@@ -292,7 +292,7 @@ stargazer(m3, m4,
 
           title = "Heterogeneous Treatment Effect",
           covariate.labels = c('Male',
-                               'Group: Direct', 'Group: Philanthropic', 
+                               'Group: Direct', 'Group: Philanthropic',
                                'Male + Direct', 'Male + Philanthropic',
                                "Constant"),
           dep.var.labels = "Survey Completion")
@@ -301,11 +301,11 @@ stargazer(m3, m4,
 ```{r hte_2}
 
 # HTE between grad year and treatment
-m5 <- d[bounce == 0 & Gender != 'U', lm(completion ~ factor(Year_Graduation) * Block)]
+m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
 rse5 <- sqrt(diag(vcovHC(m5)))
 
 
-m6 <- d[bounce == 0 & Gender != 'U', lm(completion ~ factor(Year_Graduation) * Block + Gender)]
+m6 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block + Gender)]
 rse6 <- sqrt(diag(vcovHC(m6)))
 
 stargazer(m5, m6,
@@ -333,5 +333,20 @@ stargazer(m5, m6,
           dep.var.labels = "Survey Completion")
 ```
 
+```{r hte_f_tests}
 
+# F-test on gender
+anova(
+  d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender + Block)],
+  d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block)],
+  test = "F"
+)
+
+# F-test on graduation year
+anova(
+  m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) + Block)],
+  m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)],
+  test = "F"
+)
+```
 
