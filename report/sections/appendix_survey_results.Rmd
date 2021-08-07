@@ -1,0 +1,7 @@
+# Appendix C: Qualtrics Survey and Results Summary
+
+This appendix contains the actual Qualtrics survey that was sent to each of the MIDS alumni, as well as a graphical summary of the completed survey responses.  Figure \@ref(fig:qualtrics) is the screenshot of the Qualtrics survey that was sent to each of the MIDS alumni.  Figures XX and YY are summary visualizations of the 229 responses we received from the MIDS alumni.
+
+```{r qualtrics, echo=FALSE, fig.align = "center", out.height = "73%", fig.cap = "Screenshot of Qualtrics survey"}
+knitr::include_graphics(here::here("report/images", "Qualtrics_Survey.png"))
+```

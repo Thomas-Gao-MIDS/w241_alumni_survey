@@ -1,3 +1,4 @@
+\allsectionsfont{\centering}
 # Abstract
 
 <<abstract text goes here>>
