@@ -1,0 +1,40 @@
+---
+title: "Final Report"
+author: "Thomas Gao, Robert Hosbach, Devesh Khandelwal, Joe Mirza"
+date: "W241 | Summer 2021"
+bibliography: mybibfile.bib
+csl: apa-6th-edition.csl
+output: pdf_document
+---
+
+```{r setup, warning=FALSE, echo=FALSE, include=FALSE}
+library(data.table)
+library(tidyverse)
+library(stargazer)
+library(sandwich)
+library(lmtest)
+library(AER) # for IV regression
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, child='sections/abstract.Rmd'}
+```
+
+```{r, child='sections/introduction.Rmd'}
+```
+
+```{r, child='sections/methodology.Rmd'}
+```
+
+```{r, child='sections/results.Rmd'}
+```
+
+```{r, child='sections/discussion.Rmd'}
+```
+
+```{r, child='sections/conclusion.Rmd'}
+```
+
+\newpage
+# References
