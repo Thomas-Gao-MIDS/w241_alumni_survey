@@ -1,3 +1,30 @@
 # Discussion
 
-<<discussion text goes here>>
+In this section we'll discuss the overall data aggregation and our approach to calculate the `treatment-effect`.
+
+## Data flow and aggregation
+As highlighted in the previous section ,our data comes from 3 main sources:
+
+* Alumni Scrape - main data source that consists of alumni details from web scraping
+* YAMM Mail Merge - populated from the alumni scrape with personal links to surveys and body of the `treatment`
+* Qualtrics  - contains the information on survey respondents
+
+The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis.
+
+
+```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
+knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
+```
+
+
+
+## Randomization 
+In this section we'll build on the treatment effects from the previous section.Before doing any analysis we ensured that our covariates are balanced across the three groups of interest to avoid issues related to selection bias and a fair comparison.
+
+The figure below indicates that the covariates are largely balanced , ensuring and "apples to apples" comparison.
+
+```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CoVariate Balance Check"}
+knitr::include_graphics(here::here("report/images", "Covariate_balance_check.PNG"))
+```
+
+
