@@ -16,15 +16,58 @@ The figure below represents the high-level data flow and aggregation of our data
 knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
 ```
 
+We performed a left join on Alumni Scrape with YAMM and Qualtrics data to ensure that each subject is identified in one of the categories-`compliers, non-compliers, and attriters`. Please refer to the previous section on the definition of each and refer to appendix C for the script.
 
 
-## Randomization 
-In this section we'll build on the treatment effects from the previous section.Before doing any analysis we ensured that our covariates are balanced across the three groups of interest to avoid issues related to selection bias and a fair comparison.
+## Checks and balances 
+Before we proceeded with our analysis of the results we ensured that our covariates are balanced. This was done to validate randomization 
 
-The figure below indicates that the covariates are largely balanced , ensuring and "apples to apples" comparison.
 
 ```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CoVariate Balance Check"}
 knitr::include_graphics(here::here("report/images", "Covariate_balance_check.PNG"))
 ```
+
+## Non-Compliance
+
+As with any survey we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance* where people do not respond to assigned dosage of treatment(Direct, Philanthropic and Control). This is due to the fact that we generate personal links for alumni and refrained from using  generic survey link across groups.
+Our mail-merge strategy(with personalized body and subject) gave an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey campaign.We assume that these approaches would *prevent any two-sided non-compliance* where people in separate groups share the survey link with one another.
+
+As highlighted in the previous section we calculate the treatment effect in the following categories :
+* Intent to Treat(ITT)
+* Complier-Average Causal Effect (CACE)
+* Heterogeneous Treatment Effects (HTEs)
+
+### Calculation of ITT
+
+The ultimate aim for a research is to determine the Average Treatment Effect (ATE) for a population,however due to practical challenges and given the issue of non-compliance it is not always possible to get an accurate measure of the ATE.Researchers often start with a measure of ITT -  effect of treatment on ASSIGNMENT on outcome (for everybody) ignoring non-compliance.
+
+In our experiment we ran regressions to determine ITT by comparing the three groups and the response rates(ignoring the non-compliance).
+The table below provides an overview of ITT along with ITT by factoring in the groups and cohort. In general, we observed that the response rates in the Direct and Philanthropic groups were low compared to the control group.
+
+
+```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
+knitr::include_graphics(here::here("report/images", "ITT_stargazer.PNG"))
+```
+
+Note - For a detailed analysis of results, please refer to the subsequent sections.
+
+### Calculation of CACE
+
+Given the presence of `Never-takers`(subjects who never take the treatment dosage),a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers(subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
+Note - we assume that we don't have any `Defiers` in our data.
+
+We calculated our case by first calculating the take-up rate(proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate.Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
+
+The table below provides a snapshot of CACE for the two treatment groups with the control group as the baseline.
+
+```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
+knitr::include_graphics(here::here("report/images", "CACE_Stargazer.PNG"))
+```
+
+We again observe that the response rates in the treatment groups were lower than the response rates in the control.
+
+
+
+
 
 
