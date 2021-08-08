@@ -28,7 +28,7 @@ Our experiment followed a progression of randomization, treatment, and outcome m
 knitr::include_graphics(here::here("report/images", "roxo_table.png"))
 ```
 
-We delivered the control and treatment messages to the three groups of MIDS alumni using emails sent from Devesh Khandelwal's personal I-School email address.  (We found from testing that using a less personal email address resulted in more of our emails landing in recipients' "promotions" or "social" Gmail inboxes, rather than their "primary" inboxes.) 
+We delivered the control and treatment messages to the three groups of MIDS alumni using emails sent from Devesh Khandelwal's personal I-School email address(deveshkhandelwal@berkeley.edu).  (We found from testing that using a less personal email address resulted in more of our emails landing in recipients' "promotions" or "social" Gmail inboxes, rather than their "primary" inboxes.) 
 
 The subject lines of the emails to all three groups were identical for the initial emails as well as the reminder emails (see Table \@ref(tab:email-subjects)).  Moreover, the body text of the emails were also identical for all three groups, except for the treatment text that was accentuated using bold typeface.
 
