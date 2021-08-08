@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.1)  7 AUG 2021 19:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.1)  8 AUG 2021 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,39 +396,137 @@ LaTeX Warning: Command \underbar  has changed.
 LaTeX Warning: Command \underline  has changed.
                Check if current package is valid.
 
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count283
+\float@exts=\toks26
+\float@box=\box53
+\@float@everytoks=\toks27
+\@floatcapt=\box54
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen178
+\ar@mcellbox=\box55
+\extrarowheight=\dimen179
+\NC@list=\toks28
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box56
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip61
+\multirow@cntb=\count284
+\multirow@dima=\skip62
+\bigstrutjot=\dimen180
+) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen181
+\WF@size=\dimen182
+\c@WF@wrappedlines=\count285
+\WF@box=\box57
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks30
+\minrowclearance=\skip63
+) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed) + inter
+mediate FMi
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box58
+\sift@deathcycles=\count286
+\@vwid@loff=\dimen183
+\@vwid@roff=\dimen184
+)
+\c@taburow=\count287
+\tabu@nbcols=\count288
+\tabu@cnt=\count289
+\tabu@Xcol=\count290
+\tabu@alloc=\count291
+\tabu@nested=\count292
+\tabu@target=\dimen185
+\tabu@spreadtarget=\dimen186
+\tabu@naturalX=\dimen187
+\tabucolX=\dimen188
+\tabu@Xsum=\dimen189
+\extrarowdepth=\dimen190
+\abovetabulinesep=\dimen191
+\belowtabulinesep=\dimen192
+\tabustrutrule=\dimen193
+\tabu@thebody=\toks31
+\tabu@footnotes=\toks32
+\tabu@box=\box59
+\tabu@arstrutbox=\box60
+\tabu@hleads=\box61
+\tabu@vleads=\box62
+\tabu@cellskip=\skip64
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box63
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip65
+) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box64
+\UL@hyphenbox=\box65
+\UL@skip=\skip66
+\UL@hook=\toks33
+\UL@height=\dimen194
+\UL@pe=\count293
+\UL@pixel=\dimen195
+\ULC@box=\box66
+Package: ulem 2019/11/18
+\ULdepth=\dimen196
+) (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen197
+\c@nlinenum=\count294
+\TeXr@lab=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count283
-\l__pdf_internal_box=\box53
+\l__kernel_color_stack_int=\count295
+\l__pdf_internal_box=\box67
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Info: Redefining \microtypecontext on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Info: Redefining \microtypecontext on input line 134.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 117.
+LaTeX Info: Redefining \showhyphens on input line 134.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -437,17 +535,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen178
-\scratchbox=\box54
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen179
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count296
+\scratchdimen=\dimen198
+\scratchbox=\box68
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen199
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -456,8 +554,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 117.
+\AtBeginShipoutBox=\box69
+Package hyperref Info: Link coloring OFF on input line 134.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -465,11 +563,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 134.
+LaTeX Info: Redefining \pageref on input line 134.
+LaTeX Info: Redefining \nameref on input line 134.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -505,39 +603,39 @@ LaTeX Info: Redefining \nameref on input line 117.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-19.
+36.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-19.
+36.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-119.
+136.
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-119.
+136.
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 119.
+(Font)              <12> on input line 136.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 119.
+(Font)              <8> on input line 136.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 119.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 119
+(Font)              <6> on input line 136.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 136
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 119
+LaTeX Font Info:    Trying to load font information for U+msb on input line 136
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -545,91 +643,193 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 171.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 171.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 171.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-98.
+</home/jovyan/mids-w241/w241_alumni_survey/report/images/blocks_table.png, id=2
+8, 389.65575pt x 160.80075pt>
+File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/blocks_table.png 
+Graphic file (type png)
+<use /home/jovyan/mids-w241/w241_alumni_survey/report/images/blocks_table.png>
+Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
+s/blocks_table.png  used on input line 184.
+(pdftex.def)             Requested size: 352.33981pt x 145.40143pt.
+[3]
+</home/jovyan/mids-w241/w241_alumni_survey/report/images/roxo_table.png, id=45,
+ 384.2355pt x 162.6075pt>
+File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/roxo_table.png Gr
+aphic file (type png)
+<use /home/jovyan/mids-w241/w241_alumni_survey/report/images/roxo_table.png>
+Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
+s/roxo_table.png  used on input line 198.
+(pdftex.def)             Requested size: 352.32835pt x 149.10448pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.224 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.224 
+       </home/jovyan/mids-w241/w241_alumni_survey/report/images/blocks_table.pn
+g> </home/jovyan/mids-w241/w241_alumni_survey/report/images/roxo_table.png>] [5
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 
+      ]
+</home/jovyan/mids-w241/w241_alumni_survey/report/images/emails_survey_timeseri
+es.png, id=66, 466.1415pt x 208.3785pt>
+File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/emails_survey_tim
+eseries.png Graphic file (type png)
+<use /home/jovyan/mids-w241/w241_alumni_survey/report/images/emails_survey_time
+series.png>
+Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
+s/emails_survey_timeseries.png  used on input line 268.
+(pdftex.def)             Requested size: 466.14035pt x 208.37798pt.
+</home/jovyan/mids-w241/w241_alumni_survey/report/images/flow_diagram.png, id=6
+8, 553.06625pt x 255.95625pt>
+File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/flow_diagram.png 
+Graphic file (type png)
+<use /home/jovyan/mids-w241/w241_alumni_survey/report/images/flow_diagram.png>
+Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
+s/flow_diagram.png  used on input line 284.
+(pdftex.def)             Requested size: 469.75409pt x 217.3998pt.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.290 
+       </home/jovyan/mids-w241/w241_alumni_survey/report/images/emails_survey_t
+imeseries.png>] [7pdfTeX warning (ext4): destination with the same identifier (
+name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.313 \newpage
+               </home/jovyan/mids-w241/w241_alumni_survey/report/images/flow_di
+agram.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+62.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4] [5] [6] [7] [8]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-19.
+) [8] [9] [10] [11] [12]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+83.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 431.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 595.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-433.
+597.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \vbox (badness 10000) detected at line 500
+Underfull \vbox (badness 10000) detected at line 664
  []
 
-[9] [10]
+[13] [14]
 </home/jovyan/mids-w241/w241_alumni_survey/report/images/Qualtrics_Survey.png, 
-id=136, 414.95026pt x 864.22874pt>
+id=205, 414.95026pt x 864.22874pt>
 File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/Qualtrics_Survey.
 png Graphic file (type png)
 <use /home/jovyan/mids-w241/w241_alumni_survey/report/images/Qualtrics_Survey.p
 ng>
 Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
-s/Qualtrics_Survey.png  used on input line 511.
+s/Qualtrics_Survey.png  used on input line 675.
 (pdftex.def)             Requested size: 231.0979pt x 481.3142pt.
 </home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p1.png,
- id=138, 596.2275pt x 370.986pt>
+ id=206, 596.2275pt x 370.986pt>
 File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p1
 .png Graphic file (type png)
 <use /home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p1.
 png>
 Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
-s/survey_results_p1.png  used on input line 520.
+s/survey_results_p1.png  used on input line 684.
 (pdftex.def)             Requested size: 469.75908pt x 292.29453pt.
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.690 
+       </home/jovyan/mids-w241/w241_alumni_survey/report/images/Qualtrics_Surve
+y.png>]
 </home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p2.png,
- id=139, 584.78474pt x 140.32425pt>
+ id=217, 584.78474pt x 140.32425pt>
 File: /home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p2
 .png Graphic file (type png)
 <use /home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_results_p2.
 png>
 Package pdftex.def Info: /home/jovyan/mids-w241/w241_alumni_survey/report/image
-s/survey_results_p2.png  used on input line 529.
+s/survey_results_p2.png  used on input line 693.
 (pdftex.def)             Requested size: 469.75581pt x 112.72203pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
-[11 </home/jovyan/mids-w241/w241_alumni_survey/report/images/Qualtrics_Survey.p
-ng>] [12 </home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_result
-s_p1.png> </home/jovyan/mids-w241/w241_alumni_survey/report/images/survey_resul
-ts_p2.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 700.
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.700 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.700 \end{document}
+                     </home/jovyan/mids-w241/w241_alumni_survey/report/images/s
+urvey_results_p1.png> </home/jovyan/mids-w241/w241_alumni_survey/report/images/
+survey_results_p2.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 700.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 536.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 700.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 700.
  ) 
 Here is how much of TeX's memory you used:
- 13950 strings out of 483183
- 205249 string characters out of 5966293
- 490747 words of memory out of 5000000
- 28551 multiletter control sequences out of 15000+600000
- 587529 words of font info for 110 fonts, out of 8000000 for 9000
+ 15405 strings out of 483183
+ 227329 string characters out of 5966293
+ 522224 words of memory out of 5000000
+ 29889 multiletter control sequences out of 15000+600000
+ 597570 words of font info for 125 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,6n,42p,1348b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,42p,1376b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb
->
-Output written on main.pdf (12 pages, 426086 bytes).
+/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
+Output written on main.pdf (16 pages, 610938 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 12512 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 392 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 14628 words of extra memory for PDF output out of 17280 (max. 10000000)
 
