@@ -45,7 +45,7 @@ In our experiment we ran regressions to determine ITT by comparing the three gro
 The table below provides an overview of ITT along with ITT by factoring in the groups and cohort. In general, we observed that the response rates in the Direct and Philanthropic groups were low compared to the control group.
 
 
-```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
+```{r ITT model, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
 knitr::include_graphics(here::here("report/images", "ITT_stargazer.PNG"))
 ```
 
@@ -60,11 +60,13 @@ We calculated our case by first calculating the take-up rate(proportion of subje
 
 The table below provides a snapshot of CACE for the two treatment groups with the control group as the baseline.
 
-```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
+```{r CACE, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CACE models"}
 knitr::include_graphics(here::here("report/images", "CACE_Stargazer.PNG"))
 ```
 
 We again observe that the response rates in the treatment groups were lower than the response rates in the control.
+
+
 
 
 
