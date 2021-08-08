@@ -12,7 +12,7 @@ As highlighted in the previous section ,our data comes from 3 main sources:
 The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis.
 
 
-```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
+```{r Data flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
 knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
 ```
 
@@ -23,7 +23,7 @@ We performed a left join on Alumni Scrape with YAMM and Qualtrics data to ensure
 Before we proceeded with our analysis of the results we ensured that our covariates are balanced. This was done to validate randomization 
 
 
-```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CoVariate Balance Check"}
+```{r balance check, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CoVariate Balance Check"}
 knitr::include_graphics(here::here("report/images", "Covariate_balance_check.PNG"))
 ```
 
