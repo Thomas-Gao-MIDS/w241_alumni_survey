@@ -90,6 +90,34 @@ The `Direct` incentive group on the other hand is significant at `10%` level , h
 Note - It is worth nothing that both the `Direct` and the `Philanthropic` groups are not significant at 5%.For the `Direct` group we observe significance at a `10%`level but the estimates for the `Philanthropic`group is not significant at all, given its large standard errors.
 
 
+### Heterogeneous Treatment Effects (HTEs)
+
+We were also interested to see whether the response rates were different by cohorts/gender. This could help us in determining a group that is most likely to respond in the event of a further intervention of a policy change.
+Here, we analyze the results of how treatment effects vary by gender (*for compliers *).
+
+```{r HTE by Gender, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "HTE by Gender"}
+knitr::include_graphics(here::here("report/images", "HTE_Gender_Stargazer.PNG"))
+```
+For a detailed results of HTEs by gender and cohorts, pls refer to the "Results" section.
+
+The regression equation for the HTE above can be specified as :
+
+$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$
+
+For *compliers* We interpret the regression results as follows(this is labeled as 'cohort Fixed Effects ? No ' in the table above):
+* Response rates for females in `Control`group is highly significant and on average they respond at `38%`
+* Response rates for *men* in `Control`group is **not** significant and on average they are likely to respond anywhere between `38%` to `54.6%`(range of confidence interval)
+* The co-efficient of interaction term is **not** significant but we can calculate a range for the response rates.
+- The response rates for females in the `Direct`group can rage from `16%` to `58%` , which is the confidence interval. In other words females in the `Direct` group are ~`3%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
+- The response rates for males in the `Direct`group can rage from `0%` to `46%` , which is the confidence interval. In other words males in the `Direct` group are ~`15%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
+
+With a similar analysis we can compare the response rates between males and females in the `Philanthropic` group.
+
+
+
+
+
+
 
 
 
