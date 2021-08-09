@@ -41,6 +41,12 @@ As highlighted in the previous section we calculate the treatment effect in the 
 
 The ultimate aim for a research is to determine the Average Treatment Effect (ATE) for a population,however due to practical challenges and given the issue of non-compliance it is not always possible to get an accurate measure of the ATE.Researchers often start with a measure of ITT -  effect of treatment on ASSIGNMENT on outcome (for everybody) ignoring non-compliance.
 
+Mathematically we define ITT as:
+
+$ ITT = E[Y_i(z = 1)] - E[Y_i(z = 0)]$
+
+here, z denotes 'azzignment', to one of the experimental group.
+
 In our experiment we ran regressions to determine ITT by comparing the three groups and the response rates(ignoring the non-compliance).
 The table below provides an overview of ITT along with ITT by factoring in the groups and cohort. In general, we observed that the response rates in the Direct and Philanthropic groups were low compared to the control group.
 
@@ -53,8 +59,17 @@ We also noticed that when controlled for `cohorts` and `gender` , our treatment 
 
 ### Calculation of CACE
 
-Given the presence of `Never-takers`(subjects who never take the treatment dosage),a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers(subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
+Given the presence of `Non-compliers`(subjects who don't take the treatment dosage),a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers(subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
 Note - we assume that we don't have any `Defiers` in our data.
+
+Mathematically,
+$ ITT_D = E[d_i(z = 1)- d_i(z = 0)] $
+$ CACE = E[Y_i(d = 1) -Y_i(d = 0)|d_i(1)=1] $
+
+The `exclusion` restriction holds true for our experiment.This is because `attriters` have no possibility of receiving a treatment(their emails are no longer valid) and hence we can safely assume that assignment to the specific groups has no effect beyond the received treatment.Due to this we can simplify the CACE calculation as :
+
+$ CACE = ITT/ ITT_D] $
+
 
 We calculated our case by first calculating the take-up rate(proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate.Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
 
