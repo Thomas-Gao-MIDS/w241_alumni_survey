@@ -1,3 +1,5 @@
 # Conclusion
 
-<<conclusion text goes here>>
+For both the CACE and the ITT we noticed that the response rate is lower than the control group. This is contrary to the belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
+* MIDS is a graduate degree program with a vast majority of people who work full-time. We speculate that $25 might not be right amount of incentive to people to draw their attention.
+* 

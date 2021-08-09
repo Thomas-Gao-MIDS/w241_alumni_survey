@@ -81,15 +81,17 @@ knitr::include_graphics(here::here("report/images", "CACE_Stargazer.PNG"))
 
 We again observe that the response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the `Control`group.
 * Subjects in `Direct` group are now ~`10 %` less likely to respond, compared to `6%`(ignoring non-compliance).
-* Subjects in `Philanthropic` group are now ~`4.4 %` less likely ,, compared to `6%` (ignoring non-compliance).
+* Subjects in `Philanthropic` group are now ~`4.4 %` less likely , compared to `6%` (ignoring non-compliance).
 
 We believe that the results in the table above for CACE, measures the treatment better, compared to ITT. The survey completion rate for the `Control` group is ~ `26%`, compared to the overall average of `21%.` These results are significant at a level of one percent.The 95% confidence interval, i.e the true survey response rate for this group could be anywhere between `26%` to `27%`.
 
+The `Direct` incentive group on the other hand is significant at `10%` level , hence the true response rate for this group could be anywhere between `0%` to `27.5%`.We can follow a similar approach to measure the `CACE` for the `Philanthropic` group. The coefficient is not statistically significant. The response rates for people in this group can vary from `10%` to `33.7%`.
+
+Note - It is worth nothing that both the `Direct` and the `Philanthropic` groups are not significant at 5%.For the `Direct` group we observe significance at a `10%`level but the estimates for the `Philanthropic`group is not significant at all, given its large standard errors.
 
 
-For both the CACE and the ITT we noticed that the response rate is lower than the control group. This is contrary to the belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
-* MIDS is a graduate degree program with a vast majority of people who work full-time. We speculate that $25 might not be right amount of incentive to people to draw their attention.
-* 
+
+
 
 
 
