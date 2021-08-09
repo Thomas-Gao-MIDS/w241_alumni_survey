@@ -49,7 +49,7 @@ The table below provides an overview of ITT along with ITT by factoring in the g
 knitr::include_graphics(here::here("report/images", "ITT_stargazer.PNG"))
 ```
 
-Note - For a detailed analysis of results, please refer to the subsequent sections.
+We also noticed that when controlled for `cohorts` and `gender` , our treatment effect marginally decreased (~1.2 % point decrease) for the control group along with an increase in corresponding standard errors. The width of confidence interval also increases thereby making it less precise.
 
 ### Calculation of CACE
 
@@ -67,7 +67,9 @@ knitr::include_graphics(here::here("report/images", "CACE_Stargazer.PNG"))
 We again observe that the response rates in the treatment groups were lower than the response rates in the control.
 
 
-
+For both the CACE and the ITT we noticed that the response rate is lower than the control group. This is contrary to the belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
+* MIDS is a graduate degree program with a vast majority of people who work full-time. We speculate that $25 might not be right amount of incentive to people to draw their attention.
+* 
 
 
 
