@@ -1,31 +1,215 @@
 # Discussion
 
-In this section we'll discuss the overall data aggregation and our approach to calculate the `treatment-effect`.
+In this section we'll discuss the following:
+* Overall data aggregation
+* Covariate balance check to validate randomization
+* Calculation of the `treatment-effect`(ITT, HTE, CACE)
 
 ## Data flow and aggregation
 As highlighted in the previous section ,our data comes from 3 main sources:
 
-* Alumni Scrape - main data source that consists of alumni details from web scraping
-* YAMM Mail Merge - populated from the alumni scrape with personal links to surveys and body of the `treatment`
-* Qualtrics  - contains the information on survey respondents
+* Alumni Scrape - main data source that consists of alumni details that we obtain from web scraping.
+* YAMM Mail Merge - Data from the mail-merge tool that helps to track the status of an email.We need this status to determine the `attriters,complies, non-compliers`.
+* Qualtrics  - contains the information for subjects who take the survey.
 
-The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis.
+We obtain our final dataset by performing a left-join of Alumni-Scrape  with YAMM and Qualtrics data. This helps us to assign each subject into oe of the categories - attriters, compliers, non-compliers.
+
+The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis.Please refer to the previous section on the definition of each and refer to appendix C for the script.
 
 
 ```{r Data flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
+setwd('home/w241_alumni_survey')
+
 knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
 ```
+The script below contains the code to aggregate the data:
 
-We performed a left join on Alumni Scrape with YAMM and Qualtrics data to ensure that each subject is identified in one of the categories-`compliers, non-compliers, and attriters`. Please refer to the previous section on the definition of each and refer to appendix C for the script.
+```{r load_data,echo=FALSE}
+# list of people
+
+
+
+dt_roster <- read_csv('../../data/alumni_scrape.csv', col_types=cols()) %>%
+  select(Email = email, Gender = gender, Year_Graduation = year_graduation, 
+         Block = blocking_genderyear_assignments) %>% 
+  mutate(Block = ifelse(
+    Block == 1, "Direct", ifelse(
+      Block == 2, "Philanthropic", "Control")))
+
+# attrition, bounced, round 1 post-send merged status
+r1_g1_bounce <- read_csv('../../data/round1_0702_group1_0702_0941.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+r1_g2_bounce <- read_csv('../../data/round1_0702_group2_0702_1028.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+r1_g3_bounce <- read_csv('../../data/round1_0702_group3_0702_1055.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) %>%
+  filter(MStatus == 'BOUNCED')
+
+# final status, sent, opened
+r1_g1_status <- read_csv('../../data/round1_0702_group1_0708_1033.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r1_g2_status <- read_csv('../../data/round1_0702_group2_0708_1220.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r1_g3_status <- read_csv('../../data/round1_0702_group3_0708_1122.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r2_status <- read_csv('../../data/round2_0709_all_0716_1117.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r3_status <- read_csv('../../data/round3_0716_all_0722_1046.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r4_status <- read_csv('../../data/round4_0722_all_0723_1131.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+r5_status <- read_csv('../../data/round5_0723_all_0724_1219.csv', col_types=cols()) %>%
+  select(Email, MStatus = `Merge status`) 
+
+# outcome, Qualtrics completion
+dt_qualtrics <- read_csv('../../data/Qualtrics_downloaded_20210726.csv', col_types=cols()) %>%
+  select(Email = RecipientEmail, Duration = `Duration (in seconds)`,
+         Long = LocationLongitude, Lat = LocationLatitude) %>%
+  slice(3:n()) %>%
+  mutate(Duration = as.numeric(Duration),
+         Long = as.numeric(Long),
+         Lat = as.numeric(Lat))
+
+# emails to exclude
+ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
+               'tgao2020@berkeley.edu', 'tgao2020@berkely.edu',
+               'mirza2020@berkeley.edu')
+```
+
+
+```{r combine_data,echo= FALSE}
+
+dt_agg <- 
+  # roster does not contain us
+  dt_roster %>%
+  select(Email) %>%
+  
+  # bounce
+  left_join(bind_rows(r1_g1_bounce, r1_g2_bounce, r1_g3_bounce) %>%
+              add_column(bounce = 1) %>%
+              select(-MStatus),
+            by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # non-compliance: email_sent status for all 5 rounds
+  left_join(
+    # EMAIL_SENT not balanced.
+    #bind_rows(r1_g1_status %>% filter(MStatus == 'EMAIL_SENT'),
+    #          r1_g2_status %>% filter(MStatus == 'EMAIL_SENT'),
+    #          r1_g3_status %>% filter(MStatus == 'EMAIL_SENT')) %>%
+    #  filter(!Email %in% ex_emails) %>%
+    #inner_join(r2_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+    #           by='Email') %>%
+    
+    # EMAIL_SENT is balanced in r3, r4 and r5
+    dt_roster %>% select(Email) %>% add_column(MStatus='EMAIL_SENT') %>%
+      
+      inner_join(r3_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>%
+      inner_join(r4_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>% # 4 & 5 are the same?
+      inner_join(r5_status %>% filter(MStatus == 'EMAIL_SENT') %>% select(Email), 
+                 by='Email') %>%
+      add_column(non_complier = 1) %>%
+      select(-MStatus),
+    by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # compliers: people who opened at least 1 round
+  mutate(complier = 1 - (bounce + non_complier)) %>%
+  
+  # completion: qualtrics records
+  left_join(dt_qualtrics %>% select(Email) %>% add_column(completion=1), by = 'Email') %>%
+  replace(is.na(.), 0) %>%
+  
+  # override some incorrect YAMM data
+  # (these two lines correct rows for 4 people, all in the philanthropic group)
+  # vishal, ansjory, taeil.goh, and davidhou
+  mutate(non_complier = if_else(completion == 1, 0, non_complier),
+         complier = if_else(completion == 1, 1, complier)) %>% 
+  
+  # meta data
+  left_join(dt_roster, by = 'Email') %>%
+  left_join(dt_qualtrics, by = 'Email') 
+
+```
+
+
 
 
 ## Checks and balances 
-Before we proceeded with our analysis of the results we ensured that our covariates are balanced. This was done to validate randomization 
 
 
-```{r balance check, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CoVariate Balance Check"}
-knitr::include_graphics(here::here("report/images", "Covariate_balance_check.PNG"))
+Covariate balance checks is a recommended approach to validate randomization and a fair "apples to apples" comparison. While, one can perform a co-variaate balance check on different characteristics across the three groups, we focused on performing the balance check on the YAMM data to identify compliers,attriters and non-compliers. As we already pointed out and validated in the previous section that R blocking has already ensured that our data is balanced across cohorts and gender.
+In Figure below, we plot the number of attriters, non-compliers and compilers, and through visual inspection, we see a similar attrition rate and compliance rate. 
+
+
+```{r cov_balance , echo=FALSE}
+dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion) %>%
+  gather(measure, value, -Block) %>%
+  group_by(Block, measure) %>%
+  summarise(value = sum(value)) %>%
+  spread(measure, value) %>%
+  select(Block, bounce, non_complier, complier, completion) %>%
+  mutate(all = bounce + non_complier + complier, .before=2)
+
+
+
+dt_cb <- dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion)  %>%
+  data.table()
+
+cb1 <- dt_cb[, lm(bounce~Block)]
+cb2 <- dt_cb[, lm(non_complier~Block)]
+cb3 <- dt_cb[, lm(complier~Block)]
+
+
+
 ```
+
+```{r Graphical Representation }
+dt_agg %>% 
+  select(Block, bounce, non_complier, complier, completion) %>%
+  gather(measure, value, -Block) %>%
+  group_by(Block, measure) %>%
+  summarise(value = sum(value)) %>%
+  ungroup() %>%
+  filter(measure != 'completion') %>%
+  mutate(measure = recode_factor(measure, 
+                                 bounce = "Email Bounced (Attrition)", 
+                                 non_complier = 'Did Not Open (Non-Complier)',
+                                 complier = "Opened Email (Complier)")) %>%
+  # plotting
+  ggplot(aes(x=Block, y=value, fill=measure)) +
+  geom_col() +
+  labs(x='Treatment Group', y='Count', title='Covariate Balance Check',
+       fill='Status') +
+  scale_fill_brewer(palette = 'Accent') +
+  theme_bw()
+
+```
+More formally, in the table below , we perform regression analysis of attrition, non-compliance and compliance status on the group assignment variable and did not find statistically different results of treatment groups from the control group.
+
+
+```{r Co-variate Balance check stargazer , echo=FALSE}
+
+stargazer(cb1, cb2, cb3, 
+          type="text",
+          
+          omit.stat = c('ser', 'adj.rsq'),
+          
+          title = "Covariate Balance Check",
+          covariate.labels = c("Group: Direct", 
+                               "Group: Philanthropic",
+                               "Constant"),
+          dep.var.labels = c("Attrition", 'Non-Compliance', 'Compliance'))
+
+
+```
+
 
 ## Non-Compliance
 
