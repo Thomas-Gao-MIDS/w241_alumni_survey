@@ -156,6 +156,8 @@ cb3 <- dt_cb[, lm(complier~Block)]
 ```
 
 ```{r Graphical Representation , echo = FALSE}
+options(dplyr.summarise.inform = FALSE)
+
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
   gather(measure, value, -Block) %>%
@@ -174,6 +176,8 @@ dt_agg %>%
        fill='Status') +
   scale_fill_brewer(palette = 'Accent') +
   theme_bw()
+
+options(dplyr.summarise.inform = TRUE)
 
 ```
 More formally, in the table below, we perform regression analysis of attrition, non-compliance and compliance status on the group assignment variable and did not find statistically different results of treatment groups from the control group.
