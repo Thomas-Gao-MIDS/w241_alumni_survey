@@ -170,7 +170,7 @@ cb3 <- dt_cb[, lm(complier~Block)]
 
 ```
 
-```{r Graphical Representation }
+```{r Graphical Representation , echo = FALSE}
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
   gather(measure, value, -Block) %>%
@@ -194,7 +194,7 @@ dt_agg %>%
 More formally, in the table below , we perform regression analysis of attrition, non-compliance and compliance status on the group assignment variable and did not find statistically different results of treatment groups from the control group.
 
 
-```{r Co-variate Balance check stargazer , echo=FALSE}
+```{r Co-variate Balance check stargazer , echo=FALSE,comment=''}
 
 stargazer(cb1, cb2, cb3, 
           type="text",
@@ -255,7 +255,7 @@ rse2 <- sqrt(diag(vcovHC(m2)))
 ```
 The table below summarizes the regression results.
 
-```{r stargazer ITT}
+```{r stargazer ITT,comment='',echo=FALSE}
 stargazer(m1, m2, 
           type="text",
           se = list(rse1, rse2),
@@ -341,7 +341,7 @@ rseiv_philanthropic <- sqrt(diag(vcovHC(ivmod_philanthropic)))
 ```
 
 The table below shows the summary of the regression results.
-```{r Stargazer CACE}
+```{r Stargazer CACE, comment='',echo= FALSE}
 stargazer(cace_table, type = 'text', 
           summary = F, rownames = F,
           title = 'CACE = ITT / ITTd')
@@ -381,7 +381,7 @@ We also calculated to see whether the response rates were different by cohorts/g
 Here, we analyze the results of how treatment effects vary by gender (*for compliers *).
 
 
-```{r hte}
+```{r hte, echo = FALSE}
 
 # HTE for different gender
 m3 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block)]
@@ -393,7 +393,7 @@ rse4<- sqrt(diag(vcovHC(m4)))
 ```
 
 
-```{r hte_2}
+```{r hte_2 , echo= FALSE}
 
 # HTE between grad year and treatment
 m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
@@ -407,7 +407,7 @@ rse6 <- sqrt(diag(vcovHC(m6)))
 
 The table below calculates the HTEs for Gender and Graduation-Year.
 
-```{r}
+```{r stargazer gender , comment='', echo = FALSE}
 
 stargazer(m3, m4,
           type="text",
@@ -433,6 +433,7 @@ We interpret one of these regression values with the help of a mathematical equa
 $$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$$
 
 For *compliers* We interpret the regression results as follows(this is labeled as 'cohort Fixed Effects ? No ' in the table above):
+
 * Response rates for females in `Control`group is highly significant and on average they respond at `38%`. Response rates might vary in the range of `24%` to `52%`.
 * Response rates for *men* in `Control`group is **not** significant and on average they are likely to respond anywhere between `33%` to `66.2%`(range of confidence interval)
 * The co-efficient of interaction term is **not** significant but we can calculate a range for the response rates.
@@ -440,6 +441,8 @@ For *compliers* We interpret the regression results as follows(this is labeled a
 - The response rates for males in the `Direct`group can rage from `0%` to `46%` , which is the confidence interval. In other words males in the `Direct` group are ~`15%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
 
 With a similar analysis we can compare the response rates between males and females in the `Philanthropic` group.
+
+
 
 
 
@@ -458,7 +461,36 @@ rse6 <- sqrt(diag(vcovHC(m6)))
 
 ```
 
-The table below represents the HTE values by cohort and gender. These values can be interpreted in a similar fashion as described above.
+In the code chunk below we evaluate whether any of the interaction models that we define are better at explaining the variance of the response rates. The `anova` analyzes this variance and evaluates the null hypothesis of a significant difference between variance of response rates between the two categories of interaction models that we have defined.
+
+
+```{r hte_f_tests, echo=FALSE}
+
+# F-test on gender
+anova_gender<- anova(
+  d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender + Block)],
+  d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block)],
+  test = "F"
+)
+
+# F-test on graduation year
+anova_gender_coh<- anova(
+  m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) + Block)],
+  m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)],
+  test = "F"
+)
+
+
+```
+Findings of `anova` test:
+- The p-value of the difference between our base model(one that doesnt include interaction) and the interaction model of Gender is `r anova_gender$Pr[2]`, indicating that it is insignificant.
+- The p-value of the difference between our non-interaction model(one that doesn't interact with year and block) and the interaction model(year and block interaction) is `r anova_gender_coh$Pr[2]`, indicating that it is insignificant as well.
+
+
+Please refer to the appendix section for a table that describes the interaction effects of gender and cohort.
+
+The table below represents the HTE values by cohort and gender. These values can be interpreted in a similar fashion as described above
+.
 ```{r stargazer by gender and cohort}
 stargazer(m5, m6,
           type="text",
@@ -487,6 +519,8 @@ stargazer(m5, m6,
 
 ```
 
+** A note on Generalizability:
+We belive that our regression results are very specific for the MIDS population and cannot be generalized to any alumni. For a detailed discussion on generalizability, please refer to the `Conclusion` section.
 
 
 
