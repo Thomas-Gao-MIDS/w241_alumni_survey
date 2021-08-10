@@ -1,9 +1,9 @@
 # Results and Discussion
 
-In this section we'll discuss the following:
+In this section we will discuss the following:
 * Overall data aggregation
 * Covariate balance check to validate randomization
-* Calculation of the `treatment-effect`(ITT, HTE, CACE)
+* Calculation of the `treatment-effect` (ITT, HTE, CACE)
 
 ## Data flow and aggregation
 As highlighted in the previous section, our data comes from 3 main sources:
@@ -14,13 +14,13 @@ As highlighted in the previous section, our data comes from 3 main sources:
 
 We obtain our final dataset by performing a left-join of Alumni-Scrape  with YAMM and Qualtrics data. This helps us to assign each subject into one of the categories - attriters, compliers, non-compliers.
 
-The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis. Please refer to the previous section on the definition of each and refer to appendix C for the script.
+Figure \@ref(fig:Data Flow) below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis. Please refer to the previous section on the definition of each.
 
 
-```{r Data flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
+```{r Data Flow, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
 #setwd('home/w241_alumni_survey')
 
-knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
+knitr::include_graphics(here::here("report/images", "Data_flow_2.PNG"))
 ```
 
 ```{r load_data,echo=FALSE}
@@ -481,7 +481,7 @@ Please refer to the appendix section for a table that describes the interaction 
 
 
 ** A note on Generalizability:
-We belive that our regression results are very specific for the MIDS population and cannot be generalized to any alumni. For a detailed discussion on generalizability, please refer to the `Conclusion` section.
+We believe that our regression results are very specific for the MIDS population and cannot be generalized to any alumni. For a detailed discussion on generalizability, please refer to the `Conclusion` section.
 
 
 
