@@ -213,8 +213,8 @@ stargazer(cb1, cb2, cb3,
 
 ## Non-Compliance
 
-As with any survey we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance* where people do not respond to assigned dosage of treatment(Direct, Philanthropic and Control). This is due to the fact that we generate personal links for alumni and refrained from using  generic survey link across groups.
-Our mail-merge strategy(with personalized body and subject) gave an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey campaign.We assume that these approaches would *prevent any two-sided non-compliance* where people in separate groups share the survey link with one another.
+As with any survey campaign we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance*, where people do not respond to assigned dosage of treatment(Direct, Philanthropic and Control). This is because we generate personal links for each subject and refrained from using a generic survey link across groups.
+Our mail-merge strategy(with personalized body and subject) also gives an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey. Our understanding is that these approaches have prevented any instances of *two-sided non-compliance* where people in different groups share the survey link with one another.
 
 As highlighted in the previous section we calculate the treatment effect in the following categories :
 * Intent to Treat(ITT)
@@ -227,77 +227,265 @@ The ultimate aim for a research is to determine the Average Treatment Effect (AT
 
 Mathematically we define ITT as:
 
-$ ITT = E[Y_i(z = 1)] - E[Y_i(z = 0)]$
+$$ ITT = E[Y_i(z = 1)] - E[Y_i(z = 0)]$$
 
-here, z denotes 'azzignment', to one of the experimental groups.
+here, z denotes *'azzignment'*, to one of the experimental groups.
 
-In our experiment we ran regressions to determine ITT by comparing the three groups and the response rates(ignoring the non-compliance).
-The table below provides an overview of ITT along with ITT by factoring in the groups and cohort. In general, we observed that the response rates in the Direct and Philanthropic groups were low compared to the control group.
+After removing the attriters, we perform two regressions to estimate the ITT effect. First, the survey completion variable is regressed on the group assignment variable with the control group as base case. We also perform a second regression by adding Gender and Cohort covariates to the first regression as controls. 
 
+Mathematically we can write the two regressions as below:
 
-```{r ITT model, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "ITT models"}
-knitr::include_graphics(here::here("report/images", "ITT_stargazer.PNG"))
+Regression 1: 
+$$Y = \beta_0 + \beta_1Block +  \epsilon$$
+
+Regression 2:
+$$Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3gradYear + \epsilon$$
+The code chunk below calculates the regression .
+```{r ITT Calculation , echo=FALSE}
+d <- data.table(dt_agg)
+
+# Generate models
+m1 <- d[bounce == 0 , lm(completion ~ Block)]
+m2 <- d[bounce == 0 , lm(completion ~ Block + Gender + factor(Year_Graduation))]
+
+# Calculate robust SEs for both models
+rse1 <- sqrt(diag(vcovHC(m1)))
+rse2 <- sqrt(diag(vcovHC(m2)))
+
+```
+The table below summarizes the regression results.
+
+```{r stargazer ITT}
+stargazer(m1, m2, 
+          type="text",
+          se = list(rse1, rse2),
+          
+          #no.space = T, 
+          omit.stat = c('ser', 'f', 'adj.rsq'),
+          omit = c('Gender', 'Year_Graduation'),
+          add.lines = list(c('Gender Fixed Effects?', 'No', 'Yes'),
+                           c('Cohort Fixed Effects?', 'No', 'Yes')),
+          
+          title = "ITT Estimate with Attriters Removed",
+          covariate.labels = c("Group: Direct", "Group: Philanthropic",
+                               #"Gender: Male", "Gender: Unknown",
+                               #"Cohort: 2016", "Cohort: 2017",
+                               #"Cohort: 2018", "Cohort: 2019",
+                               #"Cohort: 2020", "Cohort: 2021",
+                               "Constant"),
+          dep.var.labels = "Survey Completion")
+
 ```
 
-We also noticed that when controlled for `cohorts` and `gender` , our treatment effect marginally decreased (~1.2 % point decrease) for the control group along with an increase in corresponding standard errors. The width of confidence interval also increases thereby making it less precise.
+Key Findings on ITT:
+
+* `Direct` incentive reduced the likelihood to complete the survey by 6.2%(compared to `Control`). Actual response rates can vary from `13.6%` to `26.8%`(95% Confidence Interval).
+* `Philanthropic` incentive reduced the likelihood of completion by 2.6%(compared to `Control`).Actual response rates can vary from `16.9%` to `30.5%`(95% Confidence Interval).
+* Neither effects are statistically significant at 95% confidence level, although the direct incentive effect is significant at 90% confidence level.
+* When controlled for `cohorts` and `gender` , our treatment effect marginally decreased (~1.2 % point decrease) for the `Control` group along with an increase in corresponding standard errors. The width of confidence interval also increases thereby making it less precise.
+
 
 ### Calculation of CACE
 
 Given the presence of `Non-compliers`(subjects who don't take the treatment dosage),a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers(subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
+
 Note - we assume that we don't have any `Defiers` in our data.
 
 Mathematically,
-$ ITT_D = E[d_i(z = 1)- d_i(z = 0)] $
-$ CACE = E[Y_i(d = 1) -Y_i(d = 0)|d_i(1)=1] $
+$$ ITT_D = E[d_i(z = 1)- d_i(z = 0)] $$
+
+$$ CACE = E[Y_i(d = 1) -Y_i(d = 0)|d_i(1)=1] $$
 
 The `exclusion` restriction holds true for our experiment.This is because `attriters` have no possibility of receiving a treatment(their emails are no longer valid) and hence we can safely assume that assignment to the specific groups has no effect beyond the received treatment.Due to this we can simplify the CACE calculation as :
 
-$ CACE = ITT/ ITT_D $
+$$ CACE = ITT/ ITT_D $$
 
 
-We calculated our case by first calculating the take-up rate(proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate.Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
+We calculate the CACE by first calculating the take-up rate(proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate.Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
 
-The table below provides a snapshot of CACE for the two treatment groups with the control group as the baseline.
 
-```{r CACE, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "CACE models"}
-knitr::include_graphics(here::here("report/images", "CACE_Stargazer.PNG"))
+We also validated our CACE by making use of `Instrumental variables`. We performed two stage least squared (2SLS) regressions using the ivreg function in the AER R package. To estimate the CACE for the `Direct` group , we exclude attriters and subjects receiving `Philanthropic` treatments. We then perform the 2SLS regression with survey completion status as outcome variable, whether people complied and received direct incentive as dosage, and treatment assignment as instrument. This is equivalent to regressing dosage on treatment assignment in the first step, and regressing outcome variable on the fitted dosage values in the second step. We do the same for philanthropic incentives as well.
+
+The chunk below shows the r code to calculate the CACE
+
+```{r cace, echo=FALSE}
+# Calculate the CACE for each treatment group manually
+ittd_direct <- 
+  d[bounce == 0 & Block == "Direct" & complier == 1, .N] /
+  d[bounce == 0 & Block == "Direct" , .N]
+ittd_philanthropic <- 
+  d[bounce == 0 & Block == "Philanthropic" & complier == 1, .N] /
+  d[bounce == 0 & Block == "Philanthropic" , .N]
+
+cace_direct <- m2$coefficients['BlockDirect'] / ittd_direct
+cace_philanthropic <- m2$coefficients['BlockPhilanthropic'] / ittd_philanthropic
+
+cace_table <- 
+  data.table(Treatment = c('Direct', 'Philanthropic'),
+             ITT = m2$coefficients[c('BlockDirect', 'BlockPhilanthropic')],
+             ITTd = c(ittd_direct, ittd_philanthropic),
+             CACE = c(cace_direct, cace_philanthropic))
+
+
+# Generate IV regression models
+d[ , treated := complier * (Block != "Control")]
+ivmod_direct <- d[bounce == 0 & Block != "Philanthropic",
+                  ivreg(completion ~ treated | Block)]
+ivmod_philanthropic <- d[bounce == 0 & Block != "Direct",
+                         ivreg(completion ~ treated | Block)]
+
+# Calculate robust SEs for the IV regression models
+rseiv_direct <- sqrt(diag(vcovHC(ivmod_direct)))
+rseiv_philanthropic <- sqrt(diag(vcovHC(ivmod_philanthropic)))
+
 ```
 
-We again observe that the response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the `Control`group.
-* Subjects in `Direct` group are now ~`10 %` less likely to respond, compared to `6%`(ignoring non-compliance).
-* Subjects in `Philanthropic` group are now ~`4.4 %` less likely , compared to `6%` (ignoring non-compliance).
+The table below shows the summary of the regression results.
+```{r Stargazer CACE}
+stargazer(cace_table, type = 'text', 
+          summary = F, rownames = F,
+          title = 'CACE = ITT / ITTd')
 
-We believe that the results in the table above for CACE, measures the treatment better, compared to ITT. The survey completion rate for the `Control` group is ~ `26%`, compared to the overall average of `21%.` These results are significant at a level of one percent.The 95% confidence interval, i.e the true survey response rate for this group could be anywhere between `26%` to `27%`.
 
-The `Direct` incentive group on the other hand is significant at `10%` level , hence the true response rate for this group could be anywhere between `0%` to `27.5%`.We can follow a similar approach to measure the `CACE` for the `Philanthropic` group. The coefficient is not statistically significant. The response rates for people in this group can vary from `10%` to `33.7%`.
+stargazer(ivmod_direct, ivmod_philanthropic, 
+          type="text",
+          se = list(rseiv_direct, rseiv_philanthropic),
+          
+          omit.stat = c('rsq', 'adj.rsq', 'ser'),
+          
+          title = "CACE (IVreg) Estimate with Attriters Removed",
+          dep.var.labels = "Survey Completion",
+          covariate.labels = 'Treated',
+          column.labels = c("Direct", "Philanthropic"))
+
+
+```
+
+Key Findings on CACE:
+We believe that the results in the table above for CACE, measures the treatment better, compared to ITT.
+
+* Response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the `Control`group.
+  -  Subjects in `Direct` group are now ~`10 %` less likely to respond, compared to `6%`(ignoring non-compliance).
+  -  Subjects in `Philanthropic` group are now ~`4.4 %` less likely , compared to `6%` (ignoring non-compliance).
+  
+* The survey completion rate for the `Control` group is ~ `26%` on average (range = [`21.3%`,`31.3%`]), compared to the overall average of `21%.` These results are significant at a level of one percent.The 95% confidence interval, i.e the true survey response rate for this group could be anywhere between `26%` to `27%`.
+
+* The `Direct` incentive group on the other hand is significant at `10%` level , hence the true response rate for this group could be anywhere between `5.4%` to `27.4%`.We can follow a similar approach to measure the `CACE` for the `Philanthropic` group. The coefficient is not statistically significant. The response rates for people in this group can vary from `10%` to `33.7%`.
 
 Note - It is worth nothing that both the `Direct` and the `Philanthropic` groups are not significant at 5%.For the `Direct` group we observe significance at a `10%`level but the estimates for the `Philanthropic`group is not significant at all, given its large standard errors.
 
 
 ### Heterogeneous Treatment Effects (HTEs)
 
-We were also interested to see whether the response rates were different by cohorts/gender. This could help us in determining a group that is most likely to respond in the event of a further intervention of a policy change.
+We also calculated to see whether the response rates were different by cohorts/gender. This could help us in determining a group that is most likely to respond in the event of a further intervention of a policy change.
 Here, we analyze the results of how treatment effects vary by gender (*for compliers *).
 
-```{r HTE by Gender, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "HTE by Gender"}
-knitr::include_graphics(here::here("report/images", "HTE_Gender_Stargazer.PNG"))
+
+```{r hte}
+
+# HTE for different gender
+m3 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block)]
+rse3 <- sqrt(diag(vcovHC(m3)))
+
+# HTE for different gender, controlling for cohort effect
+m4 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ Gender * Block + factor(Year_Graduation))]
+rse4<- sqrt(diag(vcovHC(m4)))
 ```
-For a detailed results of HTEs by gender and cohorts, pls refer to the "Results" section.
 
-The regression equation for the HTE above can be specified as :
 
-$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$
+```{r hte_2}
+
+# HTE between grad year and treatment
+m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
+rse5 <- sqrt(diag(vcovHC(m5)))
+
+
+m6 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block + Gender)]
+rse6 <- sqrt(diag(vcovHC(m6)))
+
+```
+
+The table below calculates the HTEs for Gender and Graduation-Year.
+
+```{r}
+
+stargazer(m3, m4,
+          type="text",
+          se = list(rse3, rse4),
+          
+          no.space = T,
+          omit.stat = c('ser', 'f', 'adj.rsq'),
+          omit = c('Year_Graduation'),
+          add.lines = list(c('Cohort Fixed Effects?', 'No', 'Yes'),
+                           c('Excl. Gender Unknown?', 'Yes', 'Yes')),
+
+          title = "Heterogeneous Treatment Effect",
+          covariate.labels = c('Male',
+                               'Group: Direct', 'Group: Philanthropic',
+                               'Male + Direct', 'Male + Philanthropic',
+                               "Constant"),
+          dep.var.labels = "Survey Completion")
+
+```
+
+
+We interpret one of these regression values with the help of a mathematical equation as below:
+$$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$$
 
 For *compliers* We interpret the regression results as follows(this is labeled as 'cohort Fixed Effects ? No ' in the table above):
-* Response rates for females in `Control`group is highly significant and on average they respond at `38%`
-* Response rates for *men* in `Control`group is **not** significant and on average they are likely to respond anywhere between `38%` to `54.6%`(range of confidence interval)
+* Response rates for females in `Control`group is highly significant and on average they respond at `38%`. Response rates might vary in the range of `24%` to `52%`.
+* Response rates for *men* in `Control`group is **not** significant and on average they are likely to respond anywhere between `33%` to `66.2%`(range of confidence interval)
 * The co-efficient of interaction term is **not** significant but we can calculate a range for the response rates.
-- The response rates for females in the `Direct`group can rage from `16%` to `58%` , which is the confidence interval. In other words females in the `Direct` group are ~`3%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
+- The response rates for females in the `Direct`group can rage from `16%` to `55%` , which is the confidence interval. In other words females in the `Direct` group are ~`3%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
 - The response rates for males in the `Direct`group can rage from `0%` to `46%` , which is the confidence interval. In other words males in the `Direct` group are ~`15%` less likely to respond as compared to the females in the `control`group.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
 
 With a similar analysis we can compare the response rates between males and females in the `Philanthropic` group.
 
 
+
+We also performed a hetrogenous treatment analysis of gender and cohort groups. The chunk below calculates the model for HTEs across these groups.
+
+```{r HTE by gender and cohort , echo=FALSE}
+# HTE between grad year and treatment
+
+m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
+rse5 <- sqrt(diag(vcovHC(m5)))
+
+
+m6 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block + Gender)]
+rse6 <- sqrt(diag(vcovHC(m6)))
+
+
+```
+
+The table below represents the HTE values by cohort and gender. These values can be interpreted in a similar fashion as described above.
+```{r stargazer by gender and cohort}
+stargazer(m5, m6,
+          type="text",
+          se = list(rse5, rse6),
+          
+          no.space = T,
+          omit.stat = c('ser', 'f', 'adj.rsq'),
+          omit = c('Gender'),
+          add.lines = list(c('Gender Fixed Effects?', 'No', 'Yes'),
+                           c('Excl. Gender Unknown?', 'Yes', 'Yes')),
+
+          title = "Heterogeneous Treatment Effect",
+          covariate.labels = c("Graduation: 2016", "Graduation: 2017",
+                               "Graduation: 2018", "Graduation: 2019",
+                               "Graduation: 2020", "Graduation: 2021",
+                               "Group: Direct", "Group: Philanthropic",
+                               "2016 + Direct", "2017 + Direct",
+                               "2018 + Direct", "2019 + Direct",
+                               "2020 + Direct", "2021 + Direct",
+                               "2016 + Philanthropic", "2017 + Philanthropic",
+                               "2018 + Philanthropic", "2019 + Philanthropic",
+                               "2020 + Philanthropic", "2021 + Philanthropic",
+                               "Constant"),
+          dep.var.labels = "Survey Completion")
+
+
+```
 
 
 
