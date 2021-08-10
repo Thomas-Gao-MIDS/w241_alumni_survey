@@ -478,35 +478,7 @@ Findings of `anova` test:
 
 Please refer to the appendix section for a table that describes the interaction effects of gender and cohort.
 
-The table below represents the HTE values by cohort and gender. These values can be interpreted in a similar fashion as described above
-.
-```{r stargazer by gender and cohort}
-stargazer(m5, m6,
-          type="text",
-          se = list(rse5, rse6),
-          
-          no.space = T,
-          omit.stat = c('ser', 'f', 'adj.rsq'),
-          omit = c('Gender'),
-          add.lines = list(c('Gender Fixed Effects?', 'No', 'Yes'),
-                           c('Excl. Gender Unknown?', 'Yes', 'Yes')),
 
-          title = "Heterogeneous Treatment Effect",
-          covariate.labels = c("Graduation: 2016", "Graduation: 2017",
-                               "Graduation: 2018", "Graduation: 2019",
-                               "Graduation: 2020", "Graduation: 2021",
-                               "Group: Direct", "Group: Philanthropic",
-                               "2016 + Direct", "2017 + Direct",
-                               "2018 + Direct", "2019 + Direct",
-                               "2020 + Direct", "2021 + Direct",
-                               "2016 + Philanthropic", "2017 + Philanthropic",
-                               "2018 + Philanthropic", "2019 + Philanthropic",
-                               "2020 + Philanthropic", "2021 + Philanthropic",
-                               "Constant"),
-          dep.var.labels = "Survey Completion")
-
-
-```
 
 ** A note on Generalizability:
 We belive that our regression results are very specific for the MIDS population and cannot be generalized to any alumni. For a detailed discussion on generalizability, please refer to the `Conclusion` section.
