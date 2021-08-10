@@ -60,6 +60,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, child='sections/appendix_python.Rmd'}
 ```
 
+
 \newpage
 ```{r, child='sections/appendix_survey_results.Rmd'}
+```
+
+\newpage
+```{r, child='sections/appendix_aggregate_interaction.Rmd'}
 ```
