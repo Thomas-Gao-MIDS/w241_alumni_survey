@@ -25,8 +25,9 @@ knitr::include_graphics(here::here("report/images", "blocks_table.png"))
 We conducted a power analysis in advance of running our experiment to determine the likelihood that we would detect a significant effect if the effect were real.  The studies referenced in the Introduction provide a range of survey incentive effects in different contexts.  @debell_improving_2020 observed an increase in response rate from 43% to 47% (a 4% effect) by making a cash incentive plainly visible in a physically mailed envelope.  In contrast, @pedersen_improving_2016 found a variety of effects that ranged from -3.5% given a philanthropic incentive to 4.5% given an egotistic text appeal treatment.
 
 We used Alexander Coppock's Power Calculator application to perform this analysis [@coppock_power_2021].  The application requires certain inputs that we set as follows:
+
 * **Binary dependent variable:** selected
-* **Significance level:** Alpha = 0.05
+* **Significance level:** 0.05
 * **Proportion (DV = 1) in Control Group:** 0.1
 * **Proportion (DV = 1) in Treatment Group:** 0.2
 * **Power Target:** 0.8
