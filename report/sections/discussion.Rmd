@@ -1,4 +1,4 @@
-# Discussion
+# Results and Discussion
 
 In this section we'll discuss the following:
 * Overall data aggregation
