@@ -6,15 +6,15 @@ In this section we'll discuss the following:
 * Calculation of the `treatment-effect`(ITT, HTE, CACE)
 
 ## Data flow and aggregation
-As highlighted in the previous section ,our data comes from 3 main sources:
+As highlighted in the previous section, our data comes from 3 main sources:
 
 * Alumni Scrape - main data source that consists of alumni details that we obtain from web scraping.
-* YAMM Mail Merge - Data from the mail-merge tool that helps to track the status of an email.We need this status to determine the `attriters,complies, non-compliers`.
-* Qualtrics  - contains the information for subjects who take the survey.
+* YAMM Mail Merge - data from the mail-merge tool that helps to track the status of an email. We need this status to determine the `attriters, compliers, non-compliers`.
+* Qualtrics  - information for subjects who take the survey.
 
-We obtain our final dataset by performing a left-join of Alumni-Scrape  with YAMM and Qualtrics data. This helps us to assign each subject into oe of the categories - attriters, compliers, non-compliers.
+We obtain our final dataset by performing a left-join of Alumni-Scrape  with YAMM and Qualtrics data. This helps us to assign each subject into one of the categories - attriters, compliers, non-compliers.
 
-The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis.Please refer to the previous section on the definition of each and refer to appendix C for the script.
+The figure below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis. Please refer to the previous section on the definition of each and refer to appendix C for the script.
 
 
 ```{r Data flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
@@ -22,12 +22,10 @@ The figure below represents the high-level data flow and aggregation of our data
 
 knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
 ```
-The script below contains the code to aggregate the data:
 
 ```{r load_data,echo=FALSE}
+# The script below contains the code to aggregate the data:
 # list of people
-
-
 
 dt_roster <- read_csv('../../data/alumni_scrape.csv', col_types=cols()) %>%
   select(Email = email, Gender = gender, Year_Graduation = year_graduation, 
@@ -142,21 +140,18 @@ dt_agg <-
 ## Checks and balances 
 
 
-Covariate balance checks is a recommended approach to validate randomization and a fair "apples to apples" comparison. While, one can perform a co-variaate balance check on different characteristics across the three groups, we focused on performing the balance check on the YAMM data to identify compliers,attriters and non-compliers. As we already pointed out and validated in the previous section that R blocking has already ensured that our data is balanced across cohorts and gender.
-In Figure below, we plot the number of attriters, non-compliers and compilers, and through visual inspection, we see a similar attrition rate and compliance rate. 
+Covariate balance check is a recommended approach to validate randomization to ensure a fair "apples to apples" comparison. While one can perform a covariaate balance check on different characteristics across the three groups, we focus on performing the balance check on the YAMM data to identify compliers, attriters and non-compliers. As we pointed out and validated in the previous section, R blocking ensures that our data is balanced across cohorts and genders. Figure 6 shows plot the number of attriters, non-compliers and compilers, and through visual inspection, we see a similar attrition rate and compliance rate. 
 
 
-```{r cov_balance , echo=FALSE}
-dt_agg %>% 
-  select(Block, bounce, non_complier, complier, completion) %>%
-  gather(measure, value, -Block) %>%
-  group_by(Block, measure) %>%
-  summarise(value = sum(value)) %>%
-  spread(measure, value) %>%
-  select(Block, bounce, non_complier, complier, completion) %>%
-  mutate(all = bounce + non_complier + complier, .before=2)
-
-
+```{r cov_balance, echo=FALSE}
+# dt_agg %>% 
+#   select(Block, bounce, non_complier, complier, completion) %>%
+#   gather(measure, value, -Block) %>%
+#   group_by(Block, measure) %>%
+#   summarise(value = sum(value)) %>%
+#   spread(measure, value) %>%
+#   select(Block, bounce, non_complier, complier, completion) %>%
+#   mutate(all = bounce + non_complier + complier, .before=2)
 
 dt_cb <- dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion)  %>%
@@ -165,8 +160,6 @@ dt_cb <- dt_agg %>%
 cb1 <- dt_cb[, lm(bounce~Block)]
 cb2 <- dt_cb[, lm(non_complier~Block)]
 cb3 <- dt_cb[, lm(complier~Block)]
-
-
 
 ```
 
@@ -191,8 +184,7 @@ dt_agg %>%
   theme_bw()
 
 ```
-More formally, in the table below , we perform regression analysis of attrition, non-compliance and compliance status on the group assignment variable and did not find statistically different results of treatment groups from the control group.
-
+More formally, in the table below, we perform regression analysis of attrition, non-compliance and compliance status on the group assignment variable and did not find statistically different results of treatment groups from the control group.
 
 ```{r Co-variate Balance check stargazer , echo=FALSE,comment=''}
 
