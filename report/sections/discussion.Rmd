@@ -18,7 +18,7 @@ The figure below represents the high-level data flow and aggregation of our data
 
 
 ```{r Data flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
-setwd('home/w241_alumni_survey')
+#setwd('home/w241_alumni_survey')
 
 knitr::include_graphics(here::here("report/images", "Data_flow.PNG"))
 ```
