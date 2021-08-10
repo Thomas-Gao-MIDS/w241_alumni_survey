@@ -98,7 +98,7 @@ knitr::kable(
 
 In addition to the initial email that we sent to all 1,105 alumni, we sent four follow-up reminder emails.  We sent the first reminder email to all 1,105 alumni starting at 9:00 am (PDT) on July 9, 2021 (even to those who had already completed the survey).  We sent the remaining three reminder emails starting at 9:15 am (PDT) on July 16, 8:00 am (PDT) on July 22, and 9:15 am (PDT) on July 23, 2021 only to alumni who had not already completed the survey by the evening prior to sending the emails.  Figure \@ref(fig:emails-survey) shows the cumulative number of completed surveys over time, with dashed lines signifying when we sent emails.  The figure shows a clear pattern of a sharp increase in survey responses immediately after we sent the emails, with diminishing returns over time.
 
-```{r emails-survey, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Cumulative survey completions over the experimental period with initial and reminder email send dates indicated by dashed vertical lines"}
+```{r emails-survey, echo=FALSE, fig.align = "center", out.width = "90%", fig.cap = "Cumulative survey completions over the experimental period with initial and reminder email send dates indicated by dashed vertical lines"}
 d <- read.csv("../../data/Qualtrics_downloaded_20210726.csv")
 d <- d[3:nrow(d),]
 
@@ -139,7 +139,7 @@ The YAMM service provides a near-real time merge status indicator for each email
 
 We placed the treatment text specific to the control, direct incentive, and philanthropic incentive groups in the body of the emails, rather than in the email subject lines.  This allowed us to define a complier as someone who opened the email, given the assumption that if the person opened the email they read the treatment text.  (Alternatively, we could have defined compliance as reception of the email; however, that criterion seemed too lenient for assuming the recipient actually received the treatment.)  We therefore identified compliers as those alumni for whom YAMM reported that they opened, clicked, or responded to at least one of the emails we sent them.  Conversely, we define non-compliers as those who receive at least one of the emails, but never open any emails they receive.  As a result, these alumni never receive a dosage of the treatment corresponding to the group to which we assigned them.  We identified non-compliers in our study as those for whom the email did not bounce, and YAMM reported that the person never opened, clicked, or responded to any of the emails we sent them.  Finally, we define attriters as those alumni who never receive any of the emails we sent them.  We deemed any alumni for whom YAMM reported a bounced email from our initial email batch an attriter.  The flow diagram in Figure \@ref(fig:flow-diagram) shows the number of alumni in each group after accounting for attriters and non-compliers.  In total, 229 MIDS alumni completed the survey, providing an overall response rate of approximately 21%.
 
-```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Flow diagram indicating the number of MIDS alumni by group after accounting for attrition and non-compliance"}
+```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "90%", fig.cap = "Flow diagram indicating the number of MIDS alumni by group after accounting for attrition and non-compliance"}
 knitr::include_graphics(here::here("report/images", "flow_diagram.png"))
 ```
 
