@@ -18,7 +18,7 @@ We obtain our final dataset by performing a left-join of Alumni-Scrape  with YAM
 Figure \@ref(fig:Data Flow) below represents the high-level data flow and aggregation of our data sources to arrive at our final data source for further analysis. Please refer to the previous section on the definition of each.
 
 
-```{r Data Flow, echo=FALSE, fig.align = "center", out.width = "100%", fig.cap = "Data Flow"}
+```{r Data-flow diagram, echo=FALSE, fig.align = "center", out.width = "75%", fig.cap = "Data Flow", }
 #setwd('home/w241_alumni_survey')
 
 knitr::include_graphics(here::here("report/images", "Data_flow_2.PNG"))
@@ -145,14 +145,6 @@ Covariate balance check is a recommended approach to validate randomization to e
 
 
 ```{r cov_balance, echo=FALSE}
-# dt_agg %>% 
-#   select(Block, bounce, non_complier, complier, completion) %>%
-#   gather(measure, value, -Block) %>%
-#   group_by(Block, measure) %>%
-#   summarise(value = sum(value)) %>%
-#   spread(measure, value) %>%
-#   select(Block, bounce, non_complier, complier, completion) %>%
-#   mutate(all = bounce + non_complier + complier, .before=2)
 
 dt_cb <- dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion)  %>%
