@@ -1,7 +1,7 @@
 # Appendix C: Data Aggregation and Analysis of HTEs of Gender and Cohort
 
 ## Load Data
-```{r load_data}
+```{r Appendix  load_data,echo=FALSE}
 # list of people
 
 
@@ -56,7 +56,7 @@ ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
 
 ```
 ## Combine Data
-```{r combine_data}
+```{r Appeddix combine_data, echo= FALSE}
 
 dt_agg <- 
   # roster does not contain us
@@ -116,7 +116,7 @@ dt_agg <-
 
 
 ## Covariance Balance Check
-```{r cov_balance}
+```{r Appendix cov_balance, echo=FALSE}
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
   gather(measure, value, -Block) %>%
@@ -145,7 +145,7 @@ dt_agg %>%
 
 ## Tabulating HTEs by gender and Cohort
 
-```{r hte_2, echo=FALSE,comment=''}
+```{r Appendix hte_2, echo=FALSE,comment=''}
 d <- data.table(dt_agg)
 # HTE between grad year and treatment
 m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
