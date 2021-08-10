@@ -205,35 +205,35 @@ stargazer(cb1, cb2, cb3,
 
 ## Non-Compliance
 
-As with any survey campaign we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance*, where people do not respond to assigned dosage of treatment(Direct, Philanthropic and Control). This is because we generate personal links for each subject and refrained from using a generic survey link across groups.
-Our mail-merge strategy(with personalized body and subject) also gives an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey. Our understanding is that these approaches have prevented any instances of *two-sided non-compliance* where people in different groups share the survey link with one another.
+As with any survey campaign we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance*, where people do not respond to assigned dosage of treatment (direct, philanthropic and control). This is because we generate personal links for each subject and refrained from using a generic survey link across groups.
+Our mail-merge strategy (with personalized body and subject) also gives an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey. Our understanding is that these approaches have prevented any instances of *two-sided non-compliance* where people in different groups share the survey link with one another.
 
-As highlighted in the previous section we calculate the treatment effect in the following categories :
-* Intent to Treat(ITT)
+As highlighted in the previous section we calculate the treatment effect in the following categories:
+* Intent to Treat (ITT)
 * Complier-Average Causal Effect (CACE)
-* Heterogeneous Treatment Effects (HTEs)
+* Heterogeneous Treatment Effect (HTE)
 
 ### Calculation of ITT
 
-The ultimate aim for a research is to determine the Average Treatment Effect (ATE) for a population,however due to practical challenges and given the issue of non-compliance it is not always possible to get an accurate measure of the ATE.Researchers often start with a measure of ITT -  effect of treatment on ASSIGNMENT on outcome (for everybody) ignoring non-compliance.
+The ultimate aim for a research is to determine the Average Treatment Effect (ATE) for a population, however due to practical challenges and given the issue of non-compliance it is not always possible to get an accurate measure of the ATE. Researchers often start with a measure of ITT - effect of treatment *assignment* on outcome (for everybody) ignoring non-compliance.
 
 Mathematically we define ITT as:
 
 $$ ITT = E[Y_i(z = 1)] - E[Y_i(z = 0)]$$
 
-here, z denotes *'azzignment'*, to one of the experimental groups.
+where z denotes *assignment* to one of the experimental groups.
 
-After removing the attriters, we perform two regressions to estimate the ITT effect. First, the survey completion variable is regressed on the group assignment variable with the control group as base case. We also perform a second regression by adding Gender and Cohort covariates to the first regression as controls. 
+After removing the attriters, we perform two regressions to estimate the ITT effect. First, the survey completion variable is regressed on the group assignment variable with the control group as base case. We also perform a second regression by adding gender and cohort covariates to the first regression as controls. 
 
-Mathematically we can write the two regressions as below:
+Mathematically we can write the two regressions as follows:
 
 Regression 1: 
 $$Y = \beta_0 + \beta_1Block +  \epsilon$$
 
 Regression 2:
 $$Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3gradYear + \epsilon$$
-The code chunk below calculates the regression .
 ```{r ITT Calculation , echo=FALSE}
+#The code chunk below calculates the regression .
 d <- data.table(dt_agg)
 
 # Generate models
@@ -271,15 +271,15 @@ stargazer(m1, m2,
 
 Key Findings on ITT:
 
-* `Direct` incentive reduced the likelihood to complete the survey by 6.2%(compared to `Control`). Actual response rates can vary from `13.6%` to `26.8%`(95% Confidence Interval).
-* `Philanthropic` incentive reduced the likelihood of completion by 2.6%(compared to `Control`).Actual response rates can vary from `16.9%` to `30.5%`(95% Confidence Interval).
+* `Direct` incentive reduced the likelihood to complete the survey by 6.2% (compared to `Control`). Actual response rates can vary from `13.6%` to `26.8%` (95% Confidence Interval).
+* `Philanthropic` incentive reduced the likelihood of completion by 2.6% (compared to `Control`). Actual response rates can vary from `16.9%` to `30.5%` (95% Confidence Interval).
 * Neither effects are statistically significant at 95% confidence level, although the direct incentive effect is significant at 90% confidence level.
 * When controlled for `cohorts` and `gender` , our treatment effect marginally decreased (~1.2 % point decrease) for the `Control` group along with an increase in corresponding standard errors. The width of confidence interval also increases thereby making it less precise.
 
 
 ### Calculation of CACE
 
-Given the presence of `Non-compliers`(subjects who don't take the treatment dosage),a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers(subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
+Given the presence of `Non-compliers` (subjects who don't take the treatment dosage), a more realistic measure for the treatment effect would be to calculate the effect of the treatment on compliers (subjects who take at least one treatment dosage). It is this group of subjects who are most likely to respond to the treatment and hence reflects a better picture of the results.
 
 Note - we assume that we don't have any `Defiers` in our data.
 
@@ -288,19 +288,15 @@ $$ ITT_D = E[d_i(z = 1)- d_i(z = 0)] $$
 
 $$ CACE = E[Y_i(d = 1) -Y_i(d = 0)|d_i(1)=1] $$
 
-The `exclusion` restriction holds true for our experiment.This is because `attriters` have no possibility of receiving a treatment(their emails are no longer valid) and hence we can safely assume that assignment to the specific groups has no effect beyond the received treatment.Due to this we can simplify the CACE calculation as :
+The `exclusion` restriction holds true for our experiment. This is because `attriters` have no possibility of receiving a treatment (their emails are no longer valid) and hence we can safely assume that assignment to the specific groups has no effect beyond the received treatment. Due to this we can simplify the CACE calculation as :
 
 $$ CACE = ITT/ ITT_D $$
 
 
-We calculate the CACE by first calculating the take-up rate(proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate.Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
-
-
-We also validated our CACE by making use of `Instrumental variables`. We performed two stage least squared (2SLS) regressions using the ivreg function in the AER R package. To estimate the CACE for the `Direct` group , we exclude attriters and subjects receiving `Philanthropic` treatments. We then perform the 2SLS regression with survey completion status as outcome variable, whether people complied and received direct incentive as dosage, and treatment assignment as instrument. This is equivalent to regressing dosage on treatment assignment in the first step, and regressing outcome variable on the fitted dosage values in the second step. We do the same for philanthropic incentives as well.
-
-The chunk below shows the r code to calculate the CACE
+We calculate the CACE by first calculating the take-up rate (proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate. Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
 
 ```{r cace, echo=FALSE}
+# The chunk below shows the r code to calculate the CACE
 # Calculate the CACE for each treatment group manually
 ittd_direct <- 
   d[bounce == 0 & Block == "Direct" & complier == 1, .N] /
@@ -330,14 +326,15 @@ ivmod_philanthropic <- d[bounce == 0 & Block != "Direct",
 rseiv_direct <- sqrt(diag(vcovHC(ivmod_direct)))
 rseiv_philanthropic <- sqrt(diag(vcovHC(ivmod_philanthropic)))
 
-```
-
-The table below shows the summary of the regression results.
-```{r Stargazer CACE, comment='',echo= FALSE}
 stargazer(cace_table, type = 'text', 
           summary = F, rownames = F,
           title = 'CACE = ITT / ITTd')
 
+```
+
+We also validate our CACE by making use of `Instrumental variables`. We perform two stage least squared (2SLS) regressions using the ivreg function in the AER R package. To estimate the CACE for the `Direct` group , we exclude attriters and subjects receiving `Philanthropic` treatments. We then perform the 2SLS regression with survey completion status as outcome variable, whether people complied and received direct incentive as dosage, and treatment assignment as instrument. This is equivalent to regressing dosage on treatment assignment in the first step, and regressing outcome variable on the fitted dosage values in the second step. We do the same for philanthropic incentives as well.
+
+```{r Stargazer CACE, comment='',echo= FALSE}
 
 stargazer(ivmod_direct, ivmod_philanthropic, 
           type="text",
@@ -350,10 +347,10 @@ stargazer(ivmod_direct, ivmod_philanthropic,
           covariate.labels = 'Treated',
           column.labels = c("Direct", "Philanthropic"))
 
-
 ```
 
 Key Findings on CACE:
+
 We believe that the results in the table above for CACE, measures the treatment better, compared to ITT.
 
 * Response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the `Control`group.
