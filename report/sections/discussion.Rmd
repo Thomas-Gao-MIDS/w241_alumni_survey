@@ -1,6 +1,7 @@
 # Results and Discussion
 
 In this section we will discuss the following:
+
 * Overall data aggregation
 * Covariate balance check to validate randomization
 * Calculation of the `treatment-effect` (ITT, HTE, CACE)
