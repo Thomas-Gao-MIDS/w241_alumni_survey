@@ -39,9 +39,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, child='sections/methodology.Rmd'}
 ```
 
-```{r, child='sections/results.Rmd'}
-```
-
 ```{r, child='sections/discussion.Rmd'}
 ```
 
