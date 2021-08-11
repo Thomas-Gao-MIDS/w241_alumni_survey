@@ -136,11 +136,25 @@ The YAMM service provides a near-real time merge status indicator for each email
 * We considered any alumni with all emails labeled as sent (not opened, clicked, or responded) to have received, but not opened, any of their emails.
 * We assumed the remaining alumni received and opened at least one of their emails, thereby exposing themselves to the treatment text contained in the email.
 
-
 We placed the treatment text specific to the control, direct incentive, and philanthropic incentive groups in the body of the emails, rather than in the email subject lines.  This allowed us to define a complier as someone who opened the email, given the assumption that if the person opened the email they read the treatment text.  (Alternatively, we could have defined compliance as reception of the email; however, that criterion seemed too lenient for assuming the recipient actually received the treatment.)  We therefore identified compliers as those alumni for whom YAMM reported that they opened, clicked, or responded to at least one of the emails we sent them.  Conversely, we define non-compliers as those who receive at least one of the emails, but never open any emails they receive.  As a result, these alumni never receive a dosage of the treatment corresponding to the group to which we assigned them.  We identified non-compliers in our study as those for whom the email did not bounce, and YAMM reported that the person never opened, clicked, or responded to any of the emails we sent them.  Finally, we define attriters as those alumni who never receive any of the emails we sent them.  We deemed any alumni for whom YAMM reported a bounced email from our initial email batch an attriter.  The flow diagram in Figure \@ref(fig:flow-diagram) shows the number of alumni in each group after accounting for attriters and non-compliers.  In total, 229 MIDS alumni completed the survey, providing an overall response rate of approximately 21%.
 
 ```{r flow-diagram, echo=FALSE, fig.align = "center", out.width = "90%", fig.cap = "Flow diagram indicating the number of MIDS alumni by group after accounting for attrition and non-compliance"}
 knitr::include_graphics(here::here("report/images", "flow_diagram.png"))
+```
+
+## Data flow and aggregation
+As highlighted in the previous sections, our data come from three main sources:
+
+* Alumni scrape: consists of alumni details that we obtain from web scraping.
+* YAMM: data from the mail-merge tool that helps track the status of emails we sent.
+* Qualtrics: the survey platform we used that provides information on survey respondents.
+
+Figure \@ref(fig:data-flow-diagram) represents the high-level data flow and aggregation of our data sources to arrive at our final data source for analysis.
+
+```{r data-flow-diagram, echo=FALSE, fig.align = "center", out.width = "75%", fig.cap = "Summary diagram of data flows and aggregation" }
+#setwd('home/w241_alumni_survey')
+
+knitr::include_graphics(here::here("report/images", "Data_flow_2.PNG"))
 ```
 
 ## Calculating treatment effects
@@ -148,4 +162,12 @@ knitr::include_graphics(here::here("report/images", "flow_diagram.png"))
 For this experiment, we calculated the following treatment effects: intent-to-treat (ITT) effect, complier-average causal effect (CACE), and heterogeneous treatment effects (HTEs) using gender and graduation year subgroups.  When calculating these treatment effects, we omitted attriters from the analysis.  We omitted attriters for two reasons: 1) We do not have a measured outcome for these alumni, and 2) Omitting attriters should not bias our estimated treatment effects because the group assignment has no influence on whether or person's email account is active or not (which determines whether an email bounces).
 
 The ITT effect calculation provides an estimated treatment effect based only on the group assignment.  Given our concerns regarding the accuracy of our compliance data, we chose to use the ITT as our primary treatment effect.  The CACE, in contrast, does require knowledge of the number of compliers and non-compliers in each group.  Due to the aforementioned issues with YAMM, obtaining these estimates required us to make assumptions about who actually opened at least one of the emails they received.  As a result, we do not have as much trust in our CACE estimates as we do for our ITT effect estimates.  Finally, we analyzed HTEs for gender and graduation year subgroups based only on group assignment.  This allowed us to avoid making compliance assumptions, and it means that one should interpret the estimates we obtained as heterogeneous ITT effects.
+
+## Analysis assumptions
+
+To obtain unbiased causal effect estimates, we satisfied a series of key assumptions:
+
+* **Exclusion restriction:** We assume that potential outcomes in our experiment respond only to the treatment a subject receives, and not the group assignment we gave the subject or any other causal pathway.  While we cannot verify this assumption empirically, we have no reason to believe that the exclusion restriction is violated in our experiment. 
+* **Non-interference:** We assume that no subjects are affected by treatment of other subjects in our experiment.  We sent personal emails containing specific treatment text according to each subject's group assignment, which prevents interference.  While it remains possible that some MIDS alumni discussed the survey and emails we sent them, we assume no spillover effects due to the small likelihood of that occurring.
+* **Monotonicity:** We assume that none of our subjects are defiers (_i.e._, people who receive treatment when assigned to control, or vice-versa).  We can safely make this assumption due to the personal emails we sent each MIDS alumnus. 
 
