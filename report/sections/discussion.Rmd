@@ -377,16 +377,22 @@ stargazer(m3, m4,
 ```
 &nbsp;
   
-We interpret one of these regression values with the help of a mathematical equation as below:
-$$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$$
+We run a regression model to get HTEs and based on the coefficients obtained interpret one of these regression(labeled as 'cohort Fixed Effects ? No ') as below:
 
-For *compliers* We interpret the regression results as follows(this is labeled as 'cohort Fixed Effects ? No ' in the table above):
+$$ Y = .216 + .072*gender - (.025)*direct + (.023)* philanthropic - (.056)*(direct*gender) - (.074)*(philanthropic*gender) + \epsilon$$
+where :
+* gender : is a dummy variable(female = 1 , male = 0)
+* direct : is a dummy variable(direct = 1 indicates that the subject belongs to the direct incentive group)
+* philanthropic : is a dummy variable (philanthropic = 1 indicates that the subject belongs to the philanthropic incentive group)
+* $\epsilon$ : is the error term.
 
-* Response rates for females in controlgroup is highly significant and on average they respond at `38%`.
-* Response rates for *men* in controlgroup is **not** significant and on average they are likely to respond anywhere between `33%` to `66.2%`(range of confidence interval)
-* The co-efficient of interaction term is **not** significant but we can calculate a range for the response rates.
-- The response rates for females in the directgroup can rage from `16%` to `55%` , which is the confidence interval. In other words females in the direct group are ~`3%` less likely to respond as compared to the females in the controlgroup.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
-- The response rates for males in the directgroup can rage from `0%` to `46%` , which is the confidence interval. In other words males in the direct group are ~`15%` less likely to respond as compared to the females in the controlgroup.But, it is extremely likely that this effect will arise by chance(insignificant p-value).
+We interpret the regression results as follows(this is labeled as 'cohort Fixed Effects ? No ' in the table above):
+
+* Response rates for females in control group is significant at 1% level, and on average their response rate is ~21.6% .
+* Response rates for *men* in controlgroup is **not** significant and relative to females in the control group their response rate is [-3.6,12.6] with a 95% confidence interval.
+* The co-efficient of interaction term is **not** significant but we can calculate a relative response rates (**relative to females in the control group**) .
+- The response rates for females in the direct group can range from [-9.7%,14.7%] with a 95% confidence interval.
+- Response rates for males in the direct group is .9% lower. Their true response rate can range from [-39.5%,37.7%] with a 95% confidence interval.
 
 With a similar analysis we can compare the response rates between males and females in the philanthropic group.
 
@@ -394,7 +400,7 @@ With a similar analysis we can compare the response rates between males and fema
 
 
 
-We also performed a hetrogenous treatment analysis of gender and cohort groups. The chunk below calculates the model for HTEs across these groups.
+We also performed a heterogeneous treatment analysis of gender and cohort groups and evaluated whether any of the interaction models that we define are better at explaining the variance of the response rates. 
 
 ```{r HTE by gender and cohort, echo=FALSE}
 # HTE between grad year and treatment
@@ -408,8 +414,8 @@ rse6 <- sqrt(diag(vcovHC(m6)))
 
 
 ```
+The anova analyzes this variance and evaluates the null hypothesis of a significant difference between variance of response rates between the two categories of interaction models that we have defined. The values below calculates the model for HTEs across these groups.
 
-We also evaluate whether any of the interaction models that we define are better at explaining the variance of the response rates. The anova analyzes this variance and evaluates the null hypothesis of a significant difference between variance of response rates between the two categories of interaction models that we have defined.
 
 
 ```{r hte_f_tests, echo=FALSE, comment=''}
@@ -441,10 +447,10 @@ Please refer to the appendix section for a table that describes the interaction 
 
 ## Discussion
 
-**For both the CACE and the ITT we noticed that the response rate was lower than what we had for the `Control` group. This is contrary to the general belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
+**For both the CACE and the ITT we noticed that the response rate was lower than what we had for the control group. This is contrary to the general belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
 
 * MIDS is a graduate degree program with a vast majority of people working full-time. We speculate that \$25 might not be right amount of incentive to people to draw their attention.
-* We also suspect that the longer text in the body of the emails to the `Direct` and the `Philanthropic` group might have contributed to this behavior. This is due to the fact that more and more people access their emails on a hand-held device and the attention span is inversely proportional to the length of the text.
+* We also suspect that the longer text in the body of the emails to the direct and the Philanthropic group might have contributed to this behavior. This is due to the fact that more and more people access their emails on a hand-held device and the attention span is inversely proportional to the length of the text.
 * When analyzing HTEs we noticed that cohort of 2015 had an unusually higher response rates as compared to other cohorts.
 
 This could be due to smaller cohort size of 40 and a tight-knit community who is invested in the program as the very first cohort.
