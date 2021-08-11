@@ -423,7 +423,7 @@ The p-values for both F-tests are greater than 0.05, indicating that including i
 
 Please refer to Appendix D for the detailed results of the HTE analysis on graduation year.
 
-## Discussion
+## Summary of results
 
 Our ITT and CACE estimates, while not statistically significant at the 5% significance level, indicated negative treatment effects for the direct and philanthropic incentive groups. This is contrary to our hypothesis that the incentives would motivate MIDS alumni to respond to the surveys at a higher rate when compared to the control group. This result could be due to a number of reasons, including:
 
