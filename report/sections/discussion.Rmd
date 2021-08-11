@@ -111,7 +111,7 @@ dt_agg <-
 
 ## Checks and balances 
 
-Covariate balance check is a recommended approach to validate randomization to ensure a fair "apples to apples" comparison. While one can perform a covariaate balance check on different characteristics across the three groups, we focus on performing the balance check on the YAMM data to identify compliers, attriters and non-compliers. As we pointed out and validated in the previous section, R blocking ensures that our data is balanced across cohorts and genders. Figure 6 shows plot the number of attriters, non-compliers and compilers, and through visual inspection, we see a similar attrition rate and compliance rate. 
+Covariate balance check is a recommended approach to validate randomization which in turn ensures a fair "apples to apples" comparison. While one can perform a covariate balance check on different characteristics across the three groups, we focus on performing the balance check on the YAMM data to identify compliers, attriters and non-compliers. As we pointed out (and also validated) in the previous section, R blocking ensures that our data is balanced across cohorts and genders. Figure 6 shows plot the number of attriters, non-compliers and compilers, and through visual inspection, we see a similar attrition and compliance rates. 
 
 ```{r cov_balance, echo=FALSE}
 
@@ -171,8 +171,8 @@ stargazer(cb1, cb2, cb3,
 
 ## Non-Compliance
 
-As with any survey campaign we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance*, where people do not respond to assigned dosage of treatment (direct, philanthropic and control). This is because we generate personal links for each subject and refrained from using a generic survey link across groups.
-Our mail-merge strategy (with personalized body and subject) also gives an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey. Our understanding is that these approaches have prevented any instances of *two-sided non-compliance* where people in different groups share the survey link with one another.
+As with any survey campaign we also ran into the issues of non-compliance. We believe that our survey is only impacted by *one-sided non-compliance*, whereby those assigned to a particular treatment did not receive that treatment. (i.e. They received but did not open the email). This is because we generate personal links for each subject and refrained from using a generic survey link across groups.
+Our mail-merge strategy (with personalized body and subject) also gives an impression of a highly targeted campaign as opposed to a generic appeal to respond to a survey. Our understanding is that these approaches help minimize two-sided non-compliance where people in different groups share the survey link with one another.
 
 As highlighted in the previous section we calculate the treatment effect in the following categories:
 
@@ -231,12 +231,12 @@ stargazer(m1, m2,
 ```
   
 
-Key Findings on ITT:
+Key Findings on ITT(for cohort and gender fixed effects):
 
-* Direct incentive reduced the likelihood to complete the survey by 6.2% (compared to control). Actual response rates can vary from `13.6%` to `26.8%` (95% Confidence Interval).
-* Philanthropic incentive reduced the likelihood of completion by 2.6% (compared to control). Actual response rates can vary from `16.9%` to `30.5%` (95% Confidence Interval).
+* Direct incentive reduced the likelihood to complete the survey by 6.2% (compared to control) with a 95% confidence interval of [-13%, -3%]).
+* Philanthropic incentive reduced the likelihood of completion by 2.6% (compared to control) with a 95% confidence interval of [-9%, -.8%]).
 * Neither effects are statistically significant at 95% confidence level, although the direct incentive effect is significant at 90% confidence level.
-* The coefficients and standard errors are approximately the same for the two models, which provides validation that black randomization worked as we expected.
+* The coefficients and standard errors are approximately the same for the two models, which provides validation that black randomization worked as we expected. We see a lower standard error on the constant term(when controlled for cohort and gender) because our group size reduces and as a result standard error increase a bit.
 
 ### Calculation of CACE
 
@@ -253,6 +253,7 @@ $$ CACE = ITT/ ITT_D $$
 
 
 We calculate the CACE by first calculating the take-up rate (proportion of subjects in a group who respond to the survey) and then scaling the ITT values by the take-up rate. Please refer to figure \@ref(fig:flow-diagram) that shows the number of alumni in each group after accounting for attriters and non-compliers.
+We believe that this ratio of ITT and ITT_d is an unbiased estimate of CACE because of the validaity of assumptions(monotonicity, exclusion restriction and randomization) stated in the previous section.
 
 ```{r cace, comment='', echo=FALSE}
 # The chunk below shows the r code to calculate the CACE
@@ -314,14 +315,12 @@ Key Findings on CACE:
 We believe that the results in the table above for CACE, measures the treatment better, compared to ITT.
 
 * Response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the control group.
-  -  Subjects in direct group are now ~`10 %` less likely to respond, compared to `6%`(ignoring non-compliance).
-  -  Subjects in philanthropic group are now ~`4.4 %` less likely , compared to `2.6%` (ignoring non-compliance).
+  -  Subjects in direct group are now ~10 % less likely to respond with a 95% confidence interval of [-21%, -4.4%]), compared to 6% (ITT estimate).
+  -  Subjects in philanthropic group are now ~4 % less likely to respond with a 95% confidence interval of [-16.2%, 1.5%]), compared to 2.6% (ignoring non-compliance).
   
-* The survey completion rate for the control group is ~ `26%` on average (range = [`21.3%`,`31.3%`]), compared to the overall average of `21%.` These results are significant at a level of one percent.The 95% confidence interval, i.e the true survey response rate for this group could be anywhere between `26%` to `27%`.
+* The survey completion rate for the control group is ~ 26% on average range with a 95% confidence interval of [21.3%,31.3%]), compared to the overall survey response average of 21%. These results are significant at a level of one percent.The 95% confidence interval, i.e the true survey response rate for the control group could be anywhere between 21% to 29%. The point estimate of the treatment effect for this group is not statistically significant. 
 
-* The direct incentive group on the other hand is significant at `10%` level , hence the true response rate for this group could be anywhere between `5.4%` to `27.4%`.We can follow a similar approach to measure the `CACE` for the philanthropic group. The coefficient is not statistically significant. The response rates for people in this group can vary from `10%` to `33.7%`.
-
-Note - It is worth nothing that both the direct and the philanthropic groups are not significant at 5%.For the direct group we observe significance at a `10%`level but the estimates for the philanthropic group is not significant, given its large standard errors.
+Note - It is worth noting that both the direct and the philanthropic groups are not significant at 5% level. For the direct group we observe significance at a 10% level but the estimates for the philanthropic group is not significant, given its large standard errors.
 
 
 ### Heterogeneous Treatment Effects (HTEs)

@@ -1,8 +1,8 @@
 # Appendix D: Data Aggregation and Analysis of HTEs of Gender and Cohort
 
-## Load Data
 ```{r Appendix  load_data,echo=FALSE}
 # list of people
+options(dplyr.summarise.inform = FALSE)
 
 
 dt_roster <- read_csv('../../data/alumni_scrape.csv', col_types=cols()) %>%
@@ -55,8 +55,8 @@ ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
 
 
 ```
-## Combine Data
 ```{r Appeddix combine_data, echo= FALSE}
+options(dplyr.summarise.inform = FALSE)
 
 dt_agg <- 
   # roster does not contain us
@@ -115,8 +115,10 @@ dt_agg <-
 
 
 
-## Covariance Balance Check
-```{r Appendix cov_balance, echo=FALSE}
+```{r Appendix_D_HTE , echo = FALSE}
+options(tidyverse.quiet = TRUE)
+options(dplyr.summarise.inform = FALSE)
+
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
   gather(measure, value, -Block) %>%
@@ -125,6 +127,8 @@ dt_agg %>%
   spread(measure, value) %>%
   select(Block, bounce, non_complier, complier, completion) %>%
   mutate(all = bounce + non_complier + complier, .before=2)
+
+options(dplyr.summarise.inform = FALSE)
 
 dt_agg %>% 
   select(Block, bounce, non_complier, complier, completion) %>%
@@ -138,12 +142,13 @@ dt_agg %>%
                                  non_complier = 'Did Not Open (Non-Complier)',
                                  complier = "Opened Email (Complier)")) 
 
+options(dplyr.summarise.inform = FALSE)
 
 
 
 ```
 
-## Tabulating HTEs by gender and Cohort
+## Tabulating HTEs by cohort
 
 ```{r Appendix hte_2, echo=FALSE,comment='' }
 d <- data.table(dt_agg)
