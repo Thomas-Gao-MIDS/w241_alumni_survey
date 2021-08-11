@@ -1,6 +1,6 @@
 ---
 title: "Incentives and Engagement: A Field Experiment to Evaluate the Effect of Survey Incentives on MIDS Alumni"
-author: "Thomas Gao, Robert Hosbach, Devesh Khandelwal, Joe Mirza"
+author: "Robert Hosbach, Devesh Khandelwal, Joe Mirza, Thomas Gao"
 date: "DATASCI W241 | Summer 2021"
 bibliography: mybibfile.bib
 csl: apa-6th-edition.csl
