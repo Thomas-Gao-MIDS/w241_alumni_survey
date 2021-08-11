@@ -1,13 +1,4 @@
 # Conclusion
 
-For both the CACE and the ITT we noticed that the response rate was lower than what we had for the `Control` group. This is contrary to the general belief that incentives motivate people to respond to surveys(as indicated in the introduction section). This could be due to a number of reasons, some of which are listed below:
-* MIDS is a graduate degree program with a vast majority of people working full-time. We speculate that \$25 might not be right amount of incentive to people to draw their attention.
-* We also suspect that the longer text in the body of the emails to the `Direct` and the `Philanthropic` group might have contributed to this behavior. This is due to the fact that more and more people access their emails on a hand-held device and the attention span is inversely proportional to the length of the text.
-* When analyzing HTEs we noticed that cohort of 2015 had an unusually higher response rates as compared to other cohorts. This could be due to smaller cohort size of 40 and a tight-knit community who is invested in the program as the very first cohort.
-
-
-## Generalizability
-MIDS program is run by Ischool as part of UC Berkeley. It is a part time program designed for working professionals, and our experiment was targeted exclusively at MIDS alumni and the "Call to Action" was to provide feedback to improve the overall program. We don't expect our results to generalize at the school level and hold true for other programs like MICS(a full time program also by Ischool). The results might also not generalize to other professional degree programs. This is due to the fact that the response rates is influenced by overall experience of the students. We recommend follow-up studies with a mix of students in a part-time and full-time degree program and the right degree of incentives to generalize the results.
-
 
 

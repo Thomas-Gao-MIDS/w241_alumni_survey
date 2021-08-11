@@ -148,11 +148,11 @@ dt_agg %>%
 ```{r Appendix hte_2, echo=FALSE,comment=''}
 d <- data.table(dt_agg)
 # HTE between grad year and treatment
-m5 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block)]
+m5 <- d[bounce == 0 & Gender != 'U', lm(completion ~ factor(Year_Graduation) * Block)]
 rse5 <- sqrt(diag(vcovHC(m5)))
 
 
-m6 <- d[bounce == 0 & Gender != 'U' & complier == 1, lm(completion ~ factor(Year_Graduation) * Block + Gender)]
+m6 <- d[bounce == 0 & Gender != 'U', lm(completion ~ factor(Year_Graduation) * Block + Gender)]
 rse6 <- sqrt(diag(vcovHC(m6)))
 
 stargazer(m5, m6,
