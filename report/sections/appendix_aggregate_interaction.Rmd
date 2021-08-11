@@ -2,6 +2,7 @@
 
 ```{r Appendix  load_data,echo=FALSE}
 # list of people
+options(dplyr.summarise.inform = FALSE)
 
 
 dt_roster <- read_csv('../../data/alumni_scrape.csv', col_types=cols()) %>%
@@ -56,6 +57,7 @@ ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
 ```
 
 ```{r Appeddix combine_data, echo= FALSE}
+options(dplyr.summarise.inform = FALSE)
 
 dt_agg <- 
   # roster does not contain us
@@ -114,7 +116,6 @@ dt_agg <-
 
 
 
-
 ```{r Appendix cov_balance, echo=FALSE}
 # dt_agg %>% 
 #   select(Block, bounce, non_complier, complier, completion) %>%
@@ -138,9 +139,8 @@ dt_agg <-
 #                                  complier = "Opened Email (Complier)")) 
 
 
-
-
 ```
+
 
 ```{r Appendix hte_2, echo=FALSE,comment='' }
 d <- data.table(dt_agg)
