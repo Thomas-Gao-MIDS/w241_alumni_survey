@@ -311,7 +311,7 @@ stargazer(ivmod_direct, ivmod_philanthropic,
   
 Key Findings on CACE:
 
-We believe that the results in the table above for CACE, measures the treatment better, compared to ITT.
+Because CACE estimates account for non-compliance when estimate the effects, we believe that they are better representations of the treatment effects than ITT.
 
 * Response rates in the treatment groups were lower than the response rates in the control.However, there are a few subtle differences that should be noted(as a result of *one-sided non-compliance*). As compared to the control group.
   -  Subjects in direct group are now ~`10 %` less likely to respond, compared to `6%`(ignoring non-compliance).

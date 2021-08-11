@@ -1,6 +1,5 @@
-# Appendix D: Data Aggregation and Analysis of HTEs of Gender and Cohort
+# Appendix D: HTE Regression with Interaction Between Treatments and Cohorts
 
-## Load Data
 ```{r Appendix  load_data,echo=FALSE}
 # list of people
 
@@ -55,7 +54,7 @@ ex_emails <- c('deveshkhandelwal@berkeley.edu', 'rahosbach@berkeley.edu',
 
 
 ```
-## Combine Data
+
 ```{r Appeddix combine_data, echo= FALSE}
 
 dt_agg <- 
@@ -115,35 +114,33 @@ dt_agg <-
 
 
 
-## Covariance Balance Check
-```{r Appendix cov_balance, echo=FALSE}
-dt_agg %>% 
-  select(Block, bounce, non_complier, complier, completion) %>%
-  gather(measure, value, -Block) %>%
-  group_by(Block, measure) %>%
-  summarise(value = sum(value)) %>%
-  spread(measure, value) %>%
-  select(Block, bounce, non_complier, complier, completion) %>%
-  mutate(all = bounce + non_complier + complier, .before=2)
 
-dt_agg %>% 
-  select(Block, bounce, non_complier, complier, completion) %>%
-  gather(measure, value, -Block) %>%
-  group_by(Block, measure) %>%
-  summarise(value = sum(value)) %>%
-  ungroup() %>%
-  filter(measure != 'completion') %>%
-  mutate(measure = recode_factor(measure, 
-                                 bounce = "Email Bounced (Attrition)", 
-                                 non_complier = 'Did Not Open (Non-Complier)',
-                                 complier = "Opened Email (Complier)")) 
+```{r Appendix cov_balance, echo=FALSE}
+# dt_agg %>% 
+#   select(Block, bounce, non_complier, complier, completion) %>%
+#   gather(measure, value, -Block) %>%
+#   group_by(Block, measure) %>%
+#   summarise(value = sum(value)) %>%
+#   spread(measure, value) %>%
+#   select(Block, bounce, non_complier, complier, completion) %>%
+#   mutate(all = bounce + non_complier + complier, .before=2)
+
+# dt_agg %>% 
+#   select(Block, bounce, non_complier, complier, completion) %>%
+#   gather(measure, value, -Block) %>%
+#   group_by(Block, measure) %>%
+#   summarise(value = sum(value)) %>%
+#   ungroup() %>%
+#   filter(measure != 'completion') %>%
+#   mutate(measure = recode_factor(measure, 
+#                                  bounce = "Email Bounced (Attrition)", 
+#                                  non_complier = 'Did Not Open (Non-Complier)',
+#                                  complier = "Opened Email (Complier)")) 
 
 
 
 
 ```
-
-## Tabulating HTEs by gender and Cohort
 
 ```{r Appendix hte_2, echo=FALSE,comment='' }
 d <- data.table(dt_agg)
