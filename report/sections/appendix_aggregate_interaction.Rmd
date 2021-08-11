@@ -1,4 +1,4 @@
-# Appendix C: Data Aggregation and Analysis of HTEs of Gender and Cohort
+# Appendix D: Data Aggregation and Analysis of HTEs of Gender and Cohort
 
 ## Load Data
 ```{r Appendix  load_data,echo=FALSE}
@@ -145,7 +145,7 @@ dt_agg %>%
 
 ## Tabulating HTEs by gender and Cohort
 
-```{r Appendix hte_2, echo=FALSE,comment=''}
+```{r Appendix hte_2, echo=FALSE,comment='' }
 d <- data.table(dt_agg)
 # HTE between grad year and treatment
 m5 <- d[bounce == 0 & Gender != 'U', lm(completion ~ factor(Year_Graduation) * Block)]

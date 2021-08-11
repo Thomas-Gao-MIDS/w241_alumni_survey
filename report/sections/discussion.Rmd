@@ -252,6 +252,7 @@ stargazer(m1, m2,
           dep.var.labels = "Survey Completion")
 
 ```
+  
 
 Key Findings on ITT:
 
@@ -312,7 +313,7 @@ stargazer(cace_table, type = 'text',
           title = 'CACE = ITT / ITTd')
 
 ```
-
+  
 We also validate our CACE by making use of Instrumental variables. We perform two stage least squared (2SLS) regressions using the ivreg function in the AER R package. To estimate the CACE for the direct group , we exclude attriters and subjects receiving philanthropic treatments. We then perform the 2SLS regression with survey completion status as outcome variable, whether people complied and received direct incentive as dosage, and treatment assignment as instrument. This is equivalent to regressing dosage on treatment assignment in the first step, and regressing outcome variable on the fitted dosage values in the second step. We do the same for philanthropic incentives as well.
 
 ```{r Stargazer CACE, comment='',echo= FALSE}
@@ -329,7 +330,8 @@ stargazer(ivmod_direct, ivmod_philanthropic,
           column.labels = c("Direct", "Philanthropic"))
 
 ```
-
+&nbsp;
+  
 Key Findings on CACE:
 
 We believe that the results in the table above for CACE, measures the treatment better, compared to ITT.
@@ -397,8 +399,8 @@ stargazer(m3, m4,
           dep.var.labels = "Survey Completion")
 
 ```
-
-
+&nbsp;
+  
 We interpret one of these regression values with the help of a mathematical equation as below:
 $$ Y = \beta_0 + \beta_1Block + \beta_2gender + \beta_3(Block*gender) + \epsilon$$
 
@@ -431,7 +433,7 @@ rse6 <- sqrt(diag(vcovHC(m6)))
 
 ```
 
-In the code chunk below we evaluate whether any of the interaction models that we define are better at explaining the variance of the response rates. The anova analyzes this variance and evaluates the null hypothesis of a significant difference between variance of response rates between the two categories of interaction models that we have defined.
+We also evaluate whether any of the interaction models that we define are better at explaining the variance of the response rates. The anova analyzes this variance and evaluates the null hypothesis of a significant difference between variance of response rates between the two categories of interaction models that we have defined.
 
 
 ```{r hte_f_tests, echo=FALSE, comment=''}
