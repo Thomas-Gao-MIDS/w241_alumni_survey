@@ -152,7 +152,6 @@ More formally, Table 4 provides the results of a regression analysis of attritio
 
 \newpage
 \begin{center}Table 4: Covariate balance regression analysis results\end{center}
-
 ```{r covariate-balance-check-stargazer-save , echo=FALSE, comment='', fig.align="center"}
 
 stargazer(cb1, cb2, cb3, 
@@ -371,7 +370,8 @@ To facilitate interpretation, we provide an explanation of the first, simpler mo
 
 $$ 
 \begin{aligned}
-Y = 0.216 + (0.072 * Male) - (0.025 * Direct) + (0.023 * Philanthropic) - (0.056 * Male * Direct) - (0.074 * Male * Philanthropic) + \epsilon
+Y = & \ 0.216 + (0.072 * Male) - (0.025 * Direct) + (0.023 * Philanthropic) - (0.056 * Male * Direct) \\
+    &- (0.074 * Male * Philanthropic) + \epsilon
 \end{aligned}
 $$
 
@@ -409,13 +409,13 @@ anova_coh<- anova(
 
 &nbsp;
 \begin{center}Table 9: F-test on inferred gender interaction terms \end{center}
-```{r anova-gender, echo=FALSE, fig.align="center"}
+```{r anova-gender, echo=FALSE, fig.align="center", comment=''}
 anova_gender
 ```
 
 &nbsp;
 \begin{center}Table 10: F-test on graduation year interaction terms \end{center}
-```{r anova-grad, echo=FALSE, fig.align="center"}
+```{r anova-grad, echo=FALSE, fig.align="center", comment=''}
 anova_coh
 ```
 

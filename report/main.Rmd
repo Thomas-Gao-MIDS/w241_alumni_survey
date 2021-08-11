@@ -10,6 +10,7 @@ output:
     number_sections: no
     toc: no
 header-includes:
+- \usepackage{amsmath}
 - \usepackage{sectsty} \allsectionsfont{\left}
 - \usepackage{float}
 - \floatplacement{figure}{H}
